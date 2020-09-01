@@ -5,14 +5,20 @@ public class Film {
     private int id;
     private int duration;
     private String summary;
+    private String videoUrl;
+    private String imageUrl;
+    private int viewCount;
 
     @Override
     public String toString() {
-        return "film{" +
+        return "Film{" +
                 "name='" + name + '\'' +
                 ", id=" + id +
                 ", duration=" + duration +
                 ", summary='" + summary + '\'' +
+                ", videoUrl='" + videoUrl + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", viewCount=" + viewCount +
                 '}';
     }
 
@@ -48,13 +54,41 @@ public class Film {
         this.summary = summary;
     }
 
+    public String getVideoUrl() {
+        return videoUrl;
+    }
+
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public int getViewCount() {
+        return viewCount;
+    }
+
+    public void setViewCount(int viewCount) {
+        this.viewCount = viewCount;
+    }
+
     public Film() {
     }
 
-    public Film(String name, int id, int duration, String summary) {
+    public Film(String name, int id, int duration, String summary, String videoUrl, String imageUrl, int viewCount) {
         this.name = name;
         this.id = id;
         this.duration = duration;
         this.summary = summary;
+        this.videoUrl = videoUrl;
+        this.imageUrl = imageUrl;
+        this.viewCount = viewCount;
     }
+
 }
