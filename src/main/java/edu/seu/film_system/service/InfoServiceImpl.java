@@ -43,4 +43,32 @@ public class InfoServiceImpl implements InfoService {
         resultDTO.setMsg("success");
         return resultDTO;
     }
+
+    @Override
+    public ResultDTO<Info> findInfoByInfo(Info info) {
+        ResultDTO<Info> resultDTO = new ResultDTO<>();
+        List<Info> data = new ArrayList<>();
+        data = infoMapper.findInfoByInfo(info);
+        resultDTO.setData(data);
+        resultDTO.setCode(6);
+        resultDTO.setMsg("多条件查询");
+        return resultDTO;
+    }
+
+    @Override
+    public ResultDTO<Info> addInfo(Info info) {
+        ResultDTO<Info> resultDTO = new ResultDTO<>();
+        try{
+            int i = infoMapper.addInfo(info);
+            if (i > 0) {
+               resultDTO.setMsg("注册成功！");
+            } else {
+                resultDTO.setMsg("注册失败！");
+            }
+        } catch (Exception e) {
+            resultDTO.setMsg("注册失败！");
+        }
+        // 如果希望注册成功则立即登录，可能需要查询一次，那么可以在该业务中查询用户
+        return resultDTO;
+    }
 }

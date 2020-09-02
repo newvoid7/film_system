@@ -11,4 +11,10 @@ public interface InfoMapper {
 
     @Select("SELECT * FROM info WHERE name LIKE '%${value}%' OR id LIKE '%${value}%'")
     List<Info> findInfoByKeyWord(String keyWord);
+
+    // 根据 Info 查询信息
+    List<Info> findInfoByInfo(Info info);
+
+    // DML INSERT UPDATE DELETE
+    int addInfo(Info info);
 }

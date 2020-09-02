@@ -65,6 +65,7 @@ public class TestController {
     }
 
     // 接收 Json 数据
+    // 通过 http://127.0.0.1:8256/film_system/test2.html 提交表单，跳转至此
     @RequestMapping("/rqJson1")
     @ResponseBody
     public String rqJson1(@RequestBody Info info) throws Exception {
@@ -72,10 +73,27 @@ public class TestController {
         return "ok";
     }
 
+    // 地址栏传递信息
     // http://127.0.0.1:8256/film_system/test/findFilm/What
     @RequestMapping("/findFilm/{keyWord}")
     @ResponseBody
     public ResultDTO<Info> findSomeFilm(@PathVariable("keyWord")String keyWord) throws Exception {
         return infoService.findInfoByKeyWord(keyWord);
+    }
+
+    // http://127.0.0.1:8256/film_system/test/findFilmByInfo
+    // 设置 mapper.xml 文件，传递整个类的信息
+    @RequestMapping("/findFilmByInfo")
+    @ResponseBody
+    public ResultDTO<Info> findFilmByInfo(@RequestBody Info info) throws Exception {
+        System.out.println(info.toString());
+        return infoService.findInfoByInfo(info);
+    }
+
+    @RequestMapping("/addInfo")
+    @ResponseBody
+    public ResultDTO<Info> addInfo(@RequestBody Info info) throws Exception {
+        System.out.println(info.toString());
+        return infoService.addInfo(info);
     }
 }

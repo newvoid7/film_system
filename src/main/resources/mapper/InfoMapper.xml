@@ -4,4 +4,18 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.seu.film_system.mapper.InfoMapper">
 
+    <!-- List<Info> findInfoByInfo(Info info); -->
+    <!-- resultType='Info' 返回参数类型 -->
+    <!-- parameterType='Info' 输入参数类型 -->
+    <!-- #{name} 可以获取 Info 对象中 name 属性的值 -->
+    <!-- 模糊查询 name like '%${name}%' -->
+    <select id="findInfoByInfo" resultType="Info" parameterType="Info">
+        SELECT * FROM info WHERE name = #{name} AND id = #{id}
+    </select>
+
+    <!-- int addInfo(Info info);] -->
+    <insert id="addInfo" parameterType="Info">
+        INSERT INTO Info (name, pwd, balance) VALUES (#{name}, #{pwd}, #{balance})
+    </insert>
+
 </mapper>

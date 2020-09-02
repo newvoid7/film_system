@@ -19,7 +19,10 @@ public interface ReviewMapper {
     @Select("SELECT * FROM review WHERE film_id = ${filmId}")
     List<Review> searchByFilm(@Param("filmId")int filmId);
 
-    @Insert("INSERT INTO review VALUES (NOW(), ${userId}, ${filmId}, '${content}')")
+    @Select("SELECT * FROM review WHERE content LIKE '${keyWord}'")
+    List<Review> searchByContent(@Param("keyWord") String keyWord);
+
+    @Insert("INSERT INTO review (time, user_id, film_id, content) VALUES (NOW(), ${userId}, ${filmId}, '${content}')")
     void newReview(@Param("userId")int userId, @Param("filmId")int filmId, @Param("content")String content);
 
     @Delete("DELETE FROM review WHERE user_id = ${userId} AND film_id = ${filmId} AND time = ${time}")

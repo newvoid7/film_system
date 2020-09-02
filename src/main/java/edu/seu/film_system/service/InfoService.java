@@ -11,4 +11,8 @@ public interface InfoService {
     ResultDTO<Info> findAllInfo2();
     // 根据关键字查询
     ResultDTO<Info> findInfoByKeyWord(String keyWord);
+    //
+    ResultDTO<Info> findInfoByInfo(Info info);
+    //
+    ResultDTO<Info> addInfo(Info info);
 }
