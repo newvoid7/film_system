@@ -6,12 +6,11 @@ import edu.seu.film_system.pojo.ResultDTO;
 import java.util.List;
 
 public interface FilmService {
-    /*
-    List<Film> findAllFilm();
-    List<String> findAllSummary();
-    List<Film> findFilmLongerThan(int pd);
-    */
+
     ResultDTO<Film> findAllFilm();
     ResultDTO<String> findAllSummary();
     ResultDTO<Film> findFilmLongerThan(int leastDur);
+    ResultDTO<Film> fuzzySearch(String keyWord);
+    ResultDTO<Film> exactSearch(String keyWord);
+    ResultDTO<Film> searchInSummary(String keyWord);
 }

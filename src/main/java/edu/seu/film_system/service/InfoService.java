@@ -7,5 +7,8 @@ import java.util.List;
 
 public interface InfoService {
     List<Info> findAllInfo();
+    // 使用 DTO
     ResultDTO<Info> findAllInfo2();
+    // 根据关键字查询
+    ResultDTO<Info> findInfoByKeyWord(String keyWord);
 }

@@ -20,7 +20,10 @@ public class UserController {
     @RequestMapping("/all")
     @ResponseBody
     public ResultDTO<User> findAll() throws Exception {
-        return userService.findAllUser();
+        ResultDTO<User> resultDTO = new ResultDTO<>();
+        resultDTO=userService.findAllUser();
+        // System.out.println(resultDTO.getData());
+        return resultDTO;
     }
 
 }

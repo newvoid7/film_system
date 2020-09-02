@@ -1,8 +1,11 @@
 package edu.seu.film_system.pojo;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 public class Review {
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date time;
     private int userId;
     private int filmId;

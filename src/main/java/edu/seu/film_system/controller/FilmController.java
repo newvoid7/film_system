@@ -37,4 +37,18 @@ public class FilmController {
     public ResultDTO<Film> findFilmLongerThan(@PathVariable("leastDur")int leastDur) throws Exception{
         return filmService.findFilmLongerThan(leastDur);
     }
+
+    // http://127.0.0.1:8256/film_system/film/find/keyword=the
+    @RequestMapping("/find/keyword={keyWord}")
+    @ResponseBody
+    public ResultDTO<Film> fuzzySearch(@PathVariable("keyWord")String keyWord) throws Exception{
+        return filmService.fuzzySearch(keyWord);
+    }
+
+    // http://127.0.0.1:8256/film_system/film/find/summary=肖申克
+    @RequestMapping("/find/summary={keyWord}")
+    @ResponseBody
+    public ResultDTO<Film> searchInSummary(@PathVariable("keyWord")String keyWord) throws Exception{
+        return filmService.searchInSummary(keyWord);
+    }
 }

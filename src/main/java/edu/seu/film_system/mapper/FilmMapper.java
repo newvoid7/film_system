@@ -13,7 +13,13 @@ public interface FilmMapper {
     @Select("SELECT summary FROM film")
     List<String> findAllSummary();
 
-    @Select("SELECT * FROM film WHERE duration >= #{leastDur}")
+    @Select("SELECT * FROM film WHERE duration >= ${leastDur}")
     List<Film> findFilmLongerThan(@Param("leastDur") int leastDur);
+
+    @Select("SELECT * FROM film WHERE name LIKE '${keyWord}'")
+    List<Film> searchByName(@Param("keyWord") String keyWord);
+
+    @Select("SELECT * FROM film WHERE summary LIKE '${keyWord}'")
+    List<Film> searchBySummary(@Param("keyWord") String keyWord);
 
 }

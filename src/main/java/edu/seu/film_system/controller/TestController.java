@@ -75,8 +75,7 @@ public class TestController {
     // http://127.0.0.1:8256/film_system/test/findFilm/What
     @RequestMapping("/findFilm/{keyWord}")
     @ResponseBody
-    public String findSomeFilm(@PathVariable("keyWord")String keyWord) throws Exception {
-        System.out.println(keyWord);
-        return "ok";
+    public ResultDTO<Info> findSomeFilm(@PathVariable("keyWord")String keyWord) throws Exception {
+        return infoService.findInfoByKeyWord(keyWord);
     }
 }

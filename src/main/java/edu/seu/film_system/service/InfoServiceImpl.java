@@ -32,4 +32,15 @@ public class InfoServiceImpl implements InfoService {
         resultDTO.setMsg("success");
         return resultDTO;
     }
+
+    @Override
+    public ResultDTO<Info> findInfoByKeyWord(String keyWord) {
+        ResultDTO<Info> resultDTO = new ResultDTO<>();
+        List<Info> data = new ArrayList<>();
+        data = infoMapper.findInfoByKeyWord(keyWord);
+        resultDTO.setData(data);
+        resultDTO.setCode(6);
+        resultDTO.setMsg("success");
+        return resultDTO;
+    }
 }

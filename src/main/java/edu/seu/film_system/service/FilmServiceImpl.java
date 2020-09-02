@@ -40,4 +40,33 @@ public class FilmServiceImpl implements FilmService{
         resultDTO.setMsg("success");
         return resultDTO;
     }
+
+    @Override
+    public ResultDTO<Film> searchInSummary(String keyWord) {
+        keyWord = '%' + keyWord +'%';
+        ResultDTO<Film> resultDTO = new ResultDTO<>();
+        resultDTO.setData(filmMapper.searchBySummary(keyWord));
+        resultDTO.setCode(11);
+        resultDTO.setMsg("success");
+        return resultDTO;
+    }
+
+    @Override
+    public ResultDTO<Film> fuzzySearch(String keyWord) {
+        keyWord = '%' + keyWord +'%';
+        ResultDTO<Film> resultDTO = new ResultDTO<>();
+        resultDTO.setData(filmMapper.searchByName(keyWord));
+        resultDTO.setCode(11);
+        resultDTO.setMsg("success");
+        return resultDTO;
+    }
+
+    @Override
+    public ResultDTO<Film> exactSearch(String keyWord) {
+        ResultDTO<Film> resultDTO = new ResultDTO<>();
+        resultDTO.setData(filmMapper.searchByName(keyWord));
+        resultDTO.setCode(11);
+        resultDTO.setMsg("success");
+        return resultDTO;
+    }
 }
