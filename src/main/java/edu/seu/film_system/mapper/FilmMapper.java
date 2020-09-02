@@ -7,13 +7,13 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
 public interface FilmMapper {
-    @Select("SELECT * FROM movie")
+    @Select("SELECT * FROM film")
     List<Film> findAllFilm();
 
-    @Select("SELECT summary FROM movie")
+    @Select("SELECT summary FROM film")
     List<String> findAllSummary();
 
-    @Select("SELECT * FROM movie WHERE duration >= #{pd}")
-    List<Film> findFilmLongerThan(@Param("pd") int pd);
+    @Select("SELECT * FROM film WHERE duration >= #{leastDur}")
+    List<Film> findFilmLongerThan(@Param("leastDur") int leastDur);
 
 }

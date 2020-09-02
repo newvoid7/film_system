@@ -2,11 +2,11 @@ package edu.seu.film_system.service;
 
 import edu.seu.film_system.mapper.FilmMapper;
 import edu.seu.film_system.pojo.Film;
+import edu.seu.film_system.pojo.ResultDTO;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 @Service("filmService")
 @Transactional
@@ -15,17 +15,29 @@ public class FilmServiceImpl implements FilmService{
     FilmMapper filmMapper;
 
     @Override
-    public List<Film> findFilmLongerThan(int pd) {
-        return filmMapper.findFilmLongerThan(pd);
+    public ResultDTO<Film> findAllFilm() {
+        ResultDTO<Film> resultDTO = new ResultDTO<>();
+        resultDTO.setData(filmMapper.findAllFilm());
+        resultDTO.setCode(9);
+        resultDTO.setMsg("success");
+        return resultDTO;
     }
 
     @Override
-    public List<String> findAllSummary() {
-        return filmMapper.findAllSummary();
+    public ResultDTO<String> findAllSummary() {
+        ResultDTO<String> resultDTO = new ResultDTO<>();
+        resultDTO.setData(filmMapper.findAllSummary());
+        resultDTO.setCode(10);
+        resultDTO.setMsg("success");
+        return resultDTO;
     }
 
     @Override
-    public List<Film> findAllFilm() {
-        return filmMapper.findAllFilm();
+    public ResultDTO<Film> findFilmLongerThan(int leastDur) {
+        ResultDTO<Film> resultDTO = new ResultDTO<>();
+        resultDTO.setData(filmMapper.findFilmLongerThan(leastDur));
+        resultDTO.setCode(11);
+        resultDTO.setMsg("success");
+        return resultDTO;
     }
 }

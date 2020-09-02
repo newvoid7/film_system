@@ -1,10 +1,16 @@
 package edu.seu.film_system.pojo;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
+
 public class Info {
     private int id;
     private String name;
     private String pwd;
     private double balance;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date birth;
 
     public Info() {
     }
@@ -46,6 +52,14 @@ public class Info {
 
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+
+    public Date getBirth() {
+        return birth;
+    }
+
+    public void setBirth(Date birth) {
+        this.birth = birth;
     }
 
     @Override
