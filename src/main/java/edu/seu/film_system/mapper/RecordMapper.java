@@ -9,6 +9,10 @@ public interface RecordMapper {
     @Select("SELECT * FROM record")
     List<Record> findAllRecord();
 
-    // TODO
-    // @Select("SELECT * FROM record WHERE user_id")
+    @Select("SELECT * FROM record WHERE user_id = ${userId}")
+    List<Record> findRecordByUserId(int userId);
+
+    @Select("SELECT * FROM record WHERE film_id = ${filmId}")
+    List<Record> findRecordByFilmId(int filmId);
+
 }
