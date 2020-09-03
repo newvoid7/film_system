@@ -25,7 +25,7 @@ public class FilmController {
     }
 
     // http://localhost:8256/film_system/film/allSum
-    // 搜索所有电影的简介（仅测试）
+    // 搜索所有电影的简介
     @RequestMapping("/allSum")
     @ResponseBody
     public ResultDTO<String> findAllSummary() throws Exception{
@@ -34,7 +34,7 @@ public class FilmController {
 
     // 通过 url 地址传递参数
     // http://127.0.0.1:8256/film_system/film/find/longerThan/80
-    // 搜索时长长于某个值的电影（仅测试）
+    // 搜索时长长于某个值的电影
     @RequestMapping("/find/longerThan/{leastDur}")
     @ResponseBody
     public ResultDTO<Film> findFilmLongerThan(@PathVariable("leastDur")int leastDur) throws Exception{
@@ -59,12 +59,22 @@ public class FilmController {
         return filmService.searchInSummary(keyWord);
     }
 
-    // http://127.0.0.1:8256/film_system/film/find/keyword=肖申克
-    // 模糊查询：简介或名称中含有某个值的电影（可以中文）
+    // http://127.0.0.1:8256/film_system/film/find/keyword=the
+    // 模糊查询：简介或名称中含有某组值的电影
     // 关键字在 url 中，restful 风格地址栏传值
     @RequestMapping("/find/keyword={keyWord}")
     @ResponseBody
     public ResultDTO<Film> fuzzySearch(@PathVariable("keyWord")String keyWord) throws Exception{
         return filmService.fuzzySearch(keyWord);
+    }
+
+    // http://127.0.0.1:8256/film_system/film/find/keyword=the/tag=A
+    // 模糊查询：简介或名称中含有某组值的电影，同时满足某个标签
+    // 关键字在 url 中，restful 风格地址栏传值
+    @RequestMapping("/find/keyword={keyWord}/tag={tags}")
+    @ResponseBody
+    public ResultDTO<Film> fuzzySearch(@PathVariable("keyWord")String keyWord, @PathVariable("tags")String tags) throws Exception{
+        // System.out.println(keyWord+tags);
+        return filmService.fuzzySearch(keyWord, tags);
     }
 }

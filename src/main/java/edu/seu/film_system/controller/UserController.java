@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("user")
 public class UserController {
@@ -33,6 +35,14 @@ public class UserController {
     public ResultDTO<User> addUser(@RequestBody User user) throws Exception {
         System.out.println(user.toString());
         return userService.addUser(user);
+    }
+
+    @RequestMapping("/login")
+    @ResponseBody
+    public ResultDTO<User> checkUser(String nickname, String pwd) {
+        ResultDTO<User> resultDTO = userService.findUserByNickname(nickname);
+
+        return resultDTO;
     }
 }
 

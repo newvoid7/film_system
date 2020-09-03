@@ -22,4 +22,13 @@ public interface FilmMapper {
     @Select("SELECT * FROM film WHERE summary LIKE '${keyWord}'")
     List<Film> searchBySummary(@Param("keyWord") String keyWord);
 
+    @Select("SELECT * FROM film WHERE name REGEXP \"${keyWord}\" OR summary REGEXP \"${keyWord}\"")
+    List<Film> fuzzySearch1(@Param("keyWord") String keyWord);
+
+    @Select("SELECT * FROM film WHERE tag REGEXP \"${tag}\"")
+    List<Film> fuzzySearch2(@Param("tag") String tag);
+
+    @Select("SELECT * FROM film WHERE (name REGEXP \"${keyWord}\" OR summary REGEXP \"${keyWord}\") AND tag REGEXP \"${tag}\"")
+    List<Film> fuzzySearch3(@Param("keyWord") String keyWord, @Param("tag") String tag);
+
 }

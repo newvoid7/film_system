@@ -9,6 +9,8 @@ public interface UserService {
     ResultDTO<User> findAllUser();
     ResultDTO<User> findUserById(int userId);
     ResultDTO<User> findUserByNickname(String nickname);
+    ResultDTO<User> loginById(int userId, String pwd);
+    ResultDTO<User> loginByNickname(String nickname, String pwd);
     ResultDTO<User> findUserByUser(User user);
     ResultDTO<User> addUser(User user);
     void newUser(User user);

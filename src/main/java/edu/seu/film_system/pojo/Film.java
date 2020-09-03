@@ -1,5 +1,8 @@
 package edu.seu.film_system.pojo;
 
+import java.time.Year;
+import java.util.Objects;
+
 public class Film {
     private String name;
     private int id;
@@ -8,6 +11,8 @@ public class Film {
     private String videoUrl;
     private String imageUrl;
     private int viewCount;
+    private String tag;
+    private Year year;
 
     @Override
     public String toString() {
@@ -19,6 +24,8 @@ public class Film {
                 ", videoUrl='" + videoUrl + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
                 ", viewCount=" + viewCount +
+                ", tag='" + tag + '\'' +
+                ", year=" + year +
                 '}';
     }
 
@@ -54,6 +61,22 @@ public class Film {
         this.summary = summary;
     }
 
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    public Year getYear() {
+        return year;
+    }
+
+    public void setYear(Year year) {
+        this.year = year;
+    }
+
     public String getVideoUrl() {
         return videoUrl;
     }
@@ -81,7 +104,7 @@ public class Film {
     public Film() {
     }
 
-    public Film(String name, int id, int duration, String summary, String videoUrl, String imageUrl, int viewCount) {
+    public Film(String name, int id, int duration, String summary, String videoUrl, String imageUrl, int viewCount, String tag, Year year) {
         this.name = name;
         this.id = id;
         this.duration = duration;
@@ -89,21 +112,20 @@ public class Film {
         this.videoUrl = videoUrl;
         this.imageUrl = imageUrl;
         this.viewCount = viewCount;
+        this.tag = tag;
+        this.year = year;
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (!(obj instanceof Film)){
-            return false;
-        }
-        else {
-            Film f = (Film) obj;
-            return this.id==f.id;
-        }
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Film film = (Film) o;
+        return id == film.id;
     }
 
     @Override
     public int hashCode() {
-        return id;
+        return Objects.hash(id);
     }
 }

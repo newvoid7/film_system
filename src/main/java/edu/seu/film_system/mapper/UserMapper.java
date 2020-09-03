@@ -18,6 +18,12 @@ public interface UserMapper {
     @Select("SELECT * FROM user WHERE nickname LIKE ${nickname}")
     List<User> findUserByNickname(@Param("nickname") String nickname);
 
+    @Select("SELECT * FROM user WHERE nickname = ${nickname} AND pwd = ${pwd}")
+    List<User> loginByNickname(@Param("nickname")String nickname, @Param("pwd")String pwd);
+
+    @Select("SELECT * FROM user WHERE id = ${userId} AND pwd = ${pwd}")
+    List<User> loginById(@Param("userId")int userId, @Param("pwd")String pwd);
+
     // 根据 User 查询信息
     List<User> findUserByUser(User user);
 

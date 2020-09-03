@@ -8,7 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Service("userService")
@@ -21,7 +20,7 @@ public class UserServiceImpl implements UserService {
     public ResultDTO<User> findAllUser() {
         ResultDTO<User> resultDTO = new ResultDTO<>();
         resultDTO.setData(userMapper.findAllUser());
-        resultDTO.setCode(1);
+        resultDTO.setCode(20);
         resultDTO.setMsg("success");
         return resultDTO;
     }
@@ -30,7 +29,7 @@ public class UserServiceImpl implements UserService {
     public ResultDTO<User> findUserById(int userId) {
         ResultDTO<User> resultDTO = new ResultDTO<>();
         resultDTO.setData(userMapper.findUserById(userId));
-        resultDTO.setCode(1);
+        resultDTO.setCode(20);
         resultDTO.setMsg("success");
         return resultDTO;
     }
@@ -51,6 +50,84 @@ public class UserServiceImpl implements UserService {
             } catch (Exception e) {
                 resultDTO.setCode(11);
                 resultDTO.setMsg("Search in nickname: Database error");
+            }
+        }
+        resultDTO.setData(list);
+        return resultDTO;
+    }
+
+    @Override
+    public ResultDTO<User> loginById(int userId, String pwd) {
+        ResultDTO<User> resultDTO = new ResultDTO<>();
+        List<User> list = new ArrayList<>();
+        if (userId == 0) {
+            resultDTO.setCode(31);
+            resultDTO.setMsg("Login by ID: ID cannot be 0");
+        } else {
+            try {
+                list = userMapper.findUserById(userId);
+                if (list.size() == 1) {
+                    list = userMapper.loginById(userId, pwd);
+                    if (list.size() == 1){
+                        resultDTO.setCode(20);
+                        resultDTO.setMsg("Login by ID: Success");
+                    } else if (list.size() == 0) {
+                        resultDTO.setCode(22);
+                        resultDTO.setMsg("Login by ID: Password incorrect");
+                    } else {
+                        resultDTO.setCode(12);
+                        resultDTO.setMsg("Login by ID: Impossible");
+                    }
+
+                } else if (list.size() == 0) {
+                    resultDTO.setCode(21);
+                    resultDTO.setMsg("Login by ID: ID not exist");
+                } else {
+                    resultDTO.setCode(12);
+                    resultDTO.setMsg("Login by ID: Database has more than 1 ID");
+                }
+            } catch (Exception e) {
+                resultDTO.setCode(11);
+                resultDTO.setMsg("Login by ID: Database error");
+            }
+        }
+        resultDTO.setData(list);
+        return resultDTO;
+    }
+
+    @Override
+    public ResultDTO<User> loginByNickname(String nickname, String pwd) {
+        ResultDTO<User> resultDTO = new ResultDTO<>();
+        List<User> list = new ArrayList<>();
+        if (nickname.isEmpty()) {
+            resultDTO.setCode(31);
+            resultDTO.setMsg("Login by nickname: nickname cannot be empty");
+        } else {
+            try {
+                list = userMapper.findUserByNickname(nickname);
+                if (list.size() == 1) {
+                    list = userMapper.loginByNickname(nickname, pwd);
+                    if (list.size() == 1){
+                        resultDTO.setCode(20);
+                        resultDTO.setMsg("Login by nickname: Success");
+                    } else if (list.size() == 0) {
+                        resultDTO.setCode(22);
+                        resultDTO.setMsg("Login by nickname: Password incorrect");
+                    } else {
+                        resultDTO.setCode(12);
+                        resultDTO.setMsg("Login by nickname: Impossible");
+                    }
+
+                } else if (list.size() == 0) {
+                    resultDTO.setCode(21);
+                    resultDTO.setMsg("Login by nickname: Nickname not exist");
+                } else {
+                    resultDTO.setCode(12);
+                    resultDTO.setMsg("Login by nickname: Database has more than 1 nickname");
+                }
+            } catch (Exception e) {
+                resultDTO.setCode(11);
+                resultDTO.setMsg("Login by nickname: Database error");
             }
         }
         resultDTO.setData(list);

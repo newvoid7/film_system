@@ -14,4 +14,5 @@ public interface FilmService {
     ResultDTO<Film> searchInSummary(String keyWord);
     ResultDTO<Film> searchInTitle(String keyWord);
     ResultDTO<Film> fuzzySearch(String keyWord);
+    ResultDTO<Film> fuzzySearch(String keyWord, String tags);
 }
