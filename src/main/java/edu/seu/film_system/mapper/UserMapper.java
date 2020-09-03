@@ -18,6 +18,12 @@ public interface UserMapper {
     @Select("SELECT * FROM user WHERE nickname LIKE ${nickname}")
     List<User> findUserByNickname(@Param("nickname") String nickname);
 
+    // 根据 User 查询信息
+    List<User> findUserByUser(User user);
+
+    // INSERT
+    int addUser(User user);
+
     @Insert("INSERT INTO user (nickname, birthday, pwd) VALUES ('${nickname}', ${birthday}, '${pwd}')")
     void newUser(@Param("nickname")String nickname, @Param("birthday")Date birthday, @Param("pwd")String pwd);
 }

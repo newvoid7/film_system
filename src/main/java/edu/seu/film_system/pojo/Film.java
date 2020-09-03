@@ -91,4 +91,19 @@ public class Film {
         this.viewCount = viewCount;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Film)){
+            return false;
+        }
+        else {
+            Film f = (Film) obj;
+            return this.id==f.id;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
+    }
 }

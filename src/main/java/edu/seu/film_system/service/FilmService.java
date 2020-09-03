@@ -10,7 +10,8 @@ public interface FilmService {
     ResultDTO<Film> findAllFilm();
     ResultDTO<String> findAllSummary();
     ResultDTO<Film> findFilmLongerThan(int leastDur);
-    ResultDTO<Film> fuzzySearch(String keyWord);
-    ResultDTO<Film> exactSearch(String keyWord);
+    // ResultDTO<Film> exactSearch(String keyWord);
     ResultDTO<Film> searchInSummary(String keyWord);
+    ResultDTO<Film> searchInTitle(String keyWord);
+    ResultDTO<Film> fuzzySearch(String keyWord);
 }

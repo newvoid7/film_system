@@ -56,7 +56,7 @@ public class TestController {
     }
 
     // 删除用户
-    // 地址栏传递信息
+    // restful style 地址栏传递信息
     // http://127.0.0.1:8256/film_system/test/admin/del/1
     @RequestMapping("/admin/del/{id}")
     public String del(@PathVariable("id")int id) throws Exception {

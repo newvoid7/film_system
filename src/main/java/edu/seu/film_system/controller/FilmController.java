@@ -41,21 +41,30 @@ public class FilmController {
         return filmService.findFilmLongerThan(leastDur);
     }
 
-    // http://127.0.0.1:8256/film_system/film/find/keyword=the
+    // http://127.0.0.1:8256/film_system/film/find/name=the
     // 模糊查询：名称中含有某个值的电影（可以中文）
-    // 关键字在 url 中，地址栏传值
-    @RequestMapping("/find/keyword={keyWord}")
+    // 关键字在 url 中，restful 风格地址栏传值
+    @RequestMapping("/find/name={keyWord}")
     @ResponseBody
-    public ResultDTO<Film> fuzzySearch(@PathVariable("keyWord")String keyWord) throws Exception{
-        return filmService.fuzzySearch(keyWord);
+    public ResultDTO<Film> searchInTitle(@PathVariable("keyWord")String keyWord) throws Exception{
+        return filmService.searchInTitle(keyWord);
     }
 
     // http://127.0.0.1:8256/film_system/film/find/summary=肖申克
     // 模糊查询：简介中含有某个值的电影（可以中文）
-    // 关键字在 url 中，地址栏传值
+    // 关键字在 url 中，restful 风格地址栏传值
     @RequestMapping("/find/summary={keyWord}")
     @ResponseBody
     public ResultDTO<Film> searchInSummary(@PathVariable("keyWord")String keyWord) throws Exception{
         return filmService.searchInSummary(keyWord);
+    }
+
+    // http://127.0.0.1:8256/film_system/film/find/keyword=肖申克
+    // 模糊查询：简介或名称中含有某个值的电影（可以中文）
+    // 关键字在 url 中，restful 风格地址栏传值
+    @RequestMapping("/find/keyword={keyWord}")
+    @ResponseBody
+    public ResultDTO<Film> fuzzySearch(@PathVariable("keyWord")String keyWord) throws Exception{
+        return filmService.fuzzySearch(keyWord);
     }
 }

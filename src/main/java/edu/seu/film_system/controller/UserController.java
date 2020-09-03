@@ -28,5 +28,11 @@ public class UserController {
         return resultDTO;
     }
 
+    @RequestMapping("/addUser")
+    @ResponseBody
+    public ResultDTO<User> addUser(@RequestBody User user) throws Exception {
+        System.out.println(user.toString());
+        return userService.addUser(user);
+    }
 }
 

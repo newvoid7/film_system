@@ -13,9 +13,9 @@
         SELECT * FROM info WHERE name = #{name} AND id = #{id}
     </select>
 
-    <!-- int addInfo(Info info);] -->
+    <!-- int addInfo(Info info); -->
     <insert id="addInfo" parameterType="Info">
-        INSERT INTO Info (name, pwd, balance) VALUES (#{name}, #{pwd}, #{balance})
+        INSERT INTO info (name, pwd, balance) VALUES (#{name}, #{pwd}, #{balance})
     </insert>
 
 </mapper>
