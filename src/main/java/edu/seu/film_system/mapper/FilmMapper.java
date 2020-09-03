@@ -3,6 +3,7 @@ package edu.seu.film_system.mapper;
 import edu.seu.film_system.pojo.Film;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -30,5 +31,11 @@ public interface FilmMapper {
 
     @Select("SELECT * FROM film WHERE (name REGEXP \"${keyWord}\" OR summary REGEXP \"${keyWord}\") AND tag REGEXP \"${tag}\"")
     List<Film> fuzzySearch3(@Param("keyWord") String keyWord, @Param("tag") String tag);
+
+    @Update("UPDATE film SET view_count = view_count + 1 WHERE id = ${filmId}")
+    void viewCountIncrease(@Param("filmId") int filmId);
+
+    @Select("SELECT * FROM film ORDER BY view_count DESC LIMIT ${topN}")
+    List<Film> topFilm(@Param("topN") int topN);
 
 }

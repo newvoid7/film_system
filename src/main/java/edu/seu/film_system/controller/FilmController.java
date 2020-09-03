@@ -69,7 +69,8 @@ public class FilmController {
     }
 
     // http://127.0.0.1:8256/film_system/film/find/keyword=the/tag=A
-    // 模糊查询：简介或名称中含有某组值的电影，同时满足某个标签
+    // 模糊查询：简介或名称中含有某组值的电影，同时满足某个标签（满足标签是必须的，但是可以乱序）
+    // 同时可以关键词为空，仅以标签浏览
     // 关键字在 url 中，restful 风格地址栏传值
     @RequestMapping("/find/keyword={keyWord}/tag={tags}")
     @ResponseBody
@@ -77,4 +78,29 @@ public class FilmController {
         // System.out.println(keyWord+tags);
         return filmService.fuzzySearch(keyWord, tags);
     }
+
+    // http://localhost:8256/film_system/film/viewCountIncrease/id=1
+    // 观看某个电影，电影的观看数加 1
+    // TODO 潜在风险：通过 url 访问即可增加观看数，没有验证
+    @RequestMapping("/viewCountIncrease/id={filmId}")
+    @ResponseBody
+    public String viewCountIncrease(@PathVariable("filmId") int filmId) {
+        String msg = "";
+        int code = filmService.viewCountIncrease(filmId);
+        if (code == 20) {
+            msg = "ok";
+        } else {
+            msg = "Database Error";
+        }
+        return msg;
+    }
+
+    // http://localhost:8256/film_system/film/top5
+    // 播放量前 N 的电影
+    @RequestMapping("/top{topN}")
+    @ResponseBody
+    public ResultDTO<Film> getTopFilms(@PathVariable("topN") int topN) {
+        return filmService.topFilm(topN);
+    }
+
 }

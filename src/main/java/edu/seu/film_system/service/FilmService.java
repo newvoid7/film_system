@@ -15,4 +15,6 @@ public interface FilmService {
     ResultDTO<Film> searchInTitle(String keyWord);
     ResultDTO<Film> fuzzySearch(String keyWord);
     ResultDTO<Film> fuzzySearch(String keyWord, String tags);
+    int viewCountIncrease(int filmId);
+    ResultDTO<Film> topFilm(int topN);
 }

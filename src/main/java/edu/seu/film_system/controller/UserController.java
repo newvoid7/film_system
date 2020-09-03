@@ -30,6 +30,8 @@ public class UserController {
         return resultDTO;
     }
 
+    // 新增用户
+    // 要求一个 User 对象，通过 json 从前台传进
     @RequestMapping("/addUser")
     @ResponseBody
     public ResultDTO<User> addUser(@RequestBody User user) throws Exception {
@@ -37,6 +39,8 @@ public class UserController {
         return userService.addUser(user);
     }
 
+    // 登录
+    // 要求一个 User 对象，通过 json 从前台传进
     @RequestMapping("/login")
     @ResponseBody
     public ResultDTO<User> login(@RequestBody User user) {
@@ -59,8 +63,17 @@ public class UserController {
             resultDTO.setCode(21);
             resultDTO.setMsg("Login: ID and nickname neither exist");
             resultDTO.setData(resultDTO1.getData());
+        } else if (resultDTO1.getCode() >= 30 || resultDTO2.getCode() >= 30) {
+            resultDTO.setCode(31);
+            resultDTO.setMsg("Login: Front input error");
+            resultDTO.setData(resultDTO1.getData());
+        } else {
+            resultDTO.setCode(11);
+            resultDTO.setMsg("Login: Database error");
+            resultDTO.setData(resultDTO1.getData());
         }
         return resultDTO;
     }
+
 }
 

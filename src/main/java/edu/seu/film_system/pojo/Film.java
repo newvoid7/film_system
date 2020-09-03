@@ -10,7 +10,7 @@ public class Film {
     private String summary;
     private String video_url;
     private String image_url;
-    private int viewCount;
+    private int view_count;
     private String tag;
     private Year year;
 
@@ -23,7 +23,7 @@ public class Film {
                 ", summary='" + summary + '\'' +
                 ", videoUrl='" + video_url + '\'' +
                 ", imageUrl='" + image_url + '\'' +
-                ", viewCount=" + viewCount +
+                ", viewCount=" + view_count +
                 ", tag='" + tag + '\'' +
                 ", year=" + year +
                 '}';
@@ -93,25 +93,25 @@ public class Film {
         this.image_url = image_url;
     }
 
-    public int getViewCount() {
-        return viewCount;
+    public int getView_count() {
+        return view_count;
     }
 
-    public void setViewCount(int viewCount) {
-        this.viewCount = viewCount;
+    public void setView_count(int view_count) {
+        this.view_count = view_count;
     }
 
     public Film() {
     }
 
-    public Film(String name, int id, int duration, String summary, String video_url, String image_url, int viewCount, String tag, Year year) {
+    public Film(String name, int id, int duration, String summary, String video_url, String image_url, int view_count, String tag, Year year) {
         this.name = name;
         this.id = id;
         this.duration = duration;
         this.summary = summary;
         this.video_url = video_url;
         this.image_url = image_url;
-        this.viewCount = viewCount;
+        this.view_count = view_count;
         this.tag = tag;
         this.year = year;
     }

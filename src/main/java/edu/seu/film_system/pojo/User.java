@@ -11,14 +11,14 @@ public class User {
     private String nickname;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birthday;
-    private String avatarUrl;
+    private String avatar_url;
 
-    public User(int id, String pwd, String nickname, Date birthday, String avatarUrl) {
+    public User(int id, String pwd, String nickname, Date birthday, String avatar_url) {
         this.id = id;
         this.pwd = pwd;
         this.nickname = nickname;
         this.birthday = birthday;
-        this.avatarUrl = avatarUrl;
+        this.avatar_url = avatar_url;
     }
 
     public User() {
@@ -56,12 +56,12 @@ public class User {
         this.birthday = birthday;
     }
 
-    public String getAvatarUrl() {
-        return avatarUrl;
+    public String getAvatar_url() {
+        return avatar_url;
     }
 
-    public void setAvatarUrl(String avatarUrl) {
-        this.avatarUrl = avatarUrl;
+    public void setAvatar_url(String avatar_url) {
+        this.avatar_url = avatar_url;
     }
 
     @Override
@@ -71,7 +71,7 @@ public class User {
                 ", pwd='" + pwd + '\'' +
                 ", nickname='" + nickname + '\'' +
                 ", birthday=" + birthday +
-                ", avatarUrl='" + avatarUrl + '\'' +
+                ", avatarUrl='" + avatar_url + '\'' +
                 '}';
     }
 

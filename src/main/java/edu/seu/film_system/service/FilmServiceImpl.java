@@ -145,4 +145,31 @@ public class FilmServiceImpl implements FilmService{
         return resultDTO;
     }
 
+    @Override
+    public int viewCountIncrease(int filmId) {
+        int returnValue;
+        try {
+            filmMapper.viewCountIncrease(filmId);
+            returnValue = 20;
+        } catch (Exception e) {
+            returnValue = 11;
+        }
+        return returnValue;
+    }
+
+    @Override
+    public ResultDTO<Film> topFilm(int topN) {
+        ResultDTO<Film> resultDTO = new ResultDTO<>();
+        List<Film> list = new ArrayList<>();
+        try {
+            list = filmMapper.topFilm(topN);
+            resultDTO.setCode(20);
+            resultDTO.setMsg("Get top films: Success");
+        } catch (Exception e) {
+            resultDTO.setCode(11);
+            resultDTO.setMsg("Get top films: Database error");
+        }
+        resultDTO.setData(list);
+        return resultDTO;
+    }
 }

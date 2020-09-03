@@ -3,6 +3,7 @@ package edu.seu.film_system.pojo;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Review {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -61,5 +62,20 @@ public class Review {
                 ", filmId=" + filmId +
                 ", content='" + content + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Review review = (Review) o;
+        return userId == review.userId &&
+                filmId == review.filmId &&
+                time.equals(review.time);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(time, userId, filmId);
     }
 }
