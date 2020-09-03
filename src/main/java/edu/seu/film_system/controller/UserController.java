@@ -39,9 +39,27 @@ public class UserController {
 
     @RequestMapping("/login")
     @ResponseBody
-    public ResultDTO<User> checkUser(String nickname, String pwd) {
-        ResultDTO<User> resultDTO = userService.findUserByNickname(nickname);
-
+    public ResultDTO<User> login(@RequestBody User user) {
+        ResultDTO<User> resultDTO1 = userService.loginByNickname(user.getNickname(), user.getPwd());
+        ResultDTO<User> resultDTO2 = userService.loginById(user.getId(), user.getPwd());
+        ResultDTO<User> resultDTO = new ResultDTO<>();
+        if (resultDTO1.getCode() == 20) {
+            resultDTO.setCode(201);
+            resultDTO.setMsg("Login: Success logged in by nickname");
+            resultDTO.setData(resultDTO1.getData());
+        } else if (resultDTO2.getCode() == 20) {
+            resultDTO.setCode(202);
+            resultDTO.setMsg("Login: Success logged in by id");
+            resultDTO.setData(resultDTO2.getData());
+        } else if (resultDTO1.getCode() == 22 || resultDTO2.getCode() == 22) {
+            resultDTO.setCode(22);
+            resultDTO.setMsg("Login: Password incorrect");
+            resultDTO.setData(resultDTO1.getData());
+        } else if (resultDTO1.getCode() == 21 && resultDTO2.getCode() == 21) {
+            resultDTO.setCode(21);
+            resultDTO.setMsg("Login: ID and nickname neither exist");
+            resultDTO.setData(resultDTO1.getData());
+        }
         return resultDTO;
     }
 }

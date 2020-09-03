@@ -8,8 +8,8 @@ public class Film {
     private int id;
     private int duration;
     private String summary;
-    private String videoUrl;
-    private String imageUrl;
+    private String video_url;
+    private String image_url;
     private int viewCount;
     private String tag;
     private Year year;
@@ -21,8 +21,8 @@ public class Film {
                 ", id=" + id +
                 ", duration=" + duration +
                 ", summary='" + summary + '\'' +
-                ", videoUrl='" + videoUrl + '\'' +
-                ", imageUrl='" + imageUrl + '\'' +
+                ", videoUrl='" + video_url + '\'' +
+                ", imageUrl='" + image_url + '\'' +
                 ", viewCount=" + viewCount +
                 ", tag='" + tag + '\'' +
                 ", year=" + year +
@@ -77,20 +77,20 @@ public class Film {
         this.year = year;
     }
 
-    public String getVideoUrl() {
-        return videoUrl;
+    public String getVideo_url() {
+        return video_url;
     }
 
-    public void setVideoUrl(String videoUrl) {
-        this.videoUrl = videoUrl;
+    public void setVideo_url(String video_url) {
+        this.video_url = video_url;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getImage_url() {
+        return image_url;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
     }
 
     public int getViewCount() {
@@ -104,13 +104,13 @@ public class Film {
     public Film() {
     }
 
-    public Film(String name, int id, int duration, String summary, String videoUrl, String imageUrl, int viewCount, String tag, Year year) {
+    public Film(String name, int id, int duration, String summary, String video_url, String image_url, int viewCount, String tag, Year year) {
         this.name = name;
         this.id = id;
         this.duration = duration;
         this.summary = summary;
-        this.videoUrl = videoUrl;
-        this.imageUrl = imageUrl;
+        this.video_url = video_url;
+        this.image_url = image_url;
         this.viewCount = viewCount;
         this.tag = tag;
         this.year = year;
