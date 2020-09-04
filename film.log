@@ -20406,3 +20406,795 @@ java.lang.NumberFormatException: For input string: "小刘"
 2020-09-04 09:13:16,688 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@2627d60e
 2020-09-04 09:13:16,692 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@57d908c6
 2020-09-04 09:13:16,692 DEBUG HikariPool:417 -HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 09:18:14,441 DEBUG ResourceBundleMessageInterpolator:89 -Loaded expression factory via original TCCL
+2020-09-04 09:18:14,449 DEBUG ValidatorFactoryImpl:578 -HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-09-04 09:18:14,449 DEBUG ValidatorFactoryImpl:579 -HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-09-04 09:18:14,449 DEBUG ValidatorFactoryImpl:580 -HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-09-04 09:18:14,449 DEBUG ValidatorFactoryImpl:581 -HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-09-04 09:18:14,450 DEBUG ValidatorFactoryImpl:582 -HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-09-04 09:18:14,519 INFO  FilmSystemApplication:55 -Starting FilmSystemApplication on XLZ-Dell with PID 13968 (D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes started by Xuliz in D:\X\Desktop\IDEA-WeChatApp\film_system)
+2020-09-04 09:18:14,521 DEBUG FilmSystemApplication:56 -Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-09-04 09:18:14,522 INFO  FilmSystemApplication:651 -No active profile set, falling back to default profiles: default
+2020-09-04 09:18:14,958 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\FilmMapper.class]
+2020-09-04 09:18:14,959 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\InfoMapper.class]
+2020-09-04 09:18:14,959 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\RecordMapper.class]
+2020-09-04 09:18:14,959 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\ReviewMapper.class]
+2020-09-04 09:18:14,959 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\UserMapper.class]
+2020-09-04 09:18:14,959 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'filmMapper' and 'edu.seu.film_system.mapper.FilmMapper' mapperInterface
+2020-09-04 09:18:14,961 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'filmMapper'.
+2020-09-04 09:18:14,961 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'infoMapper' and 'edu.seu.film_system.mapper.InfoMapper' mapperInterface
+2020-09-04 09:18:14,961 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'infoMapper'.
+2020-09-04 09:18:14,961 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'recordMapper' and 'edu.seu.film_system.mapper.RecordMapper' mapperInterface
+2020-09-04 09:18:14,961 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'recordMapper'.
+2020-09-04 09:18:14,961 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'reviewMapper' and 'edu.seu.film_system.mapper.ReviewMapper' mapperInterface
+2020-09-04 09:18:14,962 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'reviewMapper'.
+2020-09-04 09:18:14,962 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'userMapper' and 'edu.seu.film_system.mapper.UserMapper' mapperInterface
+2020-09-04 09:18:14,962 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+2020-09-04 09:18:15,688 INFO  Http11NioProtocol:173 -Initializing ProtocolHandler ["http-nio-8256"]
+2020-09-04 09:18:15,689 INFO  StandardService:173 -Starting service [Tomcat]
+2020-09-04 09:18:15,689 INFO  StandardEngine:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-04 09:18:15,764 INFO  [/film_system]:173 -Initializing Spring embedded WebApplicationContext
+2020-09-04 09:18:15,835 DEBUG HikariConfig:900 -Driver class com.mysql.jdbc.Driver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3924490d
+2020-09-04 09:18:15,852 DEBUG LogFactory:135 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-09-04 09:18:15,884 DEBUG VFS:77 -Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+2020-09-04 09:18:15,886 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Film matches criteria [is assignable to Object]
+2020-09-04 09:18:15,886 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Info matches criteria [is assignable to Object]
+2020-09-04 09:18:15,887 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Record matches criteria [is assignable to Object]
+2020-09-04 09:18:15,887 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.ResultDTO matches criteria [is assignable to Object]
+2020-09-04 09:18:15,887 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Review matches criteria [is assignable to Object]
+2020-09-04 09:18:15,888 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.User matches criteria [is assignable to Object]
+2020-09-04 09:18:15,889 DEBUG SqlSessionFactoryBean:437 -Scanned package: 'edu.seu.film_system.pojo' for aliases
+2020-09-04 09:18:15,943 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\FilmMapper.xml]'
+2020-09-04 09:18:15,973 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\InfoMapper.xml]'
+2020-09-04 09:18:15,982 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\ReviewMapper.xml]'
+2020-09-04 09:18:15,993 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\UserMapper.xml]'
+2020-09-04 09:18:16,120 DEBUG TraversableResolvers:60 -Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-09-04 09:18:16,121 DEBUG ResourceBundleMessageInterpolator:89 -Loaded expression factory via original TCCL
+2020-09-04 09:18:16,121 DEBUG ConfigurationImpl:148 -Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2020-09-04 09:18:16,122 DEBUG ConfigurationImpl:180 -Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2020-09-04 09:18:16,122 DEBUG ConfigurationImpl:194 -Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2020-09-04 09:18:16,123 DEBUG ValidationXmlParser:120 -Trying to load META-INF/validation.xml for XML based Validator configuration.
+2020-09-04 09:18:16,123 DEBUG ResourceLoaderHelper:53 -Trying to load META-INF/validation.xml via user class loader
+2020-09-04 09:18:16,123 DEBUG ResourceLoaderHelper:60 -Trying to load META-INF/validation.xml via TCCL
+2020-09-04 09:18:16,124 DEBUG ResourceLoaderHelper:66 -Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2020-09-04 09:18:16,124 DEBUG ValidationXmlParser:127 -No META-INF/validation.xml found. Using annotation based configuration only.
+2020-09-04 09:18:16,127 DEBUG ValidatorFactoryImpl:578 -HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-09-04 09:18:16,127 DEBUG ValidatorFactoryImpl:579 -HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-09-04 09:18:16,127 DEBUG ValidatorFactoryImpl:580 -HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-09-04 09:18:16,128 DEBUG ValidatorFactoryImpl:581 -HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-09-04 09:18:16,128 DEBUG ValidatorFactoryImpl:582 -HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-09-04 09:18:16,182 DEBUG TraversableResolvers:60 -Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-09-04 09:18:16,183 DEBUG ResourceBundleMessageInterpolator:89 -Loaded expression factory via original TCCL
+2020-09-04 09:18:16,184 DEBUG TraversableResolvers:60 -Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-09-04 09:18:16,184 DEBUG ConfigurationImpl:148 -Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2020-09-04 09:18:16,184 DEBUG ConfigurationImpl:180 -Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2020-09-04 09:18:16,184 DEBUG ConfigurationImpl:194 -Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2020-09-04 09:18:16,184 DEBUG ValidationXmlParser:120 -Trying to load META-INF/validation.xml for XML based Validator configuration.
+2020-09-04 09:18:16,184 DEBUG ResourceLoaderHelper:53 -Trying to load META-INF/validation.xml via user class loader
+2020-09-04 09:18:16,185 DEBUG ResourceLoaderHelper:60 -Trying to load META-INF/validation.xml via TCCL
+2020-09-04 09:18:16,185 DEBUG ResourceLoaderHelper:66 -Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2020-09-04 09:18:16,185 DEBUG ValidationXmlParser:127 -No META-INF/validation.xml found. Using annotation based configuration only.
+2020-09-04 09:18:16,186 DEBUG ValidatorFactoryImpl:578 -HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-09-04 09:18:16,186 DEBUG ValidatorFactoryImpl:579 -HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-09-04 09:18:16,186 DEBUG ValidatorFactoryImpl:580 -HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-09-04 09:18:16,187 DEBUG ValidatorFactoryImpl:581 -HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-09-04 09:18:16,188 DEBUG ValidatorFactoryImpl:582 -HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-09-04 09:18:16,244 DEBUG InternalLoggerFactory:45 -Using SLF4J as the default logging framework
+2020-09-04 09:18:16,247 DEBUG DefaultClientResources:109 --Dio.netty.eventLoopThreads: 8
+2020-09-04 09:18:16,255 DEBUG DefaultEventLoopGroupProvider:138 -Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+2020-09-04 09:18:16,275 DEBUG InternalThreadLocalMap:54 --Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2020-09-04 09:18:16,275 DEBUG InternalThreadLocalMap:57 --Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2020-09-04 09:18:16,281 DEBUG ResourceLeakDetector:130 --Dio.netty.leakDetection.level: simple
+2020-09-04 09:18:16,281 DEBUG ResourceLeakDetector:131 --Dio.netty.leakDetection.targetRecords: 4
+2020-09-04 09:18:16,283 DEBUG ResourceLeakDetectorFactory:195 -Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@788fb399
+2020-09-04 09:18:16,286 DEBUG PlatformDependent:987 -Platform: Windows
+2020-09-04 09:18:16,287 DEBUG PlatformDependent0:396 --Dio.netty.noUnsafe: false
+2020-09-04 09:18:16,288 DEBUG PlatformDependent0:852 -Java version: 8
+2020-09-04 09:18:16,289 DEBUG PlatformDependent0:121 -sun.misc.Unsafe.theUnsafe: available
+2020-09-04 09:18:16,289 DEBUG PlatformDependent0:145 -sun.misc.Unsafe.copyMemory: available
+2020-09-04 09:18:16,290 DEBUG PlatformDependent0:183 -java.nio.Buffer.address: available
+2020-09-04 09:18:16,290 DEBUG PlatformDependent0:244 -direct buffer constructor: available
+2020-09-04 09:18:16,291 DEBUG PlatformDependent0:314 -java.nio.Bits.unaligned: available, true
+2020-09-04 09:18:16,291 DEBUG PlatformDependent0:379 -jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2020-09-04 09:18:16,291 DEBUG PlatformDependent0:386 -java.nio.DirectByteBuffer.<init>(long, int): available
+2020-09-04 09:18:16,291 DEBUG PlatformDependent:1030 -sun.misc.Unsafe: available
+2020-09-04 09:18:16,292 DEBUG PlatformDependent:1149 --Dio.netty.tmpdir: C:\Users\Xuliz\AppData\Local\Temp (java.io.tmpdir)
+2020-09-04 09:18:16,292 DEBUG PlatformDependent:1228 --Dio.netty.bitMode: 64 (sun.arch.data.model)
+2020-09-04 09:18:16,294 DEBUG PlatformDependent:174 --Dio.netty.maxDirectMemory: 1879048192 bytes
+2020-09-04 09:18:16,294 DEBUG PlatformDependent:181 --Dio.netty.uninitializedArrayAllocationThreshold: -1
+2020-09-04 09:18:16,296 DEBUG CleanerJava6:92 -java.nio.ByteBuffer.cleaner(): available
+2020-09-04 09:18:16,296 DEBUG PlatformDependent:201 --Dio.netty.noPreferDirect: false
+2020-09-04 09:18:16,297 DEBUG PlatformDependent:891 -org.jctools-core.MpscChunkedArrayQueue: available
+2020-09-04 09:18:16,307 DEBUG Loggers$LoggerFactory:249 -Using Slf4j logging framework
+2020-09-04 09:18:16,324 DEBUG DefaultClientResources:190 -LatencyUtils/HdrUtils are not available, metrics are disabled
+2020-09-04 09:18:16,365 DEBUG PooledByteBufAllocator:142 --Dio.netty.allocator.numHeapArenas: 16
+2020-09-04 09:18:16,365 DEBUG PooledByteBufAllocator:143 --Dio.netty.allocator.numDirectArenas: 16
+2020-09-04 09:18:16,365 DEBUG PooledByteBufAllocator:145 --Dio.netty.allocator.pageSize: 8192
+2020-09-04 09:18:16,366 DEBUG PooledByteBufAllocator:150 --Dio.netty.allocator.maxOrder: 11
+2020-09-04 09:18:16,366 DEBUG PooledByteBufAllocator:154 --Dio.netty.allocator.chunkSize: 16777216
+2020-09-04 09:18:16,366 DEBUG PooledByteBufAllocator:155 --Dio.netty.allocator.tinyCacheSize: 512
+2020-09-04 09:18:16,366 DEBUG PooledByteBufAllocator:156 --Dio.netty.allocator.smallCacheSize: 256
+2020-09-04 09:18:16,366 DEBUG PooledByteBufAllocator:157 --Dio.netty.allocator.normalCacheSize: 64
+2020-09-04 09:18:16,366 DEBUG PooledByteBufAllocator:158 --Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2020-09-04 09:18:16,366 DEBUG PooledByteBufAllocator:159 --Dio.netty.allocator.cacheTrimInterval: 8192
+2020-09-04 09:18:16,367 DEBUG PooledByteBufAllocator:160 --Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2020-09-04 09:18:16,367 DEBUG PooledByteBufAllocator:161 --Dio.netty.allocator.useCacheForAllThreads: true
+2020-09-04 09:18:16,367 DEBUG PooledByteBufAllocator:162 --Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2020-09-04 09:18:16,521 WARN  JacksonAutoConfiguration$JodaDateTimeJacksonConfiguration:123 -Auto-configuration of Jackson's Joda-Time integration is deprecated in favor of using java.time (JSR-310).
+2020-09-04 09:18:16,643 INFO  Http11NioProtocol:173 -Starting ProtocolHandler ["http-nio-8256"]
+2020-09-04 09:18:16,664 INFO  FilmSystemApplication:61 -Started FilmSystemApplication in 2.492 seconds (JVM running for 4.482)
+2020-09-04 09:18:18,942 INFO  [/film_system]:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-04 09:18:19,036 ERROR [dispatcherServlet]:175 -Servlet.service() for servlet [dispatcherServlet] in context with path [/film_system] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: For input string: "小刘"] with root cause
+java.lang.NumberFormatException: For input string: "小刘"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[?:1.8.0_141]
+	at java.lang.Integer.parseInt(Integer.java:580) ~[?:1.8.0_141]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[?:1.8.0_141]
+	at edu.seu.film_system.controller.UserController.login(UserController.java:52) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_141]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_141]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_141]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_141]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_141]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_141]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_141]
+2020-09-04 09:21:15,579 DEBUG ResourceBundleMessageInterpolator:89 -Loaded expression factory via original TCCL
+2020-09-04 09:21:15,587 DEBUG ValidatorFactoryImpl:578 -HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-09-04 09:21:15,587 DEBUG ValidatorFactoryImpl:579 -HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-09-04 09:21:15,587 DEBUG ValidatorFactoryImpl:580 -HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-09-04 09:21:15,587 DEBUG ValidatorFactoryImpl:581 -HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-09-04 09:21:15,588 DEBUG ValidatorFactoryImpl:582 -HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-09-04 09:21:15,654 INFO  FilmSystemApplication:55 -Starting FilmSystemApplication on XLZ-Dell with PID 6080 (D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes started by Xuliz in D:\X\Desktop\IDEA-WeChatApp\film_system)
+2020-09-04 09:21:15,656 DEBUG FilmSystemApplication:56 -Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-09-04 09:21:15,657 INFO  FilmSystemApplication:651 -No active profile set, falling back to default profiles: default
+2020-09-04 09:21:16,095 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\FilmMapper.class]
+2020-09-04 09:21:16,096 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\InfoMapper.class]
+2020-09-04 09:21:16,096 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\RecordMapper.class]
+2020-09-04 09:21:16,096 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\ReviewMapper.class]
+2020-09-04 09:21:16,096 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\UserMapper.class]
+2020-09-04 09:21:16,097 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'filmMapper' and 'edu.seu.film_system.mapper.FilmMapper' mapperInterface
+2020-09-04 09:21:16,098 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'filmMapper'.
+2020-09-04 09:21:16,098 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'infoMapper' and 'edu.seu.film_system.mapper.InfoMapper' mapperInterface
+2020-09-04 09:21:16,098 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'infoMapper'.
+2020-09-04 09:21:16,098 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'recordMapper' and 'edu.seu.film_system.mapper.RecordMapper' mapperInterface
+2020-09-04 09:21:16,098 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'recordMapper'.
+2020-09-04 09:21:16,098 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'reviewMapper' and 'edu.seu.film_system.mapper.ReviewMapper' mapperInterface
+2020-09-04 09:21:16,098 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'reviewMapper'.
+2020-09-04 09:21:16,099 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'userMapper' and 'edu.seu.film_system.mapper.UserMapper' mapperInterface
+2020-09-04 09:21:16,099 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+2020-09-04 09:21:16,813 INFO  Http11NioProtocol:173 -Initializing ProtocolHandler ["http-nio-8256"]
+2020-09-04 09:21:16,813 INFO  StandardService:173 -Starting service [Tomcat]
+2020-09-04 09:21:16,814 INFO  StandardEngine:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-04 09:21:16,887 INFO  [/film_system]:173 -Initializing Spring embedded WebApplicationContext
+2020-09-04 09:21:16,961 DEBUG HikariConfig:900 -Driver class com.mysql.jdbc.Driver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@500f8df9
+2020-09-04 09:21:16,978 DEBUG LogFactory:135 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-09-04 09:21:17,009 DEBUG VFS:77 -Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+2020-09-04 09:21:17,010 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Film matches criteria [is assignable to Object]
+2020-09-04 09:21:17,012 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Info matches criteria [is assignable to Object]
+2020-09-04 09:21:17,012 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Record matches criteria [is assignable to Object]
+2020-09-04 09:21:17,013 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.ResultDTO matches criteria [is assignable to Object]
+2020-09-04 09:21:17,013 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Review matches criteria [is assignable to Object]
+2020-09-04 09:21:17,013 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.User matches criteria [is assignable to Object]
+2020-09-04 09:21:17,014 DEBUG SqlSessionFactoryBean:437 -Scanned package: 'edu.seu.film_system.pojo' for aliases
+2020-09-04 09:21:17,063 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\FilmMapper.xml]'
+2020-09-04 09:21:17,093 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\InfoMapper.xml]'
+2020-09-04 09:21:17,102 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\ReviewMapper.xml]'
+2020-09-04 09:21:17,113 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\UserMapper.xml]'
+2020-09-04 09:21:17,234 DEBUG TraversableResolvers:60 -Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-09-04 09:21:17,234 DEBUG ResourceBundleMessageInterpolator:89 -Loaded expression factory via original TCCL
+2020-09-04 09:21:17,235 DEBUG ConfigurationImpl:148 -Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2020-09-04 09:21:17,235 DEBUG ConfigurationImpl:180 -Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2020-09-04 09:21:17,236 DEBUG ConfigurationImpl:194 -Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2020-09-04 09:21:17,236 DEBUG ValidationXmlParser:120 -Trying to load META-INF/validation.xml for XML based Validator configuration.
+2020-09-04 09:21:17,237 DEBUG ResourceLoaderHelper:53 -Trying to load META-INF/validation.xml via user class loader
+2020-09-04 09:21:17,237 DEBUG ResourceLoaderHelper:60 -Trying to load META-INF/validation.xml via TCCL
+2020-09-04 09:21:17,237 DEBUG ResourceLoaderHelper:66 -Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2020-09-04 09:21:17,238 DEBUG ValidationXmlParser:127 -No META-INF/validation.xml found. Using annotation based configuration only.
+2020-09-04 09:21:17,240 DEBUG ValidatorFactoryImpl:578 -HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-09-04 09:21:17,240 DEBUG ValidatorFactoryImpl:579 -HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-09-04 09:21:17,241 DEBUG ValidatorFactoryImpl:580 -HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-09-04 09:21:17,241 DEBUG ValidatorFactoryImpl:581 -HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-09-04 09:21:17,241 DEBUG ValidatorFactoryImpl:582 -HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-09-04 09:21:17,288 DEBUG TraversableResolvers:60 -Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-09-04 09:21:17,288 DEBUG ResourceBundleMessageInterpolator:89 -Loaded expression factory via original TCCL
+2020-09-04 09:21:17,288 DEBUG TraversableResolvers:60 -Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-09-04 09:21:17,289 DEBUG ConfigurationImpl:148 -Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2020-09-04 09:21:17,289 DEBUG ConfigurationImpl:180 -Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2020-09-04 09:21:17,289 DEBUG ConfigurationImpl:194 -Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2020-09-04 09:21:17,289 DEBUG ValidationXmlParser:120 -Trying to load META-INF/validation.xml for XML based Validator configuration.
+2020-09-04 09:21:17,289 DEBUG ResourceLoaderHelper:53 -Trying to load META-INF/validation.xml via user class loader
+2020-09-04 09:21:17,290 DEBUG ResourceLoaderHelper:60 -Trying to load META-INF/validation.xml via TCCL
+2020-09-04 09:21:17,290 DEBUG ResourceLoaderHelper:66 -Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2020-09-04 09:21:17,290 DEBUG ValidationXmlParser:127 -No META-INF/validation.xml found. Using annotation based configuration only.
+2020-09-04 09:21:17,292 DEBUG ValidatorFactoryImpl:578 -HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-09-04 09:21:17,292 DEBUG ValidatorFactoryImpl:579 -HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-09-04 09:21:17,292 DEBUG ValidatorFactoryImpl:580 -HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-09-04 09:21:17,293 DEBUG ValidatorFactoryImpl:581 -HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-09-04 09:21:17,293 DEBUG ValidatorFactoryImpl:582 -HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-09-04 09:21:17,344 DEBUG InternalLoggerFactory:45 -Using SLF4J as the default logging framework
+2020-09-04 09:21:17,347 DEBUG DefaultClientResources:109 --Dio.netty.eventLoopThreads: 8
+2020-09-04 09:21:17,353 DEBUG DefaultEventLoopGroupProvider:138 -Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+2020-09-04 09:21:17,372 DEBUG InternalThreadLocalMap:54 --Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2020-09-04 09:21:17,372 DEBUG InternalThreadLocalMap:57 --Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2020-09-04 09:21:17,378 DEBUG ResourceLeakDetector:130 --Dio.netty.leakDetection.level: simple
+2020-09-04 09:21:17,378 DEBUG ResourceLeakDetector:131 --Dio.netty.leakDetection.targetRecords: 4
+2020-09-04 09:21:17,379 DEBUG ResourceLeakDetectorFactory:195 -Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@9cf43ce
+2020-09-04 09:21:17,382 DEBUG PlatformDependent:987 -Platform: Windows
+2020-09-04 09:21:17,383 DEBUG PlatformDependent0:396 --Dio.netty.noUnsafe: false
+2020-09-04 09:21:17,383 DEBUG PlatformDependent0:852 -Java version: 8
+2020-09-04 09:21:17,385 DEBUG PlatformDependent0:121 -sun.misc.Unsafe.theUnsafe: available
+2020-09-04 09:21:17,385 DEBUG PlatformDependent0:145 -sun.misc.Unsafe.copyMemory: available
+2020-09-04 09:21:17,386 DEBUG PlatformDependent0:183 -java.nio.Buffer.address: available
+2020-09-04 09:21:17,387 DEBUG PlatformDependent0:244 -direct buffer constructor: available
+2020-09-04 09:21:17,387 DEBUG PlatformDependent0:314 -java.nio.Bits.unaligned: available, true
+2020-09-04 09:21:17,387 DEBUG PlatformDependent0:379 -jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2020-09-04 09:21:17,388 DEBUG PlatformDependent0:386 -java.nio.DirectByteBuffer.<init>(long, int): available
+2020-09-04 09:21:17,388 DEBUG PlatformDependent:1030 -sun.misc.Unsafe: available
+2020-09-04 09:21:17,389 DEBUG PlatformDependent:1149 --Dio.netty.tmpdir: C:\Users\Xuliz\AppData\Local\Temp (java.io.tmpdir)
+2020-09-04 09:21:17,389 DEBUG PlatformDependent:1228 --Dio.netty.bitMode: 64 (sun.arch.data.model)
+2020-09-04 09:21:17,391 DEBUG PlatformDependent:174 --Dio.netty.maxDirectMemory: 1879048192 bytes
+2020-09-04 09:21:17,391 DEBUG PlatformDependent:181 --Dio.netty.uninitializedArrayAllocationThreshold: -1
+2020-09-04 09:21:17,392 DEBUG CleanerJava6:92 -java.nio.ByteBuffer.cleaner(): available
+2020-09-04 09:21:17,392 DEBUG PlatformDependent:201 --Dio.netty.noPreferDirect: false
+2020-09-04 09:21:17,393 DEBUG PlatformDependent:891 -org.jctools-core.MpscChunkedArrayQueue: available
+2020-09-04 09:21:17,410 DEBUG Loggers$LoggerFactory:249 -Using Slf4j logging framework
+2020-09-04 09:21:17,434 DEBUG DefaultClientResources:190 -LatencyUtils/HdrUtils are not available, metrics are disabled
+2020-09-04 09:21:17,479 DEBUG PooledByteBufAllocator:142 --Dio.netty.allocator.numHeapArenas: 16
+2020-09-04 09:21:17,479 DEBUG PooledByteBufAllocator:143 --Dio.netty.allocator.numDirectArenas: 16
+2020-09-04 09:21:17,480 DEBUG PooledByteBufAllocator:145 --Dio.netty.allocator.pageSize: 8192
+2020-09-04 09:21:17,480 DEBUG PooledByteBufAllocator:150 --Dio.netty.allocator.maxOrder: 11
+2020-09-04 09:21:17,480 DEBUG PooledByteBufAllocator:154 --Dio.netty.allocator.chunkSize: 16777216
+2020-09-04 09:21:17,480 DEBUG PooledByteBufAllocator:155 --Dio.netty.allocator.tinyCacheSize: 512
+2020-09-04 09:21:17,480 DEBUG PooledByteBufAllocator:156 --Dio.netty.allocator.smallCacheSize: 256
+2020-09-04 09:21:17,480 DEBUG PooledByteBufAllocator:157 --Dio.netty.allocator.normalCacheSize: 64
+2020-09-04 09:21:17,480 DEBUG PooledByteBufAllocator:158 --Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2020-09-04 09:21:17,481 DEBUG PooledByteBufAllocator:159 --Dio.netty.allocator.cacheTrimInterval: 8192
+2020-09-04 09:21:17,481 DEBUG PooledByteBufAllocator:160 --Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2020-09-04 09:21:17,481 DEBUG PooledByteBufAllocator:161 --Dio.netty.allocator.useCacheForAllThreads: true
+2020-09-04 09:21:17,481 DEBUG PooledByteBufAllocator:162 --Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2020-09-04 09:21:17,639 WARN  JacksonAutoConfiguration$JodaDateTimeJacksonConfiguration:123 -Auto-configuration of Jackson's Joda-Time integration is deprecated in favor of using java.time (JSR-310).
+2020-09-04 09:21:17,752 INFO  Http11NioProtocol:173 -Starting ProtocolHandler ["http-nio-8256"]
+2020-09-04 09:21:17,771 INFO  FilmSystemApplication:61 -Started FilmSystemApplication in 2.448 seconds (JVM running for 4.359)
+2020-09-04 09:21:20,612 INFO  [/film_system]:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-04 09:21:20,702 DEBUG HikariConfig:1020 -HikariPool-1 - configuration:
+2020-09-04 09:21:20,704 DEBUG HikariConfig:1052 -allowPoolSuspension.............false
+2020-09-04 09:21:20,704 DEBUG HikariConfig:1052 -autoCommit......................true
+2020-09-04 09:21:20,704 DEBUG HikariConfig:1052 -catalog.........................none
+2020-09-04 09:21:20,704 DEBUG HikariConfig:1052 -connectionInitSql...............none
+2020-09-04 09:21:20,704 DEBUG HikariConfig:1052 -connectionTestQuery.............none
+2020-09-04 09:21:20,705 DEBUG HikariConfig:1052 -connectionTimeout...............30000
+2020-09-04 09:21:20,705 DEBUG HikariConfig:1052 -dataSource......................none
+2020-09-04 09:21:20,705 DEBUG HikariConfig:1052 -dataSourceClassName.............none
+2020-09-04 09:21:20,705 DEBUG HikariConfig:1052 -dataSourceJNDI..................none
+2020-09-04 09:21:20,706 DEBUG HikariConfig:1052 -dataSourceProperties............{password=<masked>}
+2020-09-04 09:21:20,706 DEBUG HikariConfig:1052 -driverClassName................."com.mysql.jdbc.Driver"
+2020-09-04 09:21:20,706 DEBUG HikariConfig:1052 -healthCheckProperties...........{}
+2020-09-04 09:21:20,706 DEBUG HikariConfig:1052 -healthCheckRegistry.............none
+2020-09-04 09:21:20,706 DEBUG HikariConfig:1052 -idleTimeout.....................600000
+2020-09-04 09:21:20,707 DEBUG HikariConfig:1052 -initializationFailTimeout.......1
+2020-09-04 09:21:20,707 DEBUG HikariConfig:1052 -isolateInternalQueries..........false
+2020-09-04 09:21:20,707 DEBUG HikariConfig:1052 -jdbcUrl.........................jdbc:mysql://localhost:3306/film_system?characterEncoding=utf-8
+2020-09-04 09:21:20,707 DEBUG HikariConfig:1052 -leakDetectionThreshold..........0
+2020-09-04 09:21:20,707 DEBUG HikariConfig:1052 -maxLifetime.....................1800000
+2020-09-04 09:21:20,708 DEBUG HikariConfig:1052 -maximumPoolSize.................10
+2020-09-04 09:21:20,708 DEBUG HikariConfig:1052 -metricRegistry..................none
+2020-09-04 09:21:20,708 DEBUG HikariConfig:1052 -metricsTrackerFactory...........none
+2020-09-04 09:21:20,708 DEBUG HikariConfig:1052 -minimumIdle.....................10
+2020-09-04 09:21:20,708 DEBUG HikariConfig:1052 -password........................<masked>
+2020-09-04 09:21:20,708 DEBUG HikariConfig:1052 -poolName........................"HikariPool-1"
+2020-09-04 09:21:20,709 DEBUG HikariConfig:1052 -readOnly........................false
+2020-09-04 09:21:20,709 DEBUG HikariConfig:1052 -registerMbeans..................false
+2020-09-04 09:21:20,709 DEBUG HikariConfig:1052 -scheduledExecutor...............none
+2020-09-04 09:21:20,709 DEBUG HikariConfig:1052 -schema..........................none
+2020-09-04 09:21:20,709 DEBUG HikariConfig:1052 -threadFactory...................internal
+2020-09-04 09:21:20,709 DEBUG HikariConfig:1052 -transactionIsolation............default
+2020-09-04 09:21:20,710 DEBUG HikariConfig:1052 -username........................"root"
+2020-09-04 09:21:20,710 DEBUG HikariConfig:1052 -validationTimeout...............5000
+2020-09-04 09:21:20,710 INFO  HikariDataSource:110 -HikariPool-1 - Starting...
+2020-09-04 09:21:20,858 DEBUG HikariPool:558 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@60072b6f
+2020-09-04 09:21:20,866 INFO  HikariDataSource:123 -HikariPool-1 - Start completed.
+2020-09-04 09:21:20,894 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 09:21:20,901 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@366f929f]
+2020-09-04 09:21:20,924 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@929719934 wrapping com.mysql.jdbc.JDBC4Connection@60072b6f] will be managed by Spring
+2020-09-04 09:21:20,929 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE '小刘' 
+2020-09-04 09:21:20,945 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 09:21:20,974 DEBUG findUserByNickname:159 -<==      Total: 1
+2020-09-04 09:21:20,976 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@366f929f]
+2020-09-04 09:21:20,977 DEBUG SqlSessionUtils:163 -Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@366f929f] from current transaction
+2020-09-04 09:21:20,977 DEBUG loginByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname = '小刘' AND pwd = '111' 
+2020-09-04 09:21:20,977 DEBUG loginByNickname:159 -==> Parameters: 
+2020-09-04 09:21:20,978 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=1, active=1, idle=0, waiting=0)
+2020-09-04 09:21:20,979 DEBUG loginByNickname:159 -<==      Total: 1
+2020-09-04 09:21:20,979 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@366f929f]
+2020-09-04 09:21:20,980 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@366f929f]
+2020-09-04 09:21:20,980 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@366f929f]
+2020-09-04 09:21:20,980 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@366f929f]
+2020-09-04 09:21:20,982 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 09:21:20,983 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@c780d54
+2020-09-04 09:21:20,983 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@239cb56c]
+2020-09-04 09:21:20,983 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1329712976 wrapping com.mysql.jdbc.JDBC4Connection@60072b6f] will be managed by Spring
+2020-09-04 09:21:20,984 DEBUG findUserById:159 -==>  Preparing: SELECT * FROM user WHERE id = -1 
+2020-09-04 09:21:20,984 DEBUG findUserById:159 -==> Parameters: 
+2020-09-04 09:21:20,987 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6c57f21b
+2020-09-04 09:21:20,988 DEBUG findUserById:159 -<==      Total: 0
+2020-09-04 09:21:20,988 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@239cb56c]
+2020-09-04 09:21:20,989 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@239cb56c]
+2020-09-04 09:21:20,989 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@239cb56c]
+2020-09-04 09:21:20,989 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@239cb56c]
+2020-09-04 09:21:20,990 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@68196af5
+2020-09-04 09:21:20,994 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@3ef3593e
+2020-09-04 09:21:20,998 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@695a4aea
+2020-09-04 09:21:21,003 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@19199482
+2020-09-04 09:21:21,006 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@444011fc
+2020-09-04 09:21:21,010 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@749aea09
+2020-09-04 09:21:21,014 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@320c0e96
+2020-09-04 09:21:21,014 DEBUG HikariPool:417 -HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 09:21:40,584 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 09:21:40,585 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b4ce38d]
+2020-09-04 09:21:40,585 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@833915133 wrapping com.mysql.jdbc.JDBC4Connection@60072b6f] will be managed by Spring
+2020-09-04 09:21:40,585 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE '1' 
+2020-09-04 09:21:40,586 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 09:21:40,586 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 09:21:40,587 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b4ce38d]
+2020-09-04 09:21:40,587 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b4ce38d]
+2020-09-04 09:21:40,587 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b4ce38d]
+2020-09-04 09:21:40,587 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b4ce38d]
+2020-09-04 09:21:40,588 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 09:21:40,588 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28bad53f]
+2020-09-04 09:21:40,589 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1357823546 wrapping com.mysql.jdbc.JDBC4Connection@60072b6f] will be managed by Spring
+2020-09-04 09:21:40,589 DEBUG findUserById:159 -==>  Preparing: SELECT * FROM user WHERE id = 1 
+2020-09-04 09:21:40,589 DEBUG findUserById:159 -==> Parameters: 
+2020-09-04 09:21:40,590 DEBUG findUserById:159 -<==      Total: 1
+2020-09-04 09:21:40,590 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28bad53f]
+2020-09-04 09:21:40,591 DEBUG SqlSessionUtils:163 -Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28bad53f] from current transaction
+2020-09-04 09:21:40,591 DEBUG loginById:159 -==>  Preparing: SELECT * FROM user WHERE id = 1 AND pwd = '111' 
+2020-09-04 09:21:40,591 DEBUG loginById:159 -==> Parameters: 
+2020-09-04 09:21:40,592 DEBUG loginById:159 -<==      Total: 1
+2020-09-04 09:21:40,592 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28bad53f]
+2020-09-04 09:21:40,593 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28bad53f]
+2020-09-04 09:21:40,593 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28bad53f]
+2020-09-04 09:21:40,593 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28bad53f]
+2020-09-04 09:21:50,980 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 09:24:20,203 DEBUG ResourceBundleMessageInterpolator:89 -Loaded expression factory via original TCCL
+2020-09-04 09:24:20,211 DEBUG ValidatorFactoryImpl:578 -HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-09-04 09:24:20,211 DEBUG ValidatorFactoryImpl:579 -HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-09-04 09:24:20,212 DEBUG ValidatorFactoryImpl:580 -HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-09-04 09:24:20,212 DEBUG ValidatorFactoryImpl:581 -HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-09-04 09:24:20,212 DEBUG ValidatorFactoryImpl:582 -HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-09-04 09:24:20,281 INFO  FilmSystemApplication:55 -Starting FilmSystemApplication on XLZ-Dell with PID 1220 (D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes started by Xuliz in D:\X\Desktop\IDEA-WeChatApp\film_system)
+2020-09-04 09:24:20,284 DEBUG FilmSystemApplication:56 -Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-09-04 09:24:20,285 INFO  FilmSystemApplication:651 -No active profile set, falling back to default profiles: default
+2020-09-04 09:24:20,831 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\FilmMapper.class]
+2020-09-04 09:24:20,831 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\InfoMapper.class]
+2020-09-04 09:24:20,832 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\RecordMapper.class]
+2020-09-04 09:24:20,832 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\ReviewMapper.class]
+2020-09-04 09:24:20,833 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\UserMapper.class]
+2020-09-04 09:24:20,833 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'filmMapper' and 'edu.seu.film_system.mapper.FilmMapper' mapperInterface
+2020-09-04 09:24:20,835 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'filmMapper'.
+2020-09-04 09:24:20,836 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'infoMapper' and 'edu.seu.film_system.mapper.InfoMapper' mapperInterface
+2020-09-04 09:24:20,836 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'infoMapper'.
+2020-09-04 09:24:20,838 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'recordMapper' and 'edu.seu.film_system.mapper.RecordMapper' mapperInterface
+2020-09-04 09:24:20,838 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'recordMapper'.
+2020-09-04 09:24:20,838 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'reviewMapper' and 'edu.seu.film_system.mapper.ReviewMapper' mapperInterface
+2020-09-04 09:24:20,839 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'reviewMapper'.
+2020-09-04 09:24:20,839 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'userMapper' and 'edu.seu.film_system.mapper.UserMapper' mapperInterface
+2020-09-04 09:24:20,839 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+2020-09-04 09:24:22,052 INFO  Http11NioProtocol:173 -Initializing ProtocolHandler ["http-nio-8256"]
+2020-09-04 09:24:22,053 INFO  StandardService:173 -Starting service [Tomcat]
+2020-09-04 09:24:22,054 INFO  StandardEngine:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-04 09:24:22,322 INFO  [/film_system]:173 -Initializing Spring embedded WebApplicationContext
+2020-09-04 09:24:22,606 DEBUG HikariConfig:900 -Driver class com.mysql.jdbc.Driver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@74381076
+2020-09-04 09:24:22,629 DEBUG LogFactory:135 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-09-04 09:24:22,663 DEBUG VFS:77 -Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+2020-09-04 09:24:22,664 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Film matches criteria [is assignable to Object]
+2020-09-04 09:24:22,665 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Info matches criteria [is assignable to Object]
+2020-09-04 09:24:22,666 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Record matches criteria [is assignable to Object]
+2020-09-04 09:24:22,666 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.ResultDTO matches criteria [is assignable to Object]
+2020-09-04 09:24:22,666 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Review matches criteria [is assignable to Object]
+2020-09-04 09:24:22,667 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.User matches criteria [is assignable to Object]
+2020-09-04 09:24:22,667 DEBUG SqlSessionFactoryBean:437 -Scanned package: 'edu.seu.film_system.pojo' for aliases
+2020-09-04 09:24:22,719 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\FilmMapper.xml]'
+2020-09-04 09:24:22,745 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\InfoMapper.xml]'
+2020-09-04 09:24:22,753 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\ReviewMapper.xml]'
+2020-09-04 09:24:22,763 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\UserMapper.xml]'
+2020-09-04 09:24:22,891 DEBUG TraversableResolvers:60 -Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-09-04 09:24:22,892 DEBUG ResourceBundleMessageInterpolator:89 -Loaded expression factory via original TCCL
+2020-09-04 09:24:22,893 DEBUG ConfigurationImpl:148 -Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2020-09-04 09:24:22,893 DEBUG ConfigurationImpl:180 -Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2020-09-04 09:24:22,893 DEBUG ConfigurationImpl:194 -Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2020-09-04 09:24:22,894 DEBUG ValidationXmlParser:120 -Trying to load META-INF/validation.xml for XML based Validator configuration.
+2020-09-04 09:24:22,894 DEBUG ResourceLoaderHelper:53 -Trying to load META-INF/validation.xml via user class loader
+2020-09-04 09:24:22,895 DEBUG ResourceLoaderHelper:60 -Trying to load META-INF/validation.xml via TCCL
+2020-09-04 09:24:22,895 DEBUG ResourceLoaderHelper:66 -Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2020-09-04 09:24:22,895 DEBUG ValidationXmlParser:127 -No META-INF/validation.xml found. Using annotation based configuration only.
+2020-09-04 09:24:22,897 DEBUG ValidatorFactoryImpl:578 -HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-09-04 09:24:22,898 DEBUG ValidatorFactoryImpl:579 -HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-09-04 09:24:22,898 DEBUG ValidatorFactoryImpl:580 -HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-09-04 09:24:22,898 DEBUG ValidatorFactoryImpl:581 -HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-09-04 09:24:22,898 DEBUG ValidatorFactoryImpl:582 -HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-09-04 09:24:22,949 DEBUG TraversableResolvers:60 -Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-09-04 09:24:22,950 DEBUG ResourceBundleMessageInterpolator:89 -Loaded expression factory via original TCCL
+2020-09-04 09:24:22,950 DEBUG TraversableResolvers:60 -Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-09-04 09:24:22,951 DEBUG ConfigurationImpl:148 -Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2020-09-04 09:24:22,951 DEBUG ConfigurationImpl:180 -Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2020-09-04 09:24:22,951 DEBUG ConfigurationImpl:194 -Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2020-09-04 09:24:22,951 DEBUG ValidationXmlParser:120 -Trying to load META-INF/validation.xml for XML based Validator configuration.
+2020-09-04 09:24:22,952 DEBUG ResourceLoaderHelper:53 -Trying to load META-INF/validation.xml via user class loader
+2020-09-04 09:24:22,952 DEBUG ResourceLoaderHelper:60 -Trying to load META-INF/validation.xml via TCCL
+2020-09-04 09:24:22,952 DEBUG ResourceLoaderHelper:66 -Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2020-09-04 09:24:22,952 DEBUG ValidationXmlParser:127 -No META-INF/validation.xml found. Using annotation based configuration only.
+2020-09-04 09:24:22,954 DEBUG ValidatorFactoryImpl:578 -HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-09-04 09:24:22,955 DEBUG ValidatorFactoryImpl:579 -HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-09-04 09:24:22,955 DEBUG ValidatorFactoryImpl:580 -HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-09-04 09:24:22,955 DEBUG ValidatorFactoryImpl:581 -HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-09-04 09:24:22,955 DEBUG ValidatorFactoryImpl:582 -HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-09-04 09:24:23,008 DEBUG InternalLoggerFactory:45 -Using SLF4J as the default logging framework
+2020-09-04 09:24:23,011 DEBUG DefaultClientResources:109 --Dio.netty.eventLoopThreads: 8
+2020-09-04 09:24:23,017 DEBUG DefaultEventLoopGroupProvider:138 -Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+2020-09-04 09:24:23,036 DEBUG InternalThreadLocalMap:54 --Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2020-09-04 09:24:23,036 DEBUG InternalThreadLocalMap:57 --Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2020-09-04 09:24:23,041 DEBUG ResourceLeakDetector:130 --Dio.netty.leakDetection.level: simple
+2020-09-04 09:24:23,041 DEBUG ResourceLeakDetector:131 --Dio.netty.leakDetection.targetRecords: 4
+2020-09-04 09:24:23,043 DEBUG ResourceLeakDetectorFactory:195 -Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@5250692e
+2020-09-04 09:24:23,046 DEBUG PlatformDependent:987 -Platform: Windows
+2020-09-04 09:24:23,047 DEBUG PlatformDependent0:396 --Dio.netty.noUnsafe: false
+2020-09-04 09:24:23,047 DEBUG PlatformDependent0:852 -Java version: 8
+2020-09-04 09:24:23,048 DEBUG PlatformDependent0:121 -sun.misc.Unsafe.theUnsafe: available
+2020-09-04 09:24:23,049 DEBUG PlatformDependent0:145 -sun.misc.Unsafe.copyMemory: available
+2020-09-04 09:24:23,049 DEBUG PlatformDependent0:183 -java.nio.Buffer.address: available
+2020-09-04 09:24:23,050 DEBUG PlatformDependent0:244 -direct buffer constructor: available
+2020-09-04 09:24:23,050 DEBUG PlatformDependent0:314 -java.nio.Bits.unaligned: available, true
+2020-09-04 09:24:23,051 DEBUG PlatformDependent0:379 -jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2020-09-04 09:24:23,051 DEBUG PlatformDependent0:386 -java.nio.DirectByteBuffer.<init>(long, int): available
+2020-09-04 09:24:23,051 DEBUG PlatformDependent:1030 -sun.misc.Unsafe: available
+2020-09-04 09:24:23,052 DEBUG PlatformDependent:1149 --Dio.netty.tmpdir: C:\Users\Xuliz\AppData\Local\Temp (java.io.tmpdir)
+2020-09-04 09:24:23,052 DEBUG PlatformDependent:1228 --Dio.netty.bitMode: 64 (sun.arch.data.model)
+2020-09-04 09:24:23,053 DEBUG PlatformDependent:174 --Dio.netty.maxDirectMemory: 1879048192 bytes
+2020-09-04 09:24:23,053 DEBUG PlatformDependent:181 --Dio.netty.uninitializedArrayAllocationThreshold: -1
+2020-09-04 09:24:23,054 DEBUG CleanerJava6:92 -java.nio.ByteBuffer.cleaner(): available
+2020-09-04 09:24:23,055 DEBUG PlatformDependent:201 --Dio.netty.noPreferDirect: false
+2020-09-04 09:24:23,056 DEBUG PlatformDependent:891 -org.jctools-core.MpscChunkedArrayQueue: available
+2020-09-04 09:24:23,066 DEBUG Loggers$LoggerFactory:249 -Using Slf4j logging framework
+2020-09-04 09:24:23,084 DEBUG DefaultClientResources:190 -LatencyUtils/HdrUtils are not available, metrics are disabled
+2020-09-04 09:24:23,132 DEBUG PooledByteBufAllocator:142 --Dio.netty.allocator.numHeapArenas: 16
+2020-09-04 09:24:23,132 DEBUG PooledByteBufAllocator:143 --Dio.netty.allocator.numDirectArenas: 16
+2020-09-04 09:24:23,133 DEBUG PooledByteBufAllocator:145 --Dio.netty.allocator.pageSize: 8192
+2020-09-04 09:24:23,133 DEBUG PooledByteBufAllocator:150 --Dio.netty.allocator.maxOrder: 11
+2020-09-04 09:24:23,133 DEBUG PooledByteBufAllocator:154 --Dio.netty.allocator.chunkSize: 16777216
+2020-09-04 09:24:23,133 DEBUG PooledByteBufAllocator:155 --Dio.netty.allocator.tinyCacheSize: 512
+2020-09-04 09:24:23,133 DEBUG PooledByteBufAllocator:156 --Dio.netty.allocator.smallCacheSize: 256
+2020-09-04 09:24:23,133 DEBUG PooledByteBufAllocator:157 --Dio.netty.allocator.normalCacheSize: 64
+2020-09-04 09:24:23,134 DEBUG PooledByteBufAllocator:158 --Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2020-09-04 09:24:23,134 DEBUG PooledByteBufAllocator:159 --Dio.netty.allocator.cacheTrimInterval: 8192
+2020-09-04 09:24:23,134 DEBUG PooledByteBufAllocator:160 --Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2020-09-04 09:24:23,134 DEBUG PooledByteBufAllocator:161 --Dio.netty.allocator.useCacheForAllThreads: true
+2020-09-04 09:24:23,134 DEBUG PooledByteBufAllocator:162 --Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2020-09-04 09:24:23,309 WARN  JacksonAutoConfiguration$JodaDateTimeJacksonConfiguration:123 -Auto-configuration of Jackson's Joda-Time integration is deprecated in favor of using java.time (JSR-310).
+2020-09-04 09:24:23,448 INFO  Http11NioProtocol:173 -Starting ProtocolHandler ["http-nio-8256"]
+2020-09-04 09:24:23,472 INFO  FilmSystemApplication:61 -Started FilmSystemApplication in 3.568 seconds (JVM running for 5.109)
+2020-09-04 09:24:33,874 INFO  [/film_system]:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-04 09:24:33,960 DEBUG HikariConfig:1020 -HikariPool-1 - configuration:
+2020-09-04 09:24:33,961 DEBUG HikariConfig:1052 -allowPoolSuspension.............false
+2020-09-04 09:24:33,961 DEBUG HikariConfig:1052 -autoCommit......................true
+2020-09-04 09:24:33,962 DEBUG HikariConfig:1052 -catalog.........................none
+2020-09-04 09:24:33,962 DEBUG HikariConfig:1052 -connectionInitSql...............none
+2020-09-04 09:24:33,962 DEBUG HikariConfig:1052 -connectionTestQuery.............none
+2020-09-04 09:24:33,962 DEBUG HikariConfig:1052 -connectionTimeout...............30000
+2020-09-04 09:24:33,962 DEBUG HikariConfig:1052 -dataSource......................none
+2020-09-04 09:24:33,963 DEBUG HikariConfig:1052 -dataSourceClassName.............none
+2020-09-04 09:24:33,963 DEBUG HikariConfig:1052 -dataSourceJNDI..................none
+2020-09-04 09:24:33,963 DEBUG HikariConfig:1052 -dataSourceProperties............{password=<masked>}
+2020-09-04 09:24:33,964 DEBUG HikariConfig:1052 -driverClassName................."com.mysql.jdbc.Driver"
+2020-09-04 09:24:33,964 DEBUG HikariConfig:1052 -healthCheckProperties...........{}
+2020-09-04 09:24:33,964 DEBUG HikariConfig:1052 -healthCheckRegistry.............none
+2020-09-04 09:24:33,964 DEBUG HikariConfig:1052 -idleTimeout.....................600000
+2020-09-04 09:24:33,964 DEBUG HikariConfig:1052 -initializationFailTimeout.......1
+2020-09-04 09:24:33,964 DEBUG HikariConfig:1052 -isolateInternalQueries..........false
+2020-09-04 09:24:33,965 DEBUG HikariConfig:1052 -jdbcUrl.........................jdbc:mysql://localhost:3306/film_system?characterEncoding=utf-8
+2020-09-04 09:24:33,965 DEBUG HikariConfig:1052 -leakDetectionThreshold..........0
+2020-09-04 09:24:33,965 DEBUG HikariConfig:1052 -maxLifetime.....................1800000
+2020-09-04 09:24:33,965 DEBUG HikariConfig:1052 -maximumPoolSize.................10
+2020-09-04 09:24:33,965 DEBUG HikariConfig:1052 -metricRegistry..................none
+2020-09-04 09:24:33,965 DEBUG HikariConfig:1052 -metricsTrackerFactory...........none
+2020-09-04 09:24:33,965 DEBUG HikariConfig:1052 -minimumIdle.....................10
+2020-09-04 09:24:33,966 DEBUG HikariConfig:1052 -password........................<masked>
+2020-09-04 09:24:33,966 DEBUG HikariConfig:1052 -poolName........................"HikariPool-1"
+2020-09-04 09:24:33,966 DEBUG HikariConfig:1052 -readOnly........................false
+2020-09-04 09:24:33,966 DEBUG HikariConfig:1052 -registerMbeans..................false
+2020-09-04 09:24:33,966 DEBUG HikariConfig:1052 -scheduledExecutor...............none
+2020-09-04 09:24:33,966 DEBUG HikariConfig:1052 -schema..........................none
+2020-09-04 09:24:33,966 DEBUG HikariConfig:1052 -threadFactory...................internal
+2020-09-04 09:24:33,967 DEBUG HikariConfig:1052 -transactionIsolation............default
+2020-09-04 09:24:33,967 DEBUG HikariConfig:1052 -username........................"root"
+2020-09-04 09:24:33,967 DEBUG HikariConfig:1052 -validationTimeout...............5000
+2020-09-04 09:24:33,967 INFO  HikariDataSource:110 -HikariPool-1 - Starting...
+2020-09-04 09:24:34,141 DEBUG HikariPool:558 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1715891f
+2020-09-04 09:24:34,143 INFO  HikariDataSource:123 -HikariPool-1 - Start completed.
+2020-09-04 09:24:34,158 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 09:24:34,166 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@551fb826]
+2020-09-04 09:24:34,184 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@2003122401 wrapping com.mysql.jdbc.JDBC4Connection@1715891f] will be managed by Spring
+2020-09-04 09:24:34,187 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE '小刘' 
+2020-09-04 09:24:34,201 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 09:24:34,214 DEBUG findUserByNickname:159 -<==      Total: 1
+2020-09-04 09:24:34,217 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@551fb826]
+2020-09-04 09:24:34,217 DEBUG SqlSessionUtils:163 -Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@551fb826] from current transaction
+2020-09-04 09:24:34,217 DEBUG loginByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname = '小刘' AND pwd = '111' 
+2020-09-04 09:24:34,218 DEBUG loginByNickname:159 -==> Parameters: 
+2020-09-04 09:24:34,219 DEBUG loginByNickname:159 -<==      Total: 1
+2020-09-04 09:24:34,219 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@551fb826]
+2020-09-04 09:24:34,220 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@551fb826]
+2020-09-04 09:24:34,220 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@551fb826]
+2020-09-04 09:24:34,220 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@551fb826]
+2020-09-04 09:24:34,252 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2020-09-04 09:24:34,262 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@739e80fa
+2020-09-04 09:24:34,267 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@13b17fb5
+2020-09-04 09:24:34,274 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@17ff80a5
+2020-09-04 09:24:34,279 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@58d8b3a4
+2020-09-04 09:24:34,282 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@376e31fb
+2020-09-04 09:24:34,288 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@3dff85f7
+2020-09-04 09:24:34,295 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6a9f3149
+2020-09-04 09:24:34,300 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@684e1345
+2020-09-04 09:24:34,302 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1b665753
+2020-09-04 09:24:34,303 DEBUG HikariPool:417 -HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 09:24:49,195 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 09:24:49,195 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d3c4a76]
+2020-09-04 09:24:49,195 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@667164934 wrapping com.mysql.jdbc.JDBC4Connection@1715891f] will be managed by Spring
+2020-09-04 09:24:49,196 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE '1' 
+2020-09-04 09:24:49,196 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 09:24:49,197 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 09:24:49,197 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d3c4a76]
+2020-09-04 09:24:49,197 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d3c4a76]
+2020-09-04 09:24:49,198 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d3c4a76]
+2020-09-04 09:24:49,198 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d3c4a76]
+2020-09-04 09:24:49,199 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 09:24:49,199 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@53ee68fa]
+2020-09-04 09:24:49,200 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@48846037 wrapping com.mysql.jdbc.JDBC4Connection@1715891f] will be managed by Spring
+2020-09-04 09:24:49,200 DEBUG findUserById:159 -==>  Preparing: SELECT * FROM user WHERE id = 1 
+2020-09-04 09:24:49,200 DEBUG findUserById:159 -==> Parameters: 
+2020-09-04 09:24:49,202 DEBUG findUserById:159 -<==      Total: 1
+2020-09-04 09:24:49,202 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@53ee68fa]
+2020-09-04 09:24:49,202 DEBUG SqlSessionUtils:163 -Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@53ee68fa] from current transaction
+2020-09-04 09:24:49,203 DEBUG loginById:159 -==>  Preparing: SELECT * FROM user WHERE id = 1 AND pwd = '111' 
+2020-09-04 09:24:49,203 DEBUG loginById:159 -==> Parameters: 
+2020-09-04 09:24:49,204 DEBUG loginById:159 -<==      Total: 1
+2020-09-04 09:24:49,204 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@53ee68fa]
+2020-09-04 09:24:49,204 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@53ee68fa]
+2020-09-04 09:24:49,204 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@53ee68fa]
+2020-09-04 09:24:49,204 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@53ee68fa]
+2020-09-04 09:24:58,406 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 09:24:58,406 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@650dff7]
+2020-09-04 09:24:58,406 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@212382855 wrapping com.mysql.jdbc.JDBC4Connection@1715891f] will be managed by Spring
+2020-09-04 09:24:58,407 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE '555' 
+2020-09-04 09:24:58,407 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 09:24:58,407 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 09:24:58,408 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@650dff7]
+2020-09-04 09:24:58,408 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@650dff7]
+2020-09-04 09:24:58,408 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@650dff7]
+2020-09-04 09:24:58,408 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@650dff7]
+2020-09-04 09:24:58,409 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 09:24:58,409 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4985fad3]
+2020-09-04 09:24:58,409 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@837593321 wrapping com.mysql.jdbc.JDBC4Connection@1715891f] will be managed by Spring
+2020-09-04 09:24:58,409 DEBUG findUserById:159 -==>  Preparing: SELECT * FROM user WHERE id = 555 
+2020-09-04 09:24:58,410 DEBUG findUserById:159 -==> Parameters: 
+2020-09-04 09:24:58,410 DEBUG findUserById:159 -<==      Total: 0
+2020-09-04 09:24:58,411 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4985fad3]
+2020-09-04 09:24:58,411 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4985fad3]
+2020-09-04 09:24:58,411 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4985fad3]
+2020-09-04 09:24:58,411 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4985fad3]
+2020-09-04 09:25:04,255 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 09:25:34,267 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 09:26:04,271 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:10:11,020 DEBUG ResourceBundleMessageInterpolator:89 -Loaded expression factory via original TCCL
+2020-09-04 10:10:11,028 DEBUG ValidatorFactoryImpl:578 -HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-09-04 10:10:11,028 DEBUG ValidatorFactoryImpl:579 -HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-09-04 10:10:11,028 DEBUG ValidatorFactoryImpl:580 -HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-09-04 10:10:11,028 DEBUG ValidatorFactoryImpl:581 -HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-09-04 10:10:11,028 DEBUG ValidatorFactoryImpl:582 -HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-09-04 10:10:11,098 INFO  FilmSystemApplication:55 -Starting FilmSystemApplication on XLZ-Dell with PID 9280 (D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes started by Xuliz in D:\X\Desktop\IDEA-WeChatApp\film_system)
+2020-09-04 10:10:11,100 DEBUG FilmSystemApplication:56 -Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-09-04 10:10:11,100 INFO  FilmSystemApplication:651 -No active profile set, falling back to default profiles: default
+2020-09-04 10:10:11,538 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\FilmMapper.class]
+2020-09-04 10:10:11,538 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\InfoMapper.class]
+2020-09-04 10:10:11,539 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\RecordMapper.class]
+2020-09-04 10:10:11,539 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\ReviewMapper.class]
+2020-09-04 10:10:11,539 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\UserMapper.class]
+2020-09-04 10:10:11,540 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'filmMapper' and 'edu.seu.film_system.mapper.FilmMapper' mapperInterface
+2020-09-04 10:10:11,541 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'filmMapper'.
+2020-09-04 10:10:11,541 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'infoMapper' and 'edu.seu.film_system.mapper.InfoMapper' mapperInterface
+2020-09-04 10:10:11,542 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'infoMapper'.
+2020-09-04 10:10:11,542 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'recordMapper' and 'edu.seu.film_system.mapper.RecordMapper' mapperInterface
+2020-09-04 10:10:11,542 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'recordMapper'.
+2020-09-04 10:10:11,542 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'reviewMapper' and 'edu.seu.film_system.mapper.ReviewMapper' mapperInterface
+2020-09-04 10:10:11,542 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'reviewMapper'.
+2020-09-04 10:10:11,542 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'userMapper' and 'edu.seu.film_system.mapper.UserMapper' mapperInterface
+2020-09-04 10:10:11,542 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+2020-09-04 10:10:12,288 INFO  Http11NioProtocol:173 -Initializing ProtocolHandler ["http-nio-8256"]
+2020-09-04 10:10:12,289 INFO  StandardService:173 -Starting service [Tomcat]
+2020-09-04 10:10:12,289 INFO  StandardEngine:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-04 10:10:12,362 INFO  [/film_system]:173 -Initializing Spring embedded WebApplicationContext
+2020-09-04 10:10:12,436 DEBUG HikariConfig:900 -Driver class com.mysql.jdbc.Driver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@33c8e962
+2020-09-04 10:10:12,452 DEBUG LogFactory:135 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-09-04 10:10:12,482 DEBUG VFS:77 -Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+2020-09-04 10:10:12,483 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Film matches criteria [is assignable to Object]
+2020-09-04 10:10:12,484 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Info matches criteria [is assignable to Object]
+2020-09-04 10:10:12,484 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Record matches criteria [is assignable to Object]
+2020-09-04 10:10:12,485 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.ResultDTO matches criteria [is assignable to Object]
+2020-09-04 10:10:12,485 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Review matches criteria [is assignable to Object]
+2020-09-04 10:10:12,485 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.User matches criteria [is assignable to Object]
+2020-09-04 10:10:12,486 DEBUG SqlSessionFactoryBean:437 -Scanned package: 'edu.seu.film_system.pojo' for aliases
+2020-09-04 10:10:12,536 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\FilmMapper.xml]'
+2020-09-04 10:10:12,565 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\InfoMapper.xml]'
+2020-09-04 10:10:12,575 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\ReviewMapper.xml]'
+2020-09-04 10:10:12,585 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\UserMapper.xml]'
+2020-09-04 10:10:12,703 DEBUG TraversableResolvers:60 -Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-09-04 10:10:12,704 DEBUG ResourceBundleMessageInterpolator:89 -Loaded expression factory via original TCCL
+2020-09-04 10:10:12,704 DEBUG ConfigurationImpl:148 -Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2020-09-04 10:10:12,705 DEBUG ConfigurationImpl:180 -Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2020-09-04 10:10:12,705 DEBUG ConfigurationImpl:194 -Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2020-09-04 10:10:12,706 DEBUG ValidationXmlParser:120 -Trying to load META-INF/validation.xml for XML based Validator configuration.
+2020-09-04 10:10:12,706 DEBUG ResourceLoaderHelper:53 -Trying to load META-INF/validation.xml via user class loader
+2020-09-04 10:10:12,706 DEBUG ResourceLoaderHelper:60 -Trying to load META-INF/validation.xml via TCCL
+2020-09-04 10:10:12,706 DEBUG ResourceLoaderHelper:66 -Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2020-09-04 10:10:12,707 DEBUG ValidationXmlParser:127 -No META-INF/validation.xml found. Using annotation based configuration only.
+2020-09-04 10:10:12,709 DEBUG ValidatorFactoryImpl:578 -HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-09-04 10:10:12,710 DEBUG ValidatorFactoryImpl:579 -HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-09-04 10:10:12,710 DEBUG ValidatorFactoryImpl:580 -HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-09-04 10:10:12,710 DEBUG ValidatorFactoryImpl:581 -HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-09-04 10:10:12,710 DEBUG ValidatorFactoryImpl:582 -HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-09-04 10:10:12,757 DEBUG TraversableResolvers:60 -Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-09-04 10:10:12,757 DEBUG ResourceBundleMessageInterpolator:89 -Loaded expression factory via original TCCL
+2020-09-04 10:10:12,758 DEBUG TraversableResolvers:60 -Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-09-04 10:10:12,758 DEBUG ConfigurationImpl:148 -Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2020-09-04 10:10:12,758 DEBUG ConfigurationImpl:180 -Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2020-09-04 10:10:12,758 DEBUG ConfigurationImpl:194 -Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2020-09-04 10:10:12,759 DEBUG ValidationXmlParser:120 -Trying to load META-INF/validation.xml for XML based Validator configuration.
+2020-09-04 10:10:12,759 DEBUG ResourceLoaderHelper:53 -Trying to load META-INF/validation.xml via user class loader
+2020-09-04 10:10:12,759 DEBUG ResourceLoaderHelper:60 -Trying to load META-INF/validation.xml via TCCL
+2020-09-04 10:10:12,759 DEBUG ResourceLoaderHelper:66 -Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2020-09-04 10:10:12,760 DEBUG ValidationXmlParser:127 -No META-INF/validation.xml found. Using annotation based configuration only.
+2020-09-04 10:10:12,762 DEBUG ValidatorFactoryImpl:578 -HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-09-04 10:10:12,762 DEBUG ValidatorFactoryImpl:579 -HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-09-04 10:10:12,762 DEBUG ValidatorFactoryImpl:580 -HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-09-04 10:10:12,762 DEBUG ValidatorFactoryImpl:581 -HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-09-04 10:10:12,763 DEBUG ValidatorFactoryImpl:582 -HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-09-04 10:10:12,816 DEBUG InternalLoggerFactory:45 -Using SLF4J as the default logging framework
+2020-09-04 10:10:12,819 DEBUG DefaultClientResources:109 --Dio.netty.eventLoopThreads: 8
+2020-09-04 10:10:12,826 DEBUG DefaultEventLoopGroupProvider:138 -Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+2020-09-04 10:10:12,845 DEBUG InternalThreadLocalMap:54 --Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2020-09-04 10:10:12,845 DEBUG InternalThreadLocalMap:57 --Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2020-09-04 10:10:12,849 DEBUG ResourceLeakDetector:130 --Dio.netty.leakDetection.level: simple
+2020-09-04 10:10:12,850 DEBUG ResourceLeakDetector:131 --Dio.netty.leakDetection.targetRecords: 4
+2020-09-04 10:10:12,851 DEBUG ResourceLeakDetectorFactory:195 -Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@4a1ef007
+2020-09-04 10:10:12,854 DEBUG PlatformDependent:987 -Platform: Windows
+2020-09-04 10:10:12,855 DEBUG PlatformDependent0:396 --Dio.netty.noUnsafe: false
+2020-09-04 10:10:12,856 DEBUG PlatformDependent0:852 -Java version: 8
+2020-09-04 10:10:12,857 DEBUG PlatformDependent0:121 -sun.misc.Unsafe.theUnsafe: available
+2020-09-04 10:10:12,858 DEBUG PlatformDependent0:145 -sun.misc.Unsafe.copyMemory: available
+2020-09-04 10:10:12,859 DEBUG PlatformDependent0:183 -java.nio.Buffer.address: available
+2020-09-04 10:10:12,859 DEBUG PlatformDependent0:244 -direct buffer constructor: available
+2020-09-04 10:10:12,860 DEBUG PlatformDependent0:314 -java.nio.Bits.unaligned: available, true
+2020-09-04 10:10:12,860 DEBUG PlatformDependent0:379 -jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2020-09-04 10:10:12,860 DEBUG PlatformDependent0:386 -java.nio.DirectByteBuffer.<init>(long, int): available
+2020-09-04 10:10:12,861 DEBUG PlatformDependent:1030 -sun.misc.Unsafe: available
+2020-09-04 10:10:12,861 DEBUG PlatformDependent:1149 --Dio.netty.tmpdir: C:\Users\Xuliz\AppData\Local\Temp (java.io.tmpdir)
+2020-09-04 10:10:12,861 DEBUG PlatformDependent:1228 --Dio.netty.bitMode: 64 (sun.arch.data.model)
+2020-09-04 10:10:12,863 DEBUG PlatformDependent:174 --Dio.netty.maxDirectMemory: 1879048192 bytes
+2020-09-04 10:10:12,863 DEBUG PlatformDependent:181 --Dio.netty.uninitializedArrayAllocationThreshold: -1
+2020-09-04 10:10:12,864 DEBUG CleanerJava6:92 -java.nio.ByteBuffer.cleaner(): available
+2020-09-04 10:10:12,864 DEBUG PlatformDependent:201 --Dio.netty.noPreferDirect: false
+2020-09-04 10:10:12,865 DEBUG PlatformDependent:891 -org.jctools-core.MpscChunkedArrayQueue: available
+2020-09-04 10:10:12,875 DEBUG Loggers$LoggerFactory:249 -Using Slf4j logging framework
+2020-09-04 10:10:12,894 DEBUG DefaultClientResources:190 -LatencyUtils/HdrUtils are not available, metrics are disabled
+2020-09-04 10:10:12,933 DEBUG PooledByteBufAllocator:142 --Dio.netty.allocator.numHeapArenas: 16
+2020-09-04 10:10:12,933 DEBUG PooledByteBufAllocator:143 --Dio.netty.allocator.numDirectArenas: 16
+2020-09-04 10:10:12,933 DEBUG PooledByteBufAllocator:145 --Dio.netty.allocator.pageSize: 8192
+2020-09-04 10:10:12,933 DEBUG PooledByteBufAllocator:150 --Dio.netty.allocator.maxOrder: 11
+2020-09-04 10:10:12,935 DEBUG PooledByteBufAllocator:154 --Dio.netty.allocator.chunkSize: 16777216
+2020-09-04 10:10:12,935 DEBUG PooledByteBufAllocator:155 --Dio.netty.allocator.tinyCacheSize: 512
+2020-09-04 10:10:12,935 DEBUG PooledByteBufAllocator:156 --Dio.netty.allocator.smallCacheSize: 256
+2020-09-04 10:10:12,935 DEBUG PooledByteBufAllocator:157 --Dio.netty.allocator.normalCacheSize: 64
+2020-09-04 10:10:12,935 DEBUG PooledByteBufAllocator:158 --Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2020-09-04 10:10:12,935 DEBUG PooledByteBufAllocator:159 --Dio.netty.allocator.cacheTrimInterval: 8192
+2020-09-04 10:10:12,936 DEBUG PooledByteBufAllocator:160 --Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2020-09-04 10:10:12,936 DEBUG PooledByteBufAllocator:161 --Dio.netty.allocator.useCacheForAllThreads: true
+2020-09-04 10:10:12,936 DEBUG PooledByteBufAllocator:162 --Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2020-09-04 10:10:13,079 WARN  JacksonAutoConfiguration$JodaDateTimeJacksonConfiguration:123 -Auto-configuration of Jackson's Joda-Time integration is deprecated in favor of using java.time (JSR-310).
+2020-09-04 10:10:13,201 INFO  Http11NioProtocol:173 -Starting ProtocolHandler ["http-nio-8256"]
+2020-09-04 10:10:13,221 INFO  FilmSystemApplication:61 -Started FilmSystemApplication in 2.466 seconds (JVM running for 3.717)
+2020-09-04 10:10:15,129 INFO  [/film_system]:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-04 10:10:15,160 DEBUG HikariConfig:1020 -HikariPool-1 - configuration:
+2020-09-04 10:10:15,162 DEBUG HikariConfig:1052 -allowPoolSuspension.............false
+2020-09-04 10:10:15,162 DEBUG HikariConfig:1052 -autoCommit......................true
+2020-09-04 10:10:15,162 DEBUG HikariConfig:1052 -catalog.........................none
+2020-09-04 10:10:15,162 DEBUG HikariConfig:1052 -connectionInitSql...............none
+2020-09-04 10:10:15,162 DEBUG HikariConfig:1052 -connectionTestQuery.............none
+2020-09-04 10:10:15,163 DEBUG HikariConfig:1052 -connectionTimeout...............30000
+2020-09-04 10:10:15,163 DEBUG HikariConfig:1052 -dataSource......................none
+2020-09-04 10:10:15,163 DEBUG HikariConfig:1052 -dataSourceClassName.............none
+2020-09-04 10:10:15,163 DEBUG HikariConfig:1052 -dataSourceJNDI..................none
+2020-09-04 10:10:15,164 DEBUG HikariConfig:1052 -dataSourceProperties............{password=<masked>}
+2020-09-04 10:10:15,164 DEBUG HikariConfig:1052 -driverClassName................."com.mysql.jdbc.Driver"
+2020-09-04 10:10:15,164 DEBUG HikariConfig:1052 -healthCheckProperties...........{}
+2020-09-04 10:10:15,164 DEBUG HikariConfig:1052 -healthCheckRegistry.............none
+2020-09-04 10:10:15,165 DEBUG HikariConfig:1052 -idleTimeout.....................600000
+2020-09-04 10:10:15,165 DEBUG HikariConfig:1052 -initializationFailTimeout.......1
+2020-09-04 10:10:15,165 DEBUG HikariConfig:1052 -isolateInternalQueries..........false
+2020-09-04 10:10:15,165 DEBUG HikariConfig:1052 -jdbcUrl.........................jdbc:mysql://localhost:3306/film_system?characterEncoding=utf-8
+2020-09-04 10:10:15,165 DEBUG HikariConfig:1052 -leakDetectionThreshold..........0
+2020-09-04 10:10:15,165 DEBUG HikariConfig:1052 -maxLifetime.....................1800000
+2020-09-04 10:10:15,166 DEBUG HikariConfig:1052 -maximumPoolSize.................10
+2020-09-04 10:10:15,166 DEBUG HikariConfig:1052 -metricRegistry..................none
+2020-09-04 10:10:15,166 DEBUG HikariConfig:1052 -metricsTrackerFactory...........none
+2020-09-04 10:10:15,166 DEBUG HikariConfig:1052 -minimumIdle.....................10
+2020-09-04 10:10:15,166 DEBUG HikariConfig:1052 -password........................<masked>
+2020-09-04 10:10:15,167 DEBUG HikariConfig:1052 -poolName........................"HikariPool-1"
+2020-09-04 10:10:15,167 DEBUG HikariConfig:1052 -readOnly........................false
+2020-09-04 10:10:15,167 DEBUG HikariConfig:1052 -registerMbeans..................false
+2020-09-04 10:10:15,168 DEBUG HikariConfig:1052 -scheduledExecutor...............none
+2020-09-04 10:10:15,171 DEBUG HikariConfig:1052 -schema..........................none
+2020-09-04 10:10:15,172 DEBUG HikariConfig:1052 -threadFactory...................internal
+2020-09-04 10:10:15,172 DEBUG HikariConfig:1052 -transactionIsolation............default
+2020-09-04 10:10:15,172 DEBUG HikariConfig:1052 -username........................"root"
+2020-09-04 10:10:15,172 DEBUG HikariConfig:1052 -validationTimeout...............5000
+2020-09-04 10:10:15,172 INFO  HikariDataSource:110 -HikariPool-1 - Starting...
+2020-09-04 10:10:15,330 DEBUG HikariPool:558 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@24d6bc3f
+2020-09-04 10:10:15,331 INFO  HikariDataSource:123 -HikariPool-1 - Start completed.
+2020-09-04 10:10:15,351 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:10:15,361 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f644a1c]
+2020-09-04 10:10:15,371 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@800317716 wrapping com.mysql.jdbc.JDBC4Connection@24d6bc3f] will be managed by Spring
+2020-09-04 10:10:15,375 DEBUG findAllFilm:159 -==>  Preparing: SELECT * FROM film 
+2020-09-04 10:10:15,390 DEBUG findAllFilm:159 -==> Parameters: 
+2020-09-04 10:10:15,424 DEBUG findAllFilm:159 -<==      Total: 5
+2020-09-04 10:10:15,427 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f644a1c]
+2020-09-04 10:10:15,427 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f644a1c]
+2020-09-04 10:10:15,427 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f644a1c]
+2020-09-04 10:10:15,427 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f644a1c]
+2020-09-04 10:10:15,434 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2020-09-04 10:10:15,441 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@28812658
+2020-09-04 10:10:15,445 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@48aed917
+2020-09-04 10:10:15,452 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@4ce06518
+2020-09-04 10:10:15,459 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@20e0758c
+2020-09-04 10:10:15,462 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@362cbef1
+2020-09-04 10:10:15,468 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@11326bcf
+2020-09-04 10:10:15,472 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@14115aa9
+2020-09-04 10:10:15,476 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@e772070
+2020-09-04 10:10:15,479 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@43f01405
+2020-09-04 10:10:15,479 DEBUG HikariPool:417 -HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)

@@ -30,6 +30,22 @@ public class UserController {
         return resultDTO;
     }
 
+    // 通过 ID 查找用户，模糊查询
+    // http://127.0.0.1:8256/film_system/user/find/id=1
+    @RequestMapping("/find/id={userId}")
+    @ResponseBody
+    public ResultDTO<User> findUserById(@PathVariable("userId")int userId) {
+        return userService.findUserById(userId);
+    }
+
+    // 通过昵称查找用户，模糊查询
+    // http://127.0.0.1:8256/film_system/user/find/nickname=AA
+    @RequestMapping("/find/nickname={nickname}")
+    @ResponseBody
+    public ResultDTO<User> findUserByNickname(@PathVariable("nickname")String nickname) {
+        return userService.findUserByNickname(nickname);
+    }
+
     // 新增用户
     // 要求一个 User 对象，通过 json 从前台传进
     // http://127.0.0.1:8256/film_system/user/add
@@ -40,16 +56,29 @@ public class UserController {
         return userService.addUser(user);
     }
 
-    // 登录
+    // 更新用户信息：昵称、ID、密码除外
+    @RequestMapping("/update")
+    @ResponseBody
+    public ResultDTO<User> update(@RequestBody User user) {
+        return userService.updateUser(user);
+    }
+
+    // 登录，从昵称或账号
     // 要求一个 User 对象，通过 json 从前台传进
+    // 注意：要求无论昵称还是 ID ，传入的昵称/ID 都在 nickname 标签下
+    // 仅当返回 code = 201（从昵称登录） 或 202（从ID登录） 时，登录成功
     // http://127.0.0.1:8256/film_system/user/login
-    // TODO 昵称登录有问题
     @RequestMapping("/login")
     @ResponseBody
     public ResultDTO<User> login(@RequestBody User user) {
-        System.out.println(user.toString());
+        // System.out.println(user.toString());
         String sIdOrNickname = user.getNickname();
-        int iIdOrNickname = Integer.parseInt(sIdOrNickname);
+        int iIdOrNickname = 0;
+        try {
+            iIdOrNickname = Integer.parseInt(sIdOrNickname);    // 尝试解析是否为 int 型的 ID
+        } catch (Exception e) {
+            iIdOrNickname = 0;
+        }
         ResultDTO<User> resultDTO1 = userService.loginByNickname(sIdOrNickname, user.getPwd());
         ResultDTO<User> resultDTO2 = userService.loginById(iIdOrNickname, user.getPwd());
         ResultDTO<User> resultDTO = new ResultDTO<>();
@@ -63,15 +92,15 @@ public class UserController {
             resultDTO.setData(resultDTO2.getData());
         } else if (resultDTO1.getCode() == 22 || resultDTO2.getCode() == 22) {
             resultDTO.setCode(22);
-            resultDTO.setMsg("Login: Password incorrect");
+            resultDTO.setMsg("Login: Fail, password incorrect");
             resultDTO.setData(resultDTO1.getData());
         } else if (resultDTO1.getCode() == 21 && resultDTO2.getCode() == 21) {
             resultDTO.setCode(21);
-            resultDTO.setMsg("Login: ID and nickname neither exist");
+            resultDTO.setMsg("Login: Fail, neither ID or nickname exists");
             resultDTO.setData(resultDTO1.getData());
         } else if (resultDTO1.getCode() >= 30 || resultDTO2.getCode() >= 30) {
             resultDTO.setCode(31);
-            resultDTO.setMsg("Login: Front input error");
+            resultDTO.setMsg("Login: Fail, input error");
             resultDTO.setData(resultDTO1.getData());
         } else {
             resultDTO.setCode(11);
@@ -82,7 +111,7 @@ public class UserController {
     }
 
     // 检查昵称唯一性
-    // 要求一个 User 对象，通过 json 从前台传进
+    // restful 风格地址栏传值
     // http://127.0.0.1:8256/film_system/user/checkNickname/nickname=AAA
     // 仅当返回值为 20 时，昵称可用
     @RequestMapping("/checkNickname/nickname={nickname}")

@@ -36,6 +36,7 @@ public interface UserMapper {
     int updateUser(User user);
 
     // SELECT
+    // 通过昵称或 ID
     User findUserByUser(User user);
 
 }

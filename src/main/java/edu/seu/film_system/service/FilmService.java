@@ -3,8 +3,6 @@ package edu.seu.film_system.service;
 import edu.seu.film_system.pojo.Film;
 import edu.seu.film_system.pojo.ResultDTO;
 
-import java.util.List;
-
 public interface FilmService {
 
     ResultDTO<Film> findAllFilm();

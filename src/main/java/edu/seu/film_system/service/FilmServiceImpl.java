@@ -23,27 +23,48 @@ public class FilmServiceImpl implements FilmService{
     @Override
     public ResultDTO<Film> findAllFilm() {
         ResultDTO<Film> resultDTO = new ResultDTO<>();
-        resultDTO.setData(filmMapper.findAllFilm());
-        resultDTO.setCode(20);
-        resultDTO.setMsg("Find all film success");
+        List<Film> list = new ArrayList<>();
+        try {
+            list = filmMapper.findAllFilm();
+            resultDTO.setCode(20);
+            resultDTO.setMsg("Find all film: Success");
+        } catch (Exception e) {
+            resultDTO.setCode(11);
+            resultDTO.setMsg("Find all film: Database error");
+        }
+        resultDTO.setData(list);
         return resultDTO;
     }
 
     @Override
     public ResultDTO<String> findAllSummary() {
         ResultDTO<String> resultDTO = new ResultDTO<>();
-        resultDTO.setData(filmMapper.findAllSummary());
-        resultDTO.setCode(20);
-        resultDTO.setMsg("Find all summary success");
+        List<String> list = new ArrayList<>();
+        try {
+            list = filmMapper.findAllSummary();
+            resultDTO.setCode(20);
+            resultDTO.setMsg("Find all summary: Success");
+        } catch (Exception e) {
+            resultDTO.setCode(11);
+            resultDTO.setMsg("Find all summary: Database error");
+        }
+        resultDTO.setData(list);
         return resultDTO;
     }
 
     @Override
     public ResultDTO<Film> findFilmLongerThan(int leastDur) {
         ResultDTO<Film> resultDTO = new ResultDTO<>();
-        resultDTO.setData(filmMapper.findFilmLongerThan(leastDur));
-        resultDTO.setCode(20);
-        resultDTO.setMsg("Find film longer than: Success");
+        List<Film> list = new ArrayList<>();
+        try {
+            list = filmMapper.findFilmLongerThan(leastDur);
+            resultDTO.setCode(20);
+            resultDTO.setMsg("Find film longer than: Success");
+        } catch (Exception e) {
+            resultDTO.setCode(11);
+            resultDTO.setMsg("Find film longer than: Database error");
+        }
+        resultDTO.setData(list);
         return resultDTO;
     }
 
@@ -147,7 +168,7 @@ public class FilmServiceImpl implements FilmService{
 
     @Override
     public int viewCountIncrease(int filmId) {
-        int returnValue;
+        int returnValue = 0;
         try {
             filmMapper.viewCountIncrease(filmId);
             returnValue = 20;

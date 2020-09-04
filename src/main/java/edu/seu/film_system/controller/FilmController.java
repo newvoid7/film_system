@@ -64,7 +64,7 @@ public class FilmController {
     // 关键字在 url 中，restful 风格地址栏传值
     @RequestMapping("/find/keyword={keyWord}")
     @ResponseBody
-    public ResultDTO<Film> fuzzySearch(@PathVariable("keyWord")String keyWord) throws Exception{
+    public ResultDTO<Film> fuzzySearch(@PathVariable("keyWord")String keyWord) {
         return filmService.fuzzySearch(keyWord);
     }
 
@@ -74,7 +74,7 @@ public class FilmController {
     // 关键字在 url 中，restful 风格地址栏传值
     @RequestMapping("/find/keyword={keyWord}/tag={tags}")
     @ResponseBody
-    public ResultDTO<Film> fuzzySearch(@PathVariable("keyWord")String keyWord, @PathVariable("tags")String tags) throws Exception{
+    public ResultDTO<Film> fuzzySearch(@PathVariable("keyWord")String keyWord, @PathVariable("tags")String tags) {
         // System.out.println(keyWord+tags);
         return filmService.fuzzySearch(keyWord, tags);
     }

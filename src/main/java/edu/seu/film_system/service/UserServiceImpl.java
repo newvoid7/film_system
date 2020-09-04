@@ -178,7 +178,9 @@ public class UserServiceImpl implements UserService {
         try {
             int code = userMapper.addUser(user);
             if (code > 0) {
-                list.add(userMapper.findUserByUser(user));  // 返回刚刚注册的用户对象
+                User newUser = userMapper.findUserByUser(user);
+                newUser.protectInfo();                  // 保护信息
+                list.add(newUser);                      // 返回刚刚注册的用户对象
                 resultDTO.setCode(20);
                 resultDTO.setMsg("Add user: Success");
             } else {
@@ -200,19 +202,45 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public ResultDTO<User> updateUser(User user) {
-        return null;
+        ResultDTO<User> resultDTO = new ResultDTO<>();
+        List<User> list = new ArrayList<>();
+        try {
+            int code = userMapper.updateUser(user);
+            if (code > 0) {
+                User newUser = userMapper.findUserByUser(user);
+                newUser.protectInfo();                  // 保护信息
+                list.add(newUser);                      // 返回刚刚更新的用户对象
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Update user: Success");
+            } else {
+                resultDTO.setCode(12);
+                resultDTO.setMsg("Update user: Fail");
+            }
+        } catch (Exception e) {
+            resultDTO.setCode(11);
+            resultDTO.setMsg("Update user: Database error");
+        }
+        resultDTO.setData(list);
+        return resultDTO;
     }
 
     // 用户多条件查询
+    // 通过昵称或 ID
     @Override
     public ResultDTO<User> findUserByUser(User user) {
         ResultDTO<User> resultDTO = new ResultDTO<>();
-        User resultUser = userMapper.findUserByUser(user);
         List<User> list = new ArrayList<>();
-        list.add(resultUser);
+        User resultUser = new User();
+        try {
+            resultUser = userMapper.findUserByUser(user);
+            list.add(resultUser);
+            resultDTO.setCode(20);
+            resultDTO.setMsg("Find user by user: Success");
+        } catch (Exception e) {
+            resultDTO.setCode(11);
+            resultDTO.setMsg("Find user by user: Database error, maybe nickname or ID not unique");
+        }
         resultDTO.setData(list);
-        resultDTO.setCode(6);
-        resultDTO.setMsg("多条件查询");
         return resultDTO;
     }
 
