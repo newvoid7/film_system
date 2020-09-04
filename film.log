@@ -21198,3 +21198,808 @@ java.lang.NumberFormatException: For input string: "小刘"
 2020-09-04 10:10:15,476 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@e772070
 2020-09-04 10:10:15,479 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@43f01405
 2020-09-04 10:10:15,479 DEBUG HikariPool:417 -HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:36:54,034 DEBUG ResourceBundleMessageInterpolator:89 -Loaded expression factory via original TCCL
+2020-09-04 10:36:54,061 DEBUG ValidatorFactoryImpl:578 -HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-09-04 10:36:54,061 DEBUG ValidatorFactoryImpl:579 -HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-09-04 10:36:54,061 DEBUG ValidatorFactoryImpl:580 -HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-09-04 10:36:54,061 DEBUG ValidatorFactoryImpl:581 -HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-09-04 10:36:54,061 DEBUG ValidatorFactoryImpl:582 -HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-09-04 10:36:54,161 INFO  FilmSystemApplication:55 -Starting FilmSystemApplication on XLZ-Dell with PID 14848 (D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes started by Xuliz in D:\X\Desktop\IDEA-WeChatApp\film_system)
+2020-09-04 10:36:54,164 DEBUG FilmSystemApplication:56 -Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-09-04 10:36:54,165 INFO  FilmSystemApplication:651 -No active profile set, falling back to default profiles: default
+2020-09-04 10:36:55,144 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\FilmMapper.class]
+2020-09-04 10:36:55,144 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\InfoMapper.class]
+2020-09-04 10:36:55,144 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\RecordMapper.class]
+2020-09-04 10:36:55,145 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\ReviewMapper.class]
+2020-09-04 10:36:55,145 DEBUG ClassPathMapperScanner:437 -Identified candidate component class: file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\edu\seu\film_system\mapper\UserMapper.class]
+2020-09-04 10:36:55,145 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'filmMapper' and 'edu.seu.film_system.mapper.FilmMapper' mapperInterface
+2020-09-04 10:36:55,146 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'filmMapper'.
+2020-09-04 10:36:55,146 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'infoMapper' and 'edu.seu.film_system.mapper.InfoMapper' mapperInterface
+2020-09-04 10:36:55,146 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'infoMapper'.
+2020-09-04 10:36:55,147 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'recordMapper' and 'edu.seu.film_system.mapper.RecordMapper' mapperInterface
+2020-09-04 10:36:55,147 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'recordMapper'.
+2020-09-04 10:36:55,147 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'reviewMapper' and 'edu.seu.film_system.mapper.ReviewMapper' mapperInterface
+2020-09-04 10:36:55,147 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'reviewMapper'.
+2020-09-04 10:36:55,147 DEBUG ClassPathMapperScanner:180 -Creating MapperFactoryBean with name 'userMapper' and 'edu.seu.film_system.mapper.UserMapper' mapperInterface
+2020-09-04 10:36:55,147 DEBUG ClassPathMapperScanner:216 -Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+2020-09-04 10:36:56,066 INFO  Http11NioProtocol:173 -Initializing ProtocolHandler ["http-nio-8256"]
+2020-09-04 10:36:56,067 INFO  StandardService:173 -Starting service [Tomcat]
+2020-09-04 10:36:56,067 INFO  StandardEngine:173 -Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-04 10:36:56,201 INFO  [/film_system]:173 -Initializing Spring embedded WebApplicationContext
+2020-09-04 10:36:56,293 DEBUG HikariConfig:900 -Driver class com.mysql.jdbc.Driver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7f723a1e
+2020-09-04 10:36:56,315 DEBUG LogFactory:135 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-09-04 10:36:56,384 DEBUG VFS:77 -Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+2020-09-04 10:36:56,386 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Film matches criteria [is assignable to Object]
+2020-09-04 10:36:56,386 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Info matches criteria [is assignable to Object]
+2020-09-04 10:36:56,387 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Record matches criteria [is assignable to Object]
+2020-09-04 10:36:56,387 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.ResultDTO matches criteria [is assignable to Object]
+2020-09-04 10:36:56,387 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.Review matches criteria [is assignable to Object]
+2020-09-04 10:36:56,388 DEBUG ResolverUtil:256 -Checking to see if class edu.seu.film_system.pojo.User matches criteria [is assignable to Object]
+2020-09-04 10:36:56,389 DEBUG SqlSessionFactoryBean:437 -Scanned package: 'edu.seu.film_system.pojo' for aliases
+2020-09-04 10:36:56,470 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\FilmMapper.xml]'
+2020-09-04 10:36:56,578 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\InfoMapper.xml]'
+2020-09-04 10:36:56,589 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\ReviewMapper.xml]'
+2020-09-04 10:36:56,617 DEBUG SqlSessionFactoryBean:529 -Parsed mapper file: 'file [D:\X\Desktop\IDEA-WeChatApp\film_system\target\classes\mapper\UserMapper.xml]'
+2020-09-04 10:36:56,772 DEBUG TraversableResolvers:60 -Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-09-04 10:36:56,772 DEBUG ResourceBundleMessageInterpolator:89 -Loaded expression factory via original TCCL
+2020-09-04 10:36:56,773 DEBUG ConfigurationImpl:148 -Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2020-09-04 10:36:56,773 DEBUG ConfigurationImpl:180 -Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2020-09-04 10:36:56,774 DEBUG ConfigurationImpl:194 -Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2020-09-04 10:36:56,774 DEBUG ValidationXmlParser:120 -Trying to load META-INF/validation.xml for XML based Validator configuration.
+2020-09-04 10:36:56,774 DEBUG ResourceLoaderHelper:53 -Trying to load META-INF/validation.xml via user class loader
+2020-09-04 10:36:56,775 DEBUG ResourceLoaderHelper:60 -Trying to load META-INF/validation.xml via TCCL
+2020-09-04 10:36:56,775 DEBUG ResourceLoaderHelper:66 -Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2020-09-04 10:36:56,775 DEBUG ValidationXmlParser:127 -No META-INF/validation.xml found. Using annotation based configuration only.
+2020-09-04 10:36:56,777 DEBUG ValidatorFactoryImpl:578 -HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-09-04 10:36:56,778 DEBUG ValidatorFactoryImpl:579 -HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-09-04 10:36:56,778 DEBUG ValidatorFactoryImpl:580 -HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-09-04 10:36:56,778 DEBUG ValidatorFactoryImpl:581 -HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-09-04 10:36:56,778 DEBUG ValidatorFactoryImpl:582 -HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-09-04 10:36:56,844 DEBUG TraversableResolvers:60 -Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-09-04 10:36:56,845 DEBUG ResourceBundleMessageInterpolator:89 -Loaded expression factory via original TCCL
+2020-09-04 10:36:56,846 DEBUG TraversableResolvers:60 -Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-09-04 10:36:56,846 DEBUG ConfigurationImpl:148 -Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2020-09-04 10:36:56,846 DEBUG ConfigurationImpl:180 -Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2020-09-04 10:36:56,847 DEBUG ConfigurationImpl:194 -Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2020-09-04 10:36:56,847 DEBUG ValidationXmlParser:120 -Trying to load META-INF/validation.xml for XML based Validator configuration.
+2020-09-04 10:36:56,847 DEBUG ResourceLoaderHelper:53 -Trying to load META-INF/validation.xml via user class loader
+2020-09-04 10:36:56,848 DEBUG ResourceLoaderHelper:60 -Trying to load META-INF/validation.xml via TCCL
+2020-09-04 10:36:56,848 DEBUG ResourceLoaderHelper:66 -Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2020-09-04 10:36:56,848 DEBUG ValidationXmlParser:127 -No META-INF/validation.xml found. Using annotation based configuration only.
+2020-09-04 10:36:56,851 DEBUG ValidatorFactoryImpl:578 -HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-09-04 10:36:56,851 DEBUG ValidatorFactoryImpl:579 -HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-09-04 10:36:56,852 DEBUG ValidatorFactoryImpl:580 -HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-09-04 10:36:56,852 DEBUG ValidatorFactoryImpl:581 -HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-09-04 10:36:56,852 DEBUG ValidatorFactoryImpl:582 -HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-09-04 10:36:56,914 DEBUG InternalLoggerFactory:45 -Using SLF4J as the default logging framework
+2020-09-04 10:36:56,919 DEBUG DefaultClientResources:109 --Dio.netty.eventLoopThreads: 8
+2020-09-04 10:36:56,930 DEBUG DefaultEventLoopGroupProvider:138 -Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+2020-09-04 10:36:56,956 DEBUG InternalThreadLocalMap:54 --Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2020-09-04 10:36:56,956 DEBUG InternalThreadLocalMap:57 --Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2020-09-04 10:36:56,960 DEBUG ResourceLeakDetector:130 --Dio.netty.leakDetection.level: simple
+2020-09-04 10:36:56,960 DEBUG ResourceLeakDetector:131 --Dio.netty.leakDetection.targetRecords: 4
+2020-09-04 10:36:56,962 DEBUG ResourceLeakDetectorFactory:195 -Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@7b7b10c9
+2020-09-04 10:36:56,965 DEBUG PlatformDependent:987 -Platform: Windows
+2020-09-04 10:36:56,968 DEBUG PlatformDependent0:396 --Dio.netty.noUnsafe: false
+2020-09-04 10:36:56,968 DEBUG PlatformDependent0:852 -Java version: 8
+2020-09-04 10:36:56,969 DEBUG PlatformDependent0:121 -sun.misc.Unsafe.theUnsafe: available
+2020-09-04 10:36:56,969 DEBUG PlatformDependent0:145 -sun.misc.Unsafe.copyMemory: available
+2020-09-04 10:36:56,970 DEBUG PlatformDependent0:183 -java.nio.Buffer.address: available
+2020-09-04 10:36:56,970 DEBUG PlatformDependent0:244 -direct buffer constructor: available
+2020-09-04 10:36:56,971 DEBUG PlatformDependent0:314 -java.nio.Bits.unaligned: available, true
+2020-09-04 10:36:56,971 DEBUG PlatformDependent0:379 -jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2020-09-04 10:36:56,972 DEBUG PlatformDependent0:386 -java.nio.DirectByteBuffer.<init>(long, int): available
+2020-09-04 10:36:56,972 DEBUG PlatformDependent:1030 -sun.misc.Unsafe: available
+2020-09-04 10:36:56,972 DEBUG PlatformDependent:1149 --Dio.netty.tmpdir: C:\Users\Xuliz\AppData\Local\Temp (java.io.tmpdir)
+2020-09-04 10:36:56,972 DEBUG PlatformDependent:1228 --Dio.netty.bitMode: 64 (sun.arch.data.model)
+2020-09-04 10:36:56,973 DEBUG PlatformDependent:174 --Dio.netty.maxDirectMemory: 1879048192 bytes
+2020-09-04 10:36:56,973 DEBUG PlatformDependent:181 --Dio.netty.uninitializedArrayAllocationThreshold: -1
+2020-09-04 10:36:56,974 DEBUG CleanerJava6:92 -java.nio.ByteBuffer.cleaner(): available
+2020-09-04 10:36:56,975 DEBUG PlatformDependent:201 --Dio.netty.noPreferDirect: false
+2020-09-04 10:36:56,976 DEBUG PlatformDependent:891 -org.jctools-core.MpscChunkedArrayQueue: available
+2020-09-04 10:36:56,990 DEBUG Loggers$LoggerFactory:249 -Using Slf4j logging framework
+2020-09-04 10:36:57,014 DEBUG DefaultClientResources:190 -LatencyUtils/HdrUtils are not available, metrics are disabled
+2020-09-04 10:36:57,079 DEBUG PooledByteBufAllocator:142 --Dio.netty.allocator.numHeapArenas: 16
+2020-09-04 10:36:57,079 DEBUG PooledByteBufAllocator:143 --Dio.netty.allocator.numDirectArenas: 16
+2020-09-04 10:36:57,080 DEBUG PooledByteBufAllocator:145 --Dio.netty.allocator.pageSize: 8192
+2020-09-04 10:36:57,080 DEBUG PooledByteBufAllocator:150 --Dio.netty.allocator.maxOrder: 11
+2020-09-04 10:36:57,080 DEBUG PooledByteBufAllocator:154 --Dio.netty.allocator.chunkSize: 16777216
+2020-09-04 10:36:57,080 DEBUG PooledByteBufAllocator:155 --Dio.netty.allocator.tinyCacheSize: 512
+2020-09-04 10:36:57,080 DEBUG PooledByteBufAllocator:156 --Dio.netty.allocator.smallCacheSize: 256
+2020-09-04 10:36:57,081 DEBUG PooledByteBufAllocator:157 --Dio.netty.allocator.normalCacheSize: 64
+2020-09-04 10:36:57,081 DEBUG PooledByteBufAllocator:158 --Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2020-09-04 10:36:57,081 DEBUG PooledByteBufAllocator:159 --Dio.netty.allocator.cacheTrimInterval: 8192
+2020-09-04 10:36:57,081 DEBUG PooledByteBufAllocator:160 --Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2020-09-04 10:36:57,081 DEBUG PooledByteBufAllocator:161 --Dio.netty.allocator.useCacheForAllThreads: true
+2020-09-04 10:36:57,081 DEBUG PooledByteBufAllocator:162 --Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2020-09-04 10:36:57,254 WARN  JacksonAutoConfiguration$JodaDateTimeJacksonConfiguration:123 -Auto-configuration of Jackson's Joda-Time integration is deprecated in favor of using java.time (JSR-310).
+2020-09-04 10:36:57,407 INFO  Http11NioProtocol:173 -Starting ProtocolHandler ["http-nio-8256"]
+2020-09-04 10:36:57,431 INFO  FilmSystemApplication:61 -Started FilmSystemApplication in 3.79 seconds (JVM running for 6.144)
+2020-09-04 10:44:30,178 INFO  [/film_system]:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-04 10:44:30,355 DEBUG HikariConfig:1020 -HikariPool-1 - configuration:
+2020-09-04 10:44:30,358 DEBUG HikariConfig:1052 -allowPoolSuspension.............false
+2020-09-04 10:44:30,358 DEBUG HikariConfig:1052 -autoCommit......................true
+2020-09-04 10:44:30,358 DEBUG HikariConfig:1052 -catalog.........................none
+2020-09-04 10:44:30,359 DEBUG HikariConfig:1052 -connectionInitSql...............none
+2020-09-04 10:44:30,359 DEBUG HikariConfig:1052 -connectionTestQuery.............none
+2020-09-04 10:44:30,359 DEBUG HikariConfig:1052 -connectionTimeout...............30000
+2020-09-04 10:44:30,359 DEBUG HikariConfig:1052 -dataSource......................none
+2020-09-04 10:44:30,360 DEBUG HikariConfig:1052 -dataSourceClassName.............none
+2020-09-04 10:44:30,360 DEBUG HikariConfig:1052 -dataSourceJNDI..................none
+2020-09-04 10:44:30,360 DEBUG HikariConfig:1052 -dataSourceProperties............{password=<masked>}
+2020-09-04 10:44:30,361 DEBUG HikariConfig:1052 -driverClassName................."com.mysql.jdbc.Driver"
+2020-09-04 10:44:30,361 DEBUG HikariConfig:1052 -healthCheckProperties...........{}
+2020-09-04 10:44:30,361 DEBUG HikariConfig:1052 -healthCheckRegistry.............none
+2020-09-04 10:44:30,361 DEBUG HikariConfig:1052 -idleTimeout.....................600000
+2020-09-04 10:44:30,361 DEBUG HikariConfig:1052 -initializationFailTimeout.......1
+2020-09-04 10:44:30,362 DEBUG HikariConfig:1052 -isolateInternalQueries..........false
+2020-09-04 10:44:30,362 DEBUG HikariConfig:1052 -jdbcUrl.........................jdbc:mysql://localhost:3306/film_system?characterEncoding=utf-8
+2020-09-04 10:44:30,362 DEBUG HikariConfig:1052 -leakDetectionThreshold..........0
+2020-09-04 10:44:30,362 DEBUG HikariConfig:1052 -maxLifetime.....................1800000
+2020-09-04 10:44:30,362 DEBUG HikariConfig:1052 -maximumPoolSize.................10
+2020-09-04 10:44:30,362 DEBUG HikariConfig:1052 -metricRegistry..................none
+2020-09-04 10:44:30,363 DEBUG HikariConfig:1052 -metricsTrackerFactory...........none
+2020-09-04 10:44:30,363 DEBUG HikariConfig:1052 -minimumIdle.....................10
+2020-09-04 10:44:30,363 DEBUG HikariConfig:1052 -password........................<masked>
+2020-09-04 10:44:30,363 DEBUG HikariConfig:1052 -poolName........................"HikariPool-1"
+2020-09-04 10:44:30,363 DEBUG HikariConfig:1052 -readOnly........................false
+2020-09-04 10:44:30,364 DEBUG HikariConfig:1052 -registerMbeans..................false
+2020-09-04 10:44:30,364 DEBUG HikariConfig:1052 -scheduledExecutor...............none
+2020-09-04 10:44:30,364 DEBUG HikariConfig:1052 -schema..........................none
+2020-09-04 10:44:30,364 DEBUG HikariConfig:1052 -threadFactory...................internal
+2020-09-04 10:44:30,364 DEBUG HikariConfig:1052 -transactionIsolation............default
+2020-09-04 10:44:30,365 DEBUG HikariConfig:1052 -username........................"root"
+2020-09-04 10:44:30,365 DEBUG HikariConfig:1052 -validationTimeout...............5000
+2020-09-04 10:44:30,365 INFO  HikariDataSource:110 -HikariPool-1 - Starting...
+2020-09-04 10:44:30,598 DEBUG HikariPool:558 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5f82edc5
+2020-09-04 10:44:30,602 INFO  HikariDataSource:123 -HikariPool-1 - Start completed.
+2020-09-04 10:44:30,623 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:44:30,635 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a1caf8c]
+2020-09-04 10:44:30,680 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@834768475 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:44:30,685 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE '1' 
+2020-09-04 10:44:30,709 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=1, active=1, idle=0, waiting=0)
+2020-09-04 10:44:30,710 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:44:30,717 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@57c597e0
+2020-09-04 10:44:30,722 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@37ea68af
+2020-09-04 10:44:30,726 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:44:30,727 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@33a433fc
+2020-09-04 10:44:30,730 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a1caf8c]
+2020-09-04 10:44:30,731 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@4c88bd53
+2020-09-04 10:44:30,731 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a1caf8c]
+2020-09-04 10:44:30,731 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a1caf8c]
+2020-09-04 10:44:30,731 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a1caf8c]
+2020-09-04 10:44:30,734 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:44:30,734 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d1cfd09]
+2020-09-04 10:44:30,734 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@799fea57
+2020-09-04 10:44:30,735 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1985287162 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:44:30,735 DEBUG findUserById:159 -==>  Preparing: SELECT * FROM user WHERE id = 1 
+2020-09-04 10:44:30,735 DEBUG findUserById:159 -==> Parameters: 
+2020-09-04 10:44:30,739 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@61c6f9d1
+2020-09-04 10:44:30,740 DEBUG findUserById:159 -<==      Total: 1
+2020-09-04 10:44:30,741 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d1cfd09]
+2020-09-04 10:44:30,741 DEBUG SqlSessionUtils:163 -Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d1cfd09] from current transaction
+2020-09-04 10:44:30,742 DEBUG loginById:159 -==>  Preparing: SELECT * FROM user WHERE id = 1 AND pwd = '111' 
+2020-09-04 10:44:30,742 DEBUG loginById:159 -==> Parameters: 
+2020-09-04 10:44:30,743 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@7f003f41
+2020-09-04 10:44:30,743 DEBUG loginById:159 -<==      Total: 1
+2020-09-04 10:44:30,744 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d1cfd09]
+2020-09-04 10:44:30,744 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d1cfd09]
+2020-09-04 10:44:30,745 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d1cfd09]
+2020-09-04 10:44:30,745 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d1cfd09]
+2020-09-04 10:44:30,747 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1bebfae1
+2020-09-04 10:44:30,750 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@57d45f1c
+2020-09-04 10:44:30,750 DEBUG HikariPool:417 -HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:45:00,723 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:45:30,725 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:45:33,897 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:45:33,898 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e6215b6]
+2020-09-04 10:45:33,899 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@614104774 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:45:33,899 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE '1' 
+2020-09-04 10:45:33,900 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:45:33,901 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:45:33,901 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e6215b6]
+2020-09-04 10:45:33,902 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e6215b6]
+2020-09-04 10:45:33,902 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e6215b6]
+2020-09-04 10:45:33,902 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e6215b6]
+2020-09-04 10:45:33,903 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:45:33,904 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5fe99211]
+2020-09-04 10:45:33,904 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@656952022 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:45:33,905 DEBUG findUserById:159 -==>  Preparing: SELECT * FROM user WHERE id = 1 
+2020-09-04 10:45:33,905 DEBUG findUserById:159 -==> Parameters: 
+2020-09-04 10:45:33,910 DEBUG findUserById:159 -<==      Total: 1
+2020-09-04 10:45:33,911 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5fe99211]
+2020-09-04 10:45:33,913 DEBUG SqlSessionUtils:163 -Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5fe99211] from current transaction
+2020-09-04 10:45:33,914 DEBUG loginById:159 -==>  Preparing: SELECT * FROM user WHERE id = 1 AND pwd = '111' 
+2020-09-04 10:45:33,914 DEBUG loginById:159 -==> Parameters: 
+2020-09-04 10:45:33,916 DEBUG loginById:159 -<==      Total: 1
+2020-09-04 10:45:33,916 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5fe99211]
+2020-09-04 10:45:33,917 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5fe99211]
+2020-09-04 10:45:33,917 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5fe99211]
+2020-09-04 10:45:33,917 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5fe99211]
+2020-09-04 10:46:00,726 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:46:09,134 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:46:09,135 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1626942a]
+2020-09-04 10:46:09,136 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@484376410 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:46:09,136 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE '1' 
+2020-09-04 10:46:09,137 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:46:09,138 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:46:09,138 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1626942a]
+2020-09-04 10:46:09,139 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1626942a]
+2020-09-04 10:46:09,139 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1626942a]
+2020-09-04 10:46:09,139 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1626942a]
+2020-09-04 10:46:09,140 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:46:09,141 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b793a70]
+2020-09-04 10:46:09,141 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@50339429 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:46:09,141 DEBUG findUserById:159 -==>  Preparing: SELECT * FROM user WHERE id = 1 
+2020-09-04 10:46:09,142 DEBUG findUserById:159 -==> Parameters: 
+2020-09-04 10:46:09,143 DEBUG findUserById:159 -<==      Total: 1
+2020-09-04 10:46:09,143 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b793a70]
+2020-09-04 10:46:09,144 DEBUG SqlSessionUtils:163 -Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b793a70] from current transaction
+2020-09-04 10:46:09,144 DEBUG loginById:159 -==>  Preparing: SELECT * FROM user WHERE id = 1 AND pwd = '111' 
+2020-09-04 10:46:09,144 DEBUG loginById:159 -==> Parameters: 
+2020-09-04 10:46:09,146 DEBUG loginById:159 -<==      Total: 1
+2020-09-04 10:46:09,146 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b793a70]
+2020-09-04 10:46:09,146 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b793a70]
+2020-09-04 10:46:09,147 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b793a70]
+2020-09-04 10:46:09,147 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b793a70]
+2020-09-04 10:46:30,739 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:46:39,937 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:46:39,937 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43c5d115]
+2020-09-04 10:46:39,938 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1228782181 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:46:39,938 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE '小刘' 
+2020-09-04 10:46:39,938 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:46:39,940 DEBUG findUserByNickname:159 -<==      Total: 1
+2020-09-04 10:46:39,941 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43c5d115]
+2020-09-04 10:46:39,941 DEBUG SqlSessionUtils:163 -Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43c5d115] from current transaction
+2020-09-04 10:46:39,942 DEBUG loginByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname = '小刘' AND pwd = '111' 
+2020-09-04 10:46:39,942 DEBUG loginByNickname:159 -==> Parameters: 
+2020-09-04 10:46:39,943 DEBUG loginByNickname:159 -<==      Total: 1
+2020-09-04 10:46:39,944 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43c5d115]
+2020-09-04 10:46:39,944 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43c5d115]
+2020-09-04 10:46:39,945 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43c5d115]
+2020-09-04 10:46:39,946 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43c5d115]
+2020-09-04 10:47:00,744 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:47:12,199 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:47:12,200 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e9aab80]
+2020-09-04 10:47:12,201 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1952628976 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:47:12,201 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE '小刘' 
+2020-09-04 10:47:12,201 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:47:12,202 DEBUG findUserByNickname:159 -<==      Total: 1
+2020-09-04 10:47:12,203 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e9aab80]
+2020-09-04 10:47:12,204 DEBUG SqlSessionUtils:163 -Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e9aab80] from current transaction
+2020-09-04 10:47:12,204 DEBUG loginByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname = '小刘' AND pwd = '111' 
+2020-09-04 10:47:12,205 DEBUG loginByNickname:159 -==> Parameters: 
+2020-09-04 10:47:12,206 DEBUG loginByNickname:159 -<==      Total: 1
+2020-09-04 10:47:12,207 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e9aab80]
+2020-09-04 10:47:12,207 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e9aab80]
+2020-09-04 10:47:12,207 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e9aab80]
+2020-09-04 10:47:12,208 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e9aab80]
+2020-09-04 10:47:30,758 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:48:00,771 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:48:16,058 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:48:16,058 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@522c5165]
+2020-09-04 10:48:16,059 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1664368667 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:48:16,059 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE '1' 
+2020-09-04 10:48:16,059 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:48:16,060 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:48:16,060 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@522c5165]
+2020-09-04 10:48:16,061 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@522c5165]
+2020-09-04 10:48:16,061 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@522c5165]
+2020-09-04 10:48:16,061 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@522c5165]
+2020-09-04 10:48:16,062 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:48:16,063 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3203ae2a]
+2020-09-04 10:48:16,064 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@942026590 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:48:16,064 DEBUG findUserById:159 -==>  Preparing: SELECT * FROM user WHERE id = 1 
+2020-09-04 10:48:16,065 DEBUG findUserById:159 -==> Parameters: 
+2020-09-04 10:48:16,066 DEBUG findUserById:159 -<==      Total: 1
+2020-09-04 10:48:16,066 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3203ae2a]
+2020-09-04 10:48:16,066 DEBUG SqlSessionUtils:163 -Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3203ae2a] from current transaction
+2020-09-04 10:48:16,066 DEBUG loginById:159 -==>  Preparing: SELECT * FROM user WHERE id = 1 AND pwd = '111' 
+2020-09-04 10:48:16,067 DEBUG loginById:159 -==> Parameters: 
+2020-09-04 10:48:16,069 DEBUG loginById:159 -<==      Total: 1
+2020-09-04 10:48:16,070 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3203ae2a]
+2020-09-04 10:48:16,070 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3203ae2a]
+2020-09-04 10:48:16,070 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3203ae2a]
+2020-09-04 10:48:16,070 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3203ae2a]
+2020-09-04 10:48:30,783 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:48:38,591 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:48:38,592 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f7dfcd0]
+2020-09-04 10:48:38,592 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1873901645 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:48:38,592 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'AAA' 
+2020-09-04 10:48:38,593 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:48:38,594 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:48:38,594 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f7dfcd0]
+2020-09-04 10:48:38,595 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f7dfcd0]
+2020-09-04 10:48:38,595 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f7dfcd0]
+2020-09-04 10:48:38,595 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f7dfcd0]
+2020-09-04 10:48:38,661 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:48:38,661 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ce66b23]
+2020-09-04 10:48:38,661 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@102629459 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:48:38,661 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'AAA' 
+2020-09-04 10:48:38,662 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:48:38,662 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:48:38,662 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ce66b23]
+2020-09-04 10:48:38,663 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ce66b23]
+2020-09-04 10:48:38,663 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ce66b23]
+2020-09-04 10:48:38,663 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ce66b23]
+2020-09-04 10:48:38,689 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:48:38,689 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78ddd60e]
+2020-09-04 10:48:38,689 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@2004915313 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:48:38,690 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'AAA' 
+2020-09-04 10:48:38,690 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:48:38,690 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:48:38,691 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78ddd60e]
+2020-09-04 10:48:38,691 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78ddd60e]
+2020-09-04 10:48:38,691 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78ddd60e]
+2020-09-04 10:48:38,691 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78ddd60e]
+2020-09-04 10:48:38,961 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:48:38,961 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4919b9d3]
+2020-09-04 10:48:38,962 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1138872995 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:48:38,962 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'AAA' 
+2020-09-04 10:48:38,962 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:48:38,963 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:48:38,963 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4919b9d3]
+2020-09-04 10:48:38,963 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4919b9d3]
+2020-09-04 10:48:38,963 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4919b9d3]
+2020-09-04 10:48:38,963 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4919b9d3]
+2020-09-04 10:48:39,214 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:48:39,214 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f9f678]
+2020-09-04 10:48:39,214 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@503419900 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:48:39,215 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'AAA' 
+2020-09-04 10:48:39,215 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:48:39,216 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:48:39,216 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f9f678]
+2020-09-04 10:48:39,216 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f9f678]
+2020-09-04 10:48:39,216 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f9f678]
+2020-09-04 10:48:39,216 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f9f678]
+2020-09-04 10:48:39,686 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:48:39,686 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18041297]
+2020-09-04 10:48:39,687 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1792120419 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:48:39,687 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'AAA' 
+2020-09-04 10:48:39,687 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:48:39,689 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:48:39,689 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18041297]
+2020-09-04 10:48:39,689 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18041297]
+2020-09-04 10:48:39,689 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18041297]
+2020-09-04 10:48:39,689 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18041297]
+2020-09-04 10:48:40,007 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:48:40,007 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19339a74]
+2020-09-04 10:48:40,008 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1968236102 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:48:40,008 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'AAA' 
+2020-09-04 10:48:40,008 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:48:40,009 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:48:40,009 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19339a74]
+2020-09-04 10:48:40,009 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19339a74]
+2020-09-04 10:48:40,010 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19339a74]
+2020-09-04 10:48:40,010 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19339a74]
+2020-09-04 10:48:40,982 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:48:40,982 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9be63f]
+2020-09-04 10:48:40,983 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1364176727 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:48:40,983 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'AAA' 
+2020-09-04 10:48:40,984 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:48:40,984 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:48:40,985 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9be63f]
+2020-09-04 10:48:40,985 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9be63f]
+2020-09-04 10:48:40,985 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9be63f]
+2020-09-04 10:48:40,986 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9be63f]
+2020-09-04 10:48:41,071 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:48:41,072 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e0bdefd]
+2020-09-04 10:48:41,072 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1962128781 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:48:41,072 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'AAA' 
+2020-09-04 10:48:41,072 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:48:41,073 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:48:41,073 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e0bdefd]
+2020-09-04 10:48:41,073 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e0bdefd]
+2020-09-04 10:48:41,073 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e0bdefd]
+2020-09-04 10:48:41,073 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e0bdefd]
+2020-09-04 10:49:00,798 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:49:30,800 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:49:54,531 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:49:54,532 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@446379d8]
+2020-09-04 10:49:54,532 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@2073294831 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:49:54,532 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:49:54,533 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:49:54,533 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:49:54,534 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@446379d8]
+2020-09-04 10:49:54,534 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@446379d8]
+2020-09-04 10:49:54,534 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@446379d8]
+2020-09-04 10:49:54,534 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@446379d8]
+2020-09-04 10:49:54,579 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:49:54,579 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c1c4ac7]
+2020-09-04 10:49:54,579 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@83834110 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:49:54,580 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:49:54,580 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:49:54,580 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:49:54,580 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c1c4ac7]
+2020-09-04 10:49:54,581 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c1c4ac7]
+2020-09-04 10:49:54,581 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c1c4ac7]
+2020-09-04 10:49:54,581 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c1c4ac7]
+2020-09-04 10:49:54,643 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:49:54,643 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e97274e]
+2020-09-04 10:49:54,644 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@2139351443 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:49:54,644 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:49:54,644 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:49:54,645 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:49:54,645 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e97274e]
+2020-09-04 10:49:54,645 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e97274e]
+2020-09-04 10:49:54,645 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e97274e]
+2020-09-04 10:49:54,645 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e97274e]
+2020-09-04 10:49:54,985 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:49:54,985 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b0a295]
+2020-09-04 10:49:54,985 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@2056715905 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:49:54,986 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:49:54,986 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:49:54,986 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:49:54,986 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b0a295]
+2020-09-04 10:49:54,987 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b0a295]
+2020-09-04 10:49:54,987 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b0a295]
+2020-09-04 10:49:54,987 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b0a295]
+2020-09-04 10:49:55,172 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:49:55,172 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@fc5dd84]
+2020-09-04 10:49:55,174 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@429771100 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:49:55,174 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:49:55,174 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:49:55,175 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:49:55,175 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@fc5dd84]
+2020-09-04 10:49:55,175 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@fc5dd84]
+2020-09-04 10:49:55,175 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@fc5dd84]
+2020-09-04 10:49:55,176 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@fc5dd84]
+2020-09-04 10:49:55,326 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:49:55,326 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a7af03d]
+2020-09-04 10:49:55,327 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@590162217 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:49:55,327 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:49:55,327 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:49:55,328 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:49:55,329 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a7af03d]
+2020-09-04 10:49:55,329 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a7af03d]
+2020-09-04 10:49:55,329 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a7af03d]
+2020-09-04 10:49:55,329 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a7af03d]
+2020-09-04 10:49:55,426 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:49:55,426 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@685ecac0]
+2020-09-04 10:49:55,427 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@222653762 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:49:55,427 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:49:55,427 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:49:55,428 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:49:55,428 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@685ecac0]
+2020-09-04 10:49:55,429 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@685ecac0]
+2020-09-04 10:49:55,429 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@685ecac0]
+2020-09-04 10:49:55,429 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@685ecac0]
+2020-09-04 10:50:00,805 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:50:30,813 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:50:50,963 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:50:50,963 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7d1c93de]
+2020-09-04 10:50:50,964 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1426166433 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:50:50,964 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:50:50,964 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:50:50,965 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:50:50,965 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7d1c93de]
+2020-09-04 10:50:50,965 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7d1c93de]
+2020-09-04 10:50:50,966 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7d1c93de]
+2020-09-04 10:50:50,966 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7d1c93de]
+2020-09-04 10:50:51,029 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:50:51,029 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11adf982]
+2020-09-04 10:50:51,030 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1765544165 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:50:51,030 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:50:51,030 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:50:51,031 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:50:51,031 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11adf982]
+2020-09-04 10:50:51,031 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11adf982]
+2020-09-04 10:50:51,031 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11adf982]
+2020-09-04 10:50:51,031 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11adf982]
+2020-09-04 10:50:51,104 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:50:51,105 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e344bf5]
+2020-09-04 10:50:51,105 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@225415478 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:50:51,105 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:50:51,106 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:50:51,106 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:50:51,106 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e344bf5]
+2020-09-04 10:50:51,107 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e344bf5]
+2020-09-04 10:50:51,107 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e344bf5]
+2020-09-04 10:50:51,107 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e344bf5]
+2020-09-04 10:50:51,363 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:50:51,364 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24613543]
+2020-09-04 10:50:51,364 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@2126084202 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:50:51,364 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:50:51,364 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:50:51,365 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:50:51,365 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24613543]
+2020-09-04 10:50:51,365 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24613543]
+2020-09-04 10:50:51,366 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24613543]
+2020-09-04 10:50:51,366 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24613543]
+2020-09-04 10:50:51,398 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:50:51,399 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d675d68]
+2020-09-04 10:50:51,399 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@536591060 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:50:51,399 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:50:51,399 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:50:51,400 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:50:51,401 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d675d68]
+2020-09-04 10:50:51,401 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d675d68]
+2020-09-04 10:50:51,402 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d675d68]
+2020-09-04 10:50:51,402 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d675d68]
+2020-09-04 10:50:51,646 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:50:51,646 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@379558a7]
+2020-09-04 10:50:51,646 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1161882521 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:50:51,647 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:50:51,647 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:50:51,648 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:50:51,649 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@379558a7]
+2020-09-04 10:50:51,649 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@379558a7]
+2020-09-04 10:50:51,649 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@379558a7]
+2020-09-04 10:50:51,649 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@379558a7]
+2020-09-04 10:50:51,806 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:50:51,807 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61ef19b2]
+2020-09-04 10:50:51,807 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1637004620 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:50:51,808 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:50:51,808 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:50:51,808 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:50:51,809 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61ef19b2]
+2020-09-04 10:50:51,809 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61ef19b2]
+2020-09-04 10:50:51,809 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61ef19b2]
+2020-09-04 10:50:51,809 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61ef19b2]
+2020-09-04 10:51:00,824 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:51:30,830 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:52:00,845 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:52:30,850 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:52:44,132 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:52:44,133 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6233943d]
+2020-09-04 10:52:44,133 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@486695305 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:52:44,133 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:52:44,134 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:52:44,134 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:52:44,134 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6233943d]
+2020-09-04 10:52:44,135 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6233943d]
+2020-09-04 10:52:44,135 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6233943d]
+2020-09-04 10:52:44,135 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6233943d]
+2020-09-04 10:52:44,203 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:52:44,203 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f436fc4]
+2020-09-04 10:52:44,203 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1626824492 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:52:44,204 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:52:44,204 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:52:44,204 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:52:44,204 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f436fc4]
+2020-09-04 10:52:44,205 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f436fc4]
+2020-09-04 10:52:44,205 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f436fc4]
+2020-09-04 10:52:44,205 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f436fc4]
+2020-09-04 10:52:44,270 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:52:44,271 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2785b97e]
+2020-09-04 10:52:44,271 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1116891571 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:52:44,272 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:52:44,272 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:52:44,273 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:52:44,274 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2785b97e]
+2020-09-04 10:52:44,275 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2785b97e]
+2020-09-04 10:52:44,275 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2785b97e]
+2020-09-04 10:52:44,275 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2785b97e]
+2020-09-04 10:52:44,591 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:52:44,591 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f415868]
+2020-09-04 10:52:44,591 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1916337210 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:52:44,592 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:52:44,592 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:52:44,592 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:52:44,592 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f415868]
+2020-09-04 10:52:44,593 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f415868]
+2020-09-04 10:52:44,593 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f415868]
+2020-09-04 10:52:44,593 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f415868]
+2020-09-04 10:52:44,735 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:52:44,735 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@202124f7]
+2020-09-04 10:52:44,736 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1086318977 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:52:44,736 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:52:44,736 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:52:44,737 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:52:44,738 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@202124f7]
+2020-09-04 10:52:44,738 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@202124f7]
+2020-09-04 10:52:44,738 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@202124f7]
+2020-09-04 10:52:44,738 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@202124f7]
+2020-09-04 10:52:44,877 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:52:44,877 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31dc4daa]
+2020-09-04 10:52:44,877 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@280250064 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:52:44,877 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:52:44,878 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:52:44,878 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:52:44,879 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31dc4daa]
+2020-09-04 10:52:44,879 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31dc4daa]
+2020-09-04 10:52:44,879 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31dc4daa]
+2020-09-04 10:52:44,879 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31dc4daa]
+2020-09-04 10:52:45,008 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:52:45,008 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20763ba3]
+2020-09-04 10:52:45,008 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1895929769 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:52:45,008 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:52:45,009 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:52:45,009 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:52:45,009 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20763ba3]
+2020-09-04 10:52:45,009 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20763ba3]
+2020-09-04 10:52:45,010 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20763ba3]
+2020-09-04 10:52:45,010 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20763ba3]
+2020-09-04 10:53:00,858 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:53:30,864 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:54:00,875 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:54:30,880 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:54:39,183 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:54:39,183 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b3916fa]
+2020-09-04 10:54:39,183 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1244184368 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:54:39,183 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:54:39,184 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:54:39,184 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:54:39,185 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b3916fa]
+2020-09-04 10:54:39,185 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b3916fa]
+2020-09-04 10:54:39,185 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b3916fa]
+2020-09-04 10:54:39,185 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b3916fa]
+2020-09-04 10:54:39,284 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:54:39,285 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5073a7f2]
+2020-09-04 10:54:39,285 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@627923164 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:54:39,285 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:54:39,285 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:54:39,286 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:54:39,286 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5073a7f2]
+2020-09-04 10:54:39,286 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5073a7f2]
+2020-09-04 10:54:39,286 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5073a7f2]
+2020-09-04 10:54:39,286 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5073a7f2]
+2020-09-04 10:54:39,350 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:54:39,351 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27b86f48]
+2020-09-04 10:54:39,351 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@491904287 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:54:39,351 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:54:39,351 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:54:39,352 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:54:39,352 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27b86f48]
+2020-09-04 10:54:39,352 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27b86f48]
+2020-09-04 10:54:39,353 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27b86f48]
+2020-09-04 10:54:39,353 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27b86f48]
+2020-09-04 10:54:39,592 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:54:39,593 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48e83f4a]
+2020-09-04 10:54:39,593 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@618278188 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:54:39,593 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:54:39,594 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:54:39,594 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:54:39,595 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48e83f4a]
+2020-09-04 10:54:39,595 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48e83f4a]
+2020-09-04 10:54:39,595 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48e83f4a]
+2020-09-04 10:54:39,595 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48e83f4a]
+2020-09-04 10:54:39,741 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:54:39,741 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47c4e4e]
+2020-09-04 10:54:39,741 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@896202768 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:54:39,741 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:54:39,741 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:54:39,743 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:54:39,743 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47c4e4e]
+2020-09-04 10:54:39,743 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47c4e4e]
+2020-09-04 10:54:39,743 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47c4e4e]
+2020-09-04 10:54:39,743 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47c4e4e]
+2020-09-04 10:54:39,874 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:54:39,874 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7037e78d]
+2020-09-04 10:54:39,874 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@1845320025 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:54:39,875 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:54:39,875 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:54:39,876 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:54:39,876 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7037e78d]
+2020-09-04 10:54:39,876 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7037e78d]
+2020-09-04 10:54:39,876 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7037e78d]
+2020-09-04 10:54:39,876 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7037e78d]
+2020-09-04 10:54:39,984 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:54:39,984 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4034bce6]
+2020-09-04 10:54:39,984 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@266730902 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:54:39,984 DEBUG findUserByNickname:159 -==>  Preparing: SELECT * FROM user WHERE nickname LIKE 'undefined' 
+2020-09-04 10:54:39,984 DEBUG findUserByNickname:159 -==> Parameters: 
+2020-09-04 10:54:39,985 DEBUG findUserByNickname:159 -<==      Total: 0
+2020-09-04 10:54:39,985 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4034bce6]
+2020-09-04 10:54:39,985 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4034bce6]
+2020-09-04 10:54:39,985 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4034bce6]
+2020-09-04 10:54:39,986 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4034bce6]
+2020-09-04 10:54:43,760 DEBUG SqlSessionUtils:97 -Creating a new SqlSession
+2020-09-04 10:54:43,760 DEBUG SqlSessionUtils:128 -Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45d062d1]
+2020-09-04 10:54:43,761 DEBUG SpringManagedTransaction:87 -JDBC Connection [HikariProxyConnection@63450619 wrapping com.mysql.jdbc.JDBC4Connection@5f82edc5] will be managed by Spring
+2020-09-04 10:54:43,761 DEBUG addUser:159 -==>  Preparing: INSERT INTO user (nickname, pwd) VALUES ('newvoid', 'nnn') 
+2020-09-04 10:54:43,761 DEBUG addUser:159 -==> Parameters: 
+2020-09-04 10:54:43,762 DEBUG addUser:159 -<==    Updates: 1
+2020-09-04 10:54:43,762 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45d062d1]
+2020-09-04 10:54:43,762 DEBUG SqlSessionUtils:163 -Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45d062d1] from current transaction
+2020-09-04 10:54:43,762 DEBUG findUserByUser:159 -==>  Preparing: SELECT * FROM user WHERE id = ? OR nickname = ? 
+2020-09-04 10:54:43,763 DEBUG findUserByUser:159 -==> Parameters: 0(Integer), newvoid(String)
+2020-09-04 10:54:43,764 DEBUG findUserByUser:159 -<==      Total: 1
+2020-09-04 10:54:43,764 DEBUG SqlSessionUtils:186 -Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45d062d1]
+2020-09-04 10:54:43,764 DEBUG SqlSessionUtils:284 -Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45d062d1]
+2020-09-04 10:54:43,764 DEBUG SqlSessionUtils:310 -Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45d062d1]
+2020-09-04 10:54:43,765 DEBUG SqlSessionUtils:315 -Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45d062d1]
+2020-09-04 10:55:00,893 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:55:30,902 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:56:00,909 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:56:30,916 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:57:00,928 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:57:30,930 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:58:00,943 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:58:30,959 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:59:00,967 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 10:59:30,969 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:00:00,984 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:00:30,997 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:01:00,998 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:01:31,001 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:02:01,011 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:02:31,016 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:03:01,019 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:03:31,020 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:04:01,035 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:04:31,036 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:05:01,050 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:05:31,051 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:06:01,061 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:06:31,074 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:07:01,078 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:07:31,084 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:08:01,087 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:08:31,094 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:09:01,104 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:09:31,112 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:10:01,121 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:10:31,129 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:11:01,135 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:11:31,139 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:12:01,140 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:12:31,144 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:13:01,147 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:13:31,155 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:13:51,415 DEBUG PoolBase:130 -HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@33a433fc: (connection has passed maxLifetime)
+2020-09-04 11:13:51,420 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@144e8ff2
+2020-09-04 11:13:53,563 DEBUG PoolBase:130 -HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5f82edc5: (connection has passed maxLifetime)
+2020-09-04 11:13:53,566 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@746170bd
+2020-09-04 11:13:57,460 DEBUG PoolBase:130 -HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@799fea57: (connection has passed maxLifetime)
+2020-09-04 11:13:57,464 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@702f686d
+2020-09-04 11:13:58,807 DEBUG PoolBase:130 -HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@37ea68af: (connection has passed maxLifetime)
+2020-09-04 11:13:58,811 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@59f14545
+2020-09-04 11:14:00,067 DEBUG PoolBase:130 -HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@1bebfae1: (connection has passed maxLifetime)
+2020-09-04 11:14:00,070 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@1ec6ffb6
+2020-09-04 11:14:00,285 DEBUG PoolBase:130 -HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@7f003f41: (connection has passed maxLifetime)
+2020-09-04 11:14:00,289 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@223bfb1
+2020-09-04 11:14:01,157 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:14:01,453 DEBUG PoolBase:130 -HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@57d45f1c: (connection has passed maxLifetime)
+2020-09-04 11:14:01,457 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@13c5cd7e
+2020-09-04 11:14:07,329 DEBUG PoolBase:130 -HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@57c597e0: (connection has passed maxLifetime)
+2020-09-04 11:14:07,332 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@61b4b542
+2020-09-04 11:14:07,577 DEBUG PoolBase:130 -HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@4c88bd53: (connection has passed maxLifetime)
+2020-09-04 11:14:07,580 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@19b4a0d
+2020-09-04 11:14:16,501 DEBUG PoolBase:130 -HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@61c6f9d1: (connection has passed maxLifetime)
+2020-09-04 11:14:16,505 DEBUG HikariPool:722 -HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6e7756d6
+2020-09-04 11:14:31,168 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:15:01,173 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:15:31,187 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:16:01,197 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:16:31,205 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:17:01,215 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:17:31,220 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:18:01,235 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:18:31,247 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:19:01,252 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:19:31,257 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:20:01,266 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:20:31,280 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:21:01,285 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:21:31,300 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:22:01,311 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:22:31,317 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:23:01,329 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:23:31,341 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:24:01,351 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:24:31,362 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:25:01,371 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:25:31,379 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:26:01,383 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:26:31,395 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:27:01,397 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:27:31,409 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:28:01,416 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:28:31,430 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:29:01,444 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:29:31,459 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:30:01,471 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:30:31,486 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:31:01,491 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:31:31,496 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:32:01,498 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:32:31,506 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:33:01,516 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:33:31,517 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:34:01,522 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:34:31,524 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:35:01,540 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:35:31,554 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:36:01,565 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-09-04 11:36:31,568 DEBUG HikariPool:417 -HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
