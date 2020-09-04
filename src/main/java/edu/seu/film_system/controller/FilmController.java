@@ -24,6 +24,15 @@ public class FilmController {
         return filmService.findAllFilm();
     }
 
+    // 按照 ID 查找电影，精确查询
+    // http://localhost:8256/film_system/film/id=1
+    @RequestMapping("/id={filmId}")
+    @ResponseBody
+    public ResultDTO<Film> findFilmById(@PathVariable("filmId") int filmId) {
+        return filmService.getFilmById(filmId);
+    }
+
+
     // http://localhost:8256/film_system/film/allSum
     // 搜索所有电影的简介
     @RequestMapping("/allSum")

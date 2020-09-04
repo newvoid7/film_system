@@ -4,4 +4,17 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.seu.film_system.mapper.ReviewMapper">
 
+    <!-- int addReview(Review review) -->
+    <insert id="addReview" parameterType="Review">
+        INSERT INTO review (time, user_id, film_id, content)
+        VALUES (NOW(), ${user_id}, ${film_id}, ${content})
+    </insert>
+
+    <!-- Review findReviewByReview(Review review) -->
+    <select id="findReviewByReview" parameterType="Review" resultType="Review">
+        SELECT * FROM review
+        WHERE user_id = ${user_id}
+        AND film_id = ${film_id}
+        AND time = '${time}'
+    </select>
 </mapper>

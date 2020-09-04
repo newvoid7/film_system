@@ -1,12 +1,9 @@
 package edu.seu.film_system.mapper;
 
 import edu.seu.film_system.pojo.User;
-import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
 
-import java.util.Date;
 import java.util.List;
 
 public interface UserMapper {

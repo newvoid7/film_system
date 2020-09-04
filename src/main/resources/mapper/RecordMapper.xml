@@ -18,4 +18,11 @@
         AND film_id = ${film_id}
     </update>
 
+    <!-- Record findRecordByRecord(Record record); -->
+    <select id="findRecordByRecord" parameterType="Record" resultType="Record">
+        SELECT * FROM record
+        WHERE user_id = ${user_id}
+        AND film_id = ${film_id}
+    </select>
+
 </mapper>

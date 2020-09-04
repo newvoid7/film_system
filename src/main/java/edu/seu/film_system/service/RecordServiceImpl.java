@@ -108,4 +108,19 @@ public class RecordServiceImpl implements RecordService{
         return resultDTO;
     }
 
+    @Override
+    public ResultDTO<Record> findRecordByRecord(Record record) {
+        ResultDTO<Record> resultDTO = new ResultDTO<>();
+        List<Record> list = new ArrayList<>();
+        try {
+            list.add(recordMapper.findRecordByRecord(record));
+            resultDTO.setCode(20);
+            resultDTO.setMsg("Find record by record: Success");
+        } catch (Exception e) {
+            resultDTO.setCode(11);
+            resultDTO.setMsg("Find record by record: Database error");
+        }
+        resultDTO.setData(list);
+        return resultDTO;
+    }
 }

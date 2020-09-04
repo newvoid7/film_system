@@ -8,14 +8,14 @@ import java.util.Objects;
 public class Review {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date time;
-    private int userId;
-    private int filmId;
+    private int user_id;
+    private int film_id;
     private String content;
 
-    public Review(Date time, int userId, int filmId, String content) {
+    public Review(Date time, int user_id, int film_id, String content) {
         this.time = time;
-        this.userId = userId;
-        this.filmId = filmId;
+        this.user_id = user_id;
+        this.film_id = film_id;
         this.content = content;
     }
 
@@ -30,20 +30,20 @@ public class Review {
         this.time = time;
     }
 
-    public int getUserId() {
-        return userId;
+    public int getUser_id() {
+        return user_id;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
-    public int getFilmId() {
-        return filmId;
+    public int getFilm_id() {
+        return film_id;
     }
 
-    public void setFilmId(int filmId) {
-        this.filmId = filmId;
+    public void setFilm_id(int film_id) {
+        this.film_id = film_id;
     }
 
     public String getContent() {
@@ -58,8 +58,8 @@ public class Review {
     public String toString() {
         return "Review{" +
                 "time=" + time +
-                ", userId=" + userId +
-                ", filmId=" + filmId +
+                ", userId=" + user_id +
+                ", filmId=" + film_id +
                 ", content='" + content + '\'' +
                 '}';
     }
@@ -69,13 +69,13 @@ public class Review {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Review review = (Review) o;
-        return userId == review.userId &&
-                filmId == review.filmId &&
+        return user_id == review.user_id &&
+                film_id == review.film_id &&
                 time.equals(review.time);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(time, userId, filmId);
+        return Objects.hash(time, user_id, film_id);
     }
 }

@@ -45,6 +45,7 @@ public class RecordController {
 
     // http://127.0.0.1:8256/film_system/record/add
     // 新增观影记录
+    // 从前台传 json
     @RequestMapping("/add")
     @ResponseBody
     public ResultDTO<Record> addRecord(@RequestBody Record record) {
@@ -53,9 +54,19 @@ public class RecordController {
 
     // http://127.0.0.1:8256/film_system/record/update
     // 更新观影记录（时间戳），新的“上一次浏览位置”
+    // 从前台传 json
     @RequestMapping("/update")
     @ResponseBody
     public ResultDTO<Record> updateRecord(@RequestBody Record record) {
         return recordService.updateRecord(record);
+    }
+
+    // http://127.0.0.1:8256/film_system/record/findRecordByRecord
+    // 新增观影记录
+    // 从前台传 json
+    @RequestMapping("/findRecordByRecord")
+    @ResponseBody
+    public ResultDTO<Record> findRecordByRecord(@RequestBody Record record) {
+        return recordService.findRecordByRecord(record);
     }
 }

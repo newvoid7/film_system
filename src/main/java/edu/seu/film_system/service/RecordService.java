@@ -9,4 +9,5 @@ public interface RecordService {
     ResultDTO<Record> findRecordByFilmId(int filmId);
     ResultDTO<Record> addRecord(Record record);
     ResultDTO<Record> updateRecord(Record record);
+    ResultDTO<Record> findRecordByRecord(Record record);
 }

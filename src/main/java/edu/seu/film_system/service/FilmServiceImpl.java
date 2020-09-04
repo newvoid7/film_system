@@ -1,6 +1,5 @@
 package edu.seu.film_system.service;
 
-import com.sun.org.apache.xpath.internal.compiler.Keywords;
 import edu.seu.film_system.mapper.FilmMapper;
 import edu.seu.film_system.pojo.Film;
 import edu.seu.film_system.pojo.ResultDTO;
@@ -9,10 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service("filmService")
 @Transactional
@@ -26,11 +22,32 @@ public class FilmServiceImpl implements FilmService{
         List<Film> list = new ArrayList<>();
         try {
             list = filmMapper.findAllFilm();
-            resultDTO.setCode(20);
-            resultDTO.setMsg("Find all film: Success");
+            if (list.isEmpty()) {
+                resultDTO.setCode(21);
+                resultDTO.setMsg("Find");
+            } else {
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Find all film: Success");
+            }
         } catch (Exception e) {
             resultDTO.setCode(11);
             resultDTO.setMsg("Find all film: Database error");
+        }
+        resultDTO.setData(list);
+        return resultDTO;
+    }
+
+    @Override
+    public ResultDTO<Film> getFilmById(int filmId) {
+        ResultDTO<Film> resultDTO = new ResultDTO<>();
+        List<Film> list = new ArrayList<>();
+        try {
+            list = filmMapper.getFilmById(filmId);
+            resultDTO.setCode(20);
+            resultDTO.setMsg("Find film by ID: Success");
+        } catch (Exception e) {
+            resultDTO.setCode(11);
+            resultDTO.setMsg("Find film by ID: Database error");
         }
         resultDTO.setData(list);
         return resultDTO;

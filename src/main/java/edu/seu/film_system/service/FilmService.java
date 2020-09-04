@@ -6,6 +6,7 @@ import edu.seu.film_system.pojo.ResultDTO;
 public interface FilmService {
 
     ResultDTO<Film> findAllFilm();
+    ResultDTO<Film> getFilmById(int filmId);
     ResultDTO<String> findAllSummary();
     ResultDTO<Film> findFilmLongerThan(int leastDur);
     // ResultDTO<Film> exactSearch(String keyWord);

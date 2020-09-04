@@ -11,6 +11,9 @@ public interface FilmMapper {
     @Select("SELECT * FROM film")
     List<Film> findAllFilm();
 
+    @Select("SELECT * FROM film WHERE id = ${id}")
+    List<Film> getFilmById(@Param("id") int filmId);
+
     @Select("SELECT summary FROM film")
     List<String> findAllSummary();
 

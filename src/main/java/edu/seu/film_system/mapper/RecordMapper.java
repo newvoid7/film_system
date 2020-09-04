@@ -20,4 +20,7 @@ public interface RecordMapper {
 
     // UPDATE
     int updateRecord(Record record);
+
+    // SELECT
+    Record findRecordByRecord(Record record);
 }

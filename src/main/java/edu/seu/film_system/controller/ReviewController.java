@@ -45,29 +45,22 @@ public class ReviewController {
         return reviewService.searchByFilm(filmId);
     }
 
-    // http://127.0.0.1:8256/film_system/review/new
-    // 接收 Json 数据
-    // 从 http://127.0.0.1:8256/film_system/testNewReview.html 跳转到此
-    // 新增某个评论，使用上述 html 中描述的 json 格式传递信息
+    // http://127.0.0.1:8256/film_system/review/add
+    // 新增某个评论，接收 Json 数据
     // 需要用户ID、电影ID、评论内容
     // 注意：默认设置评论时间为服务器当前时间，不可更改
-    @RequestMapping("/new")
+    @RequestMapping("/add")
     @ResponseBody
-    public String newReview(@RequestBody Review review) throws Exception {
-        System.out.println(review.toString());
-        reviewService.newReview(review);
-        return "ok";
+    public int newReview(@RequestBody Review review) {
+        return reviewService.addReview(review);
     }
 
-
-    // 从 http://127.0.0.1:8256/film_system/testNewReview.html 跳转;
-    // TODO 删除某条评论，需要评论的主键信息：用户ID、电影ID、时间戳
-    @RequestMapping("/delete")
+    // http://127.0.0.1:8256/film_system/review/findReviewByReview
+    @RequestMapping("/findReviewByReview")
     @ResponseBody
-    public String deleteReview(@RequestBody Review review) throws Exception {
-        System.out.println(review.toString());
-        reviewService.newReview(review);
-        return "ok";
+    public ResultDTO<Review> findReviewByReview(@RequestBody Review review) {
+        return reviewService.findReviewByReview(review);
     }
+
 }
 
