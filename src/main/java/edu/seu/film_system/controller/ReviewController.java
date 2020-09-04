@@ -56,6 +56,8 @@ public class ReviewController {
     }
 
     // http://127.0.0.1:8256/film_system/review/findReviewByReview
+    // 根据评论搜评论，要求主键做输入：用户ID、电影ID、时间
+    // 前台传Json
     @RequestMapping("/findReviewByReview")
     @ResponseBody
     public ResultDTO<Review> findReviewByReview(@RequestBody Review review) {

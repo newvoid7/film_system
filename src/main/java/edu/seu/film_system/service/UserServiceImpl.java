@@ -260,6 +260,11 @@ public class UserServiceImpl implements UserService {
         return resultDTO;
     }
 
+    @Override
+    public int updatePwd(String newNickname, int userId) {
+        return 0;
+    }
+
     // 检查昵称唯一性
     @Override
     public int checkNicknameAvailable(String nickname) {

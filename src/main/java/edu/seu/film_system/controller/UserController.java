@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.List;
-
 @Controller
 @RequestMapping("user")
 public class UserController {
@@ -65,6 +63,7 @@ public class UserController {
     }
 
     // 更新用户信息：昵称、ID、密码除外
+    // http://127.0.0.1:8256/film_system/user/update
     @RequestMapping("/update")
     @ResponseBody
     public ResultDTO<User> update(@RequestBody User user) {
@@ -127,5 +126,8 @@ public class UserController {
     public int checkNicknameAvailable(@PathVariable("nickname")String nickname) throws Exception {
         return userService.checkNicknameAvailable(nickname);
     }
+
+    // 更新用户昵称
+    // TODO 用 xml 中的函数？还是直接传入 json
 }
 

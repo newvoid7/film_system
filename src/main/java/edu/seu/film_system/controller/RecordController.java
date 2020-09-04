@@ -62,7 +62,7 @@ public class RecordController {
     }
 
     // http://127.0.0.1:8256/film_system/record/findRecordByRecord
-    // 新增观影记录
+    // 查找观影记录
     // 从前台传 json
     @RequestMapping("/findRecordByRecord")
     @ResponseBody

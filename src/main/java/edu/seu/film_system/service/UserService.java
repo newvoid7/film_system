@@ -15,5 +15,6 @@ public interface UserService {
     ResultDTO<User> delUser(User user);
     ResultDTO<User> updateUser(User user);
     ResultDTO<User> findUserByUser(User user);
+    int updatePwd(String newNickname, int userId);
     int checkNicknameAvailable(String nickname);
 }
