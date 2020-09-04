@@ -21,7 +21,7 @@ public class ReviewController {
     // 搜索出所有评论（仅测试）
     @RequestMapping("/all")
     @ResponseBody
-    public ResultDTO<Review> findAll() throws Exception {
+    public ResultDTO<Review> findAll() {
         ResultDTO<Review> resultDTO = new ResultDTO<>();
         resultDTO=reviewService.findAllReview();
         return resultDTO;
@@ -32,7 +32,7 @@ public class ReviewController {
     // 关键字在 url 中，地址栏传值
     @RequestMapping("/user={userId}")
     @ResponseBody
-    public ResultDTO<Review> searchByUser(@PathVariable("userId")int userId) throws Exception {
+    public ResultDTO<Review> searchByUser(@PathVariable("userId")int userId) {
         return reviewService.searchByUser(userId);
     }
 
@@ -41,7 +41,7 @@ public class ReviewController {
     // 关键字在 url 中，地址栏传值
     @RequestMapping("/film={filmId}")
     @ResponseBody
-    public ResultDTO<Review> searchByFilm(@PathVariable("filmId")int filmId) throws Exception {
+    public ResultDTO<Review> searchByFilm(@PathVariable("filmId")int filmId) {
         return reviewService.searchByFilm(filmId);
     }
 

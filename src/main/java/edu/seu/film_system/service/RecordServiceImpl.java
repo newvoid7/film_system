@@ -22,8 +22,13 @@ public class RecordServiceImpl implements RecordService{
         List<Record> list = new ArrayList<>();
         try {
             list = recordMapper.findAllRecord();
-            resultDTO.setCode(20);
-            resultDTO.setMsg("Find all record: Success");
+            if (list.isEmpty()) {
+                resultDTO.setCode(21);
+                resultDTO.setMsg("Find all record: Success but no data");
+            } else {
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Find all record: Success");
+            }
         } catch (Exception e) {
             resultDTO.setCode(11);
             resultDTO.setMsg("Find all record: Database error");
@@ -38,8 +43,13 @@ public class RecordServiceImpl implements RecordService{
         List<Record> list = new ArrayList<>();
         try {
             list = recordMapper.findRecordByUserId(userId);
-            resultDTO.setCode(20);
-            resultDTO.setMsg("Find record by user id: Success");
+            if (list.isEmpty()) {
+                resultDTO.setCode(21);
+                resultDTO.setMsg("Find record by user id: Success but no data");
+            } else {
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Find record by user id: Success");
+            }
         } catch (Exception e) {
             resultDTO.setCode(11);
             resultDTO.setMsg("Find record by user id: Database error");
@@ -54,8 +64,13 @@ public class RecordServiceImpl implements RecordService{
         List<Record> list = new ArrayList<>();
         try {
             list = recordMapper.findRecordByFilmId(filmId);
-            resultDTO.setCode(20);
-            resultDTO.setMsg("Find record by film id: Success");
+            if (list.isEmpty()) {
+                resultDTO.setCode(21);
+                resultDTO.setMsg("Find record by film id: Success but no data");
+            } else {
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Find record by film id: Success");
+            }
         } catch (Exception e) {
             resultDTO.setCode(11);
             resultDTO.setMsg("Find record by film id: Database error");

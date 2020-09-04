@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.seu.film_system.mapper.FavoriteMapper">
+
+    <!-- int addFavorite(Favorite favorite); -->
+    <insert id="addFavorite" parameterType="Favorite">
+        INSERT INTO favorite (user_id, film_id)
+        VALUES (${user_id}, ${film_id})
+    </insert>
+
+    <!-- int deleteFavorite(Favorite favorite); -->
+    <delete id="deleteFavorite" parameterType="Favorite">
+        DELETE FROM favorite
+        WHERE user_id = ${user_id}
+        AND film_id = ${film_id}
+    </delete>
+
+</mapper>

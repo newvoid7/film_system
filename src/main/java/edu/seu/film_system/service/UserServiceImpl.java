@@ -46,8 +46,13 @@ public class UserServiceImpl implements UserService {
             for (int i = 0; i < list.size(); ++i) {            // 保护密码信息
                 list.get(i).protectInfo();
             }
-            resultDTO.setCode(20);
-            resultDTO.setMsg("Find user by id: Success");
+            if (list.isEmpty()) {
+                resultDTO.setCode(21);
+                resultDTO.setMsg("Find user by id: Success but no data");
+            } else {
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Find user by id: Success");
+            }
         } catch (Exception e) {
             resultDTO.setCode(11);
             resultDTO.setMsg("Find user by id: Database");
@@ -71,8 +76,13 @@ public class UserServiceImpl implements UserService {
                 for (int i = 0; i < list.size(); ++i) {            // 保护密码信息
                     list.get(i).protectInfo();
                 }
-                resultDTO.setCode(20);
-                resultDTO.setMsg("Search by nickname: Success");
+                if (list.isEmpty()) {
+                    resultDTO.setCode(21);
+                    resultDTO.setMsg("Search by nickname: Success but no data");
+                } else {
+                    resultDTO.setCode(20);
+                    resultDTO.setMsg("Search by nickname: Success");
+                }
             } catch (Exception e) {
                 resultDTO.setCode(11);
                 resultDTO.setMsg("Search by nickname: Database error");
@@ -195,6 +205,7 @@ public class UserServiceImpl implements UserService {
         return resultDTO;
     }
 
+    // TODO
     @Override
     public ResultDTO<User> delUser(User user) {
         return null;
@@ -233,9 +244,14 @@ public class UserServiceImpl implements UserService {
         User resultUser = new User();
         try {
             resultUser = userMapper.findUserByUser(user);
-            list.add(resultUser);
-            resultDTO.setCode(20);
-            resultDTO.setMsg("Find user by user: Success");
+            if (resultUser == null) {
+                resultDTO.setCode(21);
+                resultDTO.setMsg("Find user by user: Success but no data");
+            } else {
+                list.add(resultUser);
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Find user by user: Success");
+            }
         } catch (Exception e) {
             resultDTO.setCode(11);
             resultDTO.setMsg("Find user by user: Database error, maybe nickname or ID not unique");

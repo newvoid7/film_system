@@ -24,7 +24,7 @@ public class FilmServiceImpl implements FilmService{
             list = filmMapper.findAllFilm();
             if (list.isEmpty()) {
                 resultDTO.setCode(21);
-                resultDTO.setMsg("Find");
+                resultDTO.setMsg("Find all film: Success but no data");
             } else {
                 resultDTO.setCode(20);
                 resultDTO.setMsg("Find all film: Success");
@@ -43,8 +43,13 @@ public class FilmServiceImpl implements FilmService{
         List<Film> list = new ArrayList<>();
         try {
             list = filmMapper.getFilmById(filmId);
-            resultDTO.setCode(20);
-            resultDTO.setMsg("Find film by ID: Success");
+            if (list.isEmpty()) {
+                resultDTO.setCode(21);
+                resultDTO.setMsg("Find film by ID: Success but no data");
+            } else {
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Find film by ID: Success");
+            }
         } catch (Exception e) {
             resultDTO.setCode(11);
             resultDTO.setMsg("Find film by ID: Database error");
@@ -59,8 +64,13 @@ public class FilmServiceImpl implements FilmService{
         List<String> list = new ArrayList<>();
         try {
             list = filmMapper.findAllSummary();
-            resultDTO.setCode(20);
-            resultDTO.setMsg("Find all summary: Success");
+            if (list.isEmpty()) {
+                resultDTO.setCode(21);
+                resultDTO.setMsg("Find all summary: Success but no data");
+            } else {
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Find all summary: Success");
+            }
         } catch (Exception e) {
             resultDTO.setCode(11);
             resultDTO.setMsg("Find all summary: Database error");
@@ -75,8 +85,13 @@ public class FilmServiceImpl implements FilmService{
         List<Film> list = new ArrayList<>();
         try {
             list = filmMapper.findFilmLongerThan(leastDur);
-            resultDTO.setCode(20);
-            resultDTO.setMsg("Find film longer than: Success");
+            if (list.isEmpty()) {
+                resultDTO.setCode(21);
+                resultDTO.setMsg("Find film longer than: Success but no data");
+            } else {
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Find film longer than: Success");
+            }
         } catch (Exception e) {
             resultDTO.setCode(11);
             resultDTO.setMsg("Find film longer than: Database error");
@@ -91,16 +106,21 @@ public class FilmServiceImpl implements FilmService{
         List<Film> list = new ArrayList<>();
         if (keyWord.isEmpty()) {
             resultDTO.setCode(31);
-            resultDTO.setMsg("Search in name: Keyword cannot be empty");
+            resultDTO.setMsg("Search film by title: Keyword cannot be empty");
         } else {
             keyWord = '%' + keyWord +'%';
             try {
                 list = filmMapper.searchByName(keyWord);
-                resultDTO.setCode(20);
-                resultDTO.setMsg("Search in name: Success");
+                if (list.isEmpty()) {
+                    resultDTO.setCode(21);
+                    resultDTO.setMsg("Search film by title: Success but no data");
+                } else {
+                    resultDTO.setCode(20);
+                    resultDTO.setMsg("Search film by title: Success");
+                }
             } catch (Exception e) {
                 resultDTO.setCode(11);
-                resultDTO.setMsg("Search in name: Database error");
+                resultDTO.setMsg("Search film by title: Database error");
             }
         }
         resultDTO.setData(list);
@@ -118,8 +138,13 @@ public class FilmServiceImpl implements FilmService{
             keyWord = '%' + keyWord +'%';
             try {
                 list = filmMapper.searchBySummary(keyWord);
-                resultDTO.setCode(20);
-                resultDTO.setMsg("Search in summary: Success");
+                if (list.isEmpty()) {
+                    resultDTO.setCode(21);
+                    resultDTO.setMsg("Search in summary: Success but no data");
+                } else {
+                    resultDTO.setCode(20);
+                    resultDTO.setMsg("Search in summary: Success");
+                }
             } catch (Exception e) {
                 resultDTO.setCode(11);
                 resultDTO.setMsg("Search in summary: Database error");
@@ -169,7 +194,7 @@ public class FilmServiceImpl implements FilmService{
                 }
                 if (list.isEmpty()) {
                     resultDTO.setCode(21);
-                    resultDTO.setMsg("Search in name/summary/tag: Success but empty");
+                    resultDTO.setMsg("Search in name/summary/tag: Success but no data");
                 } else {
                     resultDTO.setCode(20);
                     resultDTO.setMsg("Search in name/summary/tag: Success");
@@ -201,8 +226,13 @@ public class FilmServiceImpl implements FilmService{
         List<Film> list = new ArrayList<>();
         try {
             list = filmMapper.topFilm(topN);
-            resultDTO.setCode(20);
-            resultDTO.setMsg("Get top films: Success");
+            if (list.isEmpty()) {
+                resultDTO.setCode(21);
+                resultDTO.setMsg("Get top films: Success but no data");
+            } else {
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Get top films: Success");
+            }
         } catch (Exception e) {
             resultDTO.setCode(11);
             resultDTO.setMsg("Get top films: Database error");

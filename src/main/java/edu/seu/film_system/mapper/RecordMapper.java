@@ -1,6 +1,7 @@
 package edu.seu.film_system.mapper;
 
 import edu.seu.film_system.pojo.Record;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -10,10 +11,10 @@ public interface RecordMapper {
     List<Record> findAllRecord();
 
     @Select("SELECT * FROM record WHERE user_id = ${userId}")
-    List<Record> findRecordByUserId(int userId);
+    List<Record> findRecordByUserId(@Param("userId") int userId);
 
     @Select("SELECT * FROM record WHERE film_id = ${filmId}")
-    List<Record> findRecordByFilmId(int filmId);
+    List<Record> findRecordByFilmId(@Param("filmId") int filmId);
 
     // INSERT
     int addRecord(Record record);

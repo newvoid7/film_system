@@ -7,7 +7,8 @@ target/
 # src/main/java/edu/seu/film_system/config/StaticResourceConfig.java
 # src/main/resources/application.properties
 README.md
-
+film.log
+film_error.log
 
 ### STS ###
 .apt_generated

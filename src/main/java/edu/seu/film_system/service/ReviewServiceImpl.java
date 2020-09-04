@@ -8,7 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Service("reviewService")
@@ -23,8 +22,13 @@ public class ReviewServiceImpl implements ReviewService {
         List<Review> list = new ArrayList<>();
         try {
             list = reviewMapper.findAllReview();
-            resultDTO.setCode(20);
-            resultDTO.setMsg("Find all Review: Success");
+            if (list.isEmpty()) {
+                resultDTO.setCode(21);
+                resultDTO.setMsg("Find all Review: Success but no data");
+            } else {
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Find all Review: Success");
+            }
         } catch (Exception e) {
             resultDTO.setCode(11);
             resultDTO.setMsg("Find all Review: Database error");
@@ -39,8 +43,13 @@ public class ReviewServiceImpl implements ReviewService {
         List<Review> list = new ArrayList<>();
         try {
             list = reviewMapper.searchByUser(userId);
-            resultDTO.setCode(20);
-            resultDTO.setMsg("Find review by userId: Success");
+            if (list.isEmpty()) {
+                resultDTO.setCode(21);
+                resultDTO.setMsg("Find review by userId: Success but no data");
+            } else {
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Find review by userId: Success");
+            }
         } catch (Exception e) {
             resultDTO.setCode(11);
             resultDTO.setMsg("Find review by userId: Database error");
@@ -55,8 +64,13 @@ public class ReviewServiceImpl implements ReviewService {
         List<Review> list = new ArrayList<>();
         try {
             list = reviewMapper.searchByFilm(filmId);
-            resultDTO.setCode(20);
-            resultDTO.setMsg("Find review by filmId: Success");
+            if (list.isEmpty()) {
+                resultDTO.setCode(21);
+                resultDTO.setMsg("Find review by filmId: Success but no data");
+            } else {
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Find review by filmId: Success");
+            }
         } catch (Exception e) {
             resultDTO.setCode(11);
             resultDTO.setMsg("Find review by filmId: Database error");
@@ -86,9 +100,15 @@ public class ReviewServiceImpl implements ReviewService {
         ResultDTO<Review> resultDTO = new ResultDTO<>();
         List<Review> list = new ArrayList<>();
         try {
-            list.add(reviewMapper.findReviewByReview(review));
-            resultDTO.setCode(20);
-            resultDTO.setMsg("Find review by review: Success");
+            Review resultReview = reviewMapper.findReviewByReview(review);
+            if (resultReview == null) {
+                resultDTO.setCode(21);
+                resultDTO.setMsg("Find review by review: Success but no data");
+            } else {
+                list.add(resultReview);
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Find review by review: Success");
+            }
         } catch (Exception e) {
             resultDTO.setCode(11);
             resultDTO.setMsg("Find review by review: Database error");
