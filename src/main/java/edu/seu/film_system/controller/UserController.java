@@ -32,7 +32,8 @@ public class UserController {
 
     // 新增用户
     // 要求一个 User 对象，通过 json 从前台传进
-    @RequestMapping("/addUser")
+    // http://127.0.0.1:8256/film_system/user/add
+    @RequestMapping("/add")
     @ResponseBody
     public ResultDTO<User> addUser(@RequestBody User user) throws Exception {
         System.out.println(user.toString());
@@ -41,11 +42,16 @@ public class UserController {
 
     // 登录
     // 要求一个 User 对象，通过 json 从前台传进
+    // http://127.0.0.1:8256/film_system/user/login
+    // TODO 昵称登录有问题
     @RequestMapping("/login")
     @ResponseBody
     public ResultDTO<User> login(@RequestBody User user) {
-        ResultDTO<User> resultDTO1 = userService.loginByNickname(user.getNickname(), user.getPwd());
-        ResultDTO<User> resultDTO2 = userService.loginById(user.getId(), user.getPwd());
+        System.out.println(user.toString());
+        String sIdOrNickname = user.getNickname();
+        int iIdOrNickname = Integer.parseInt(sIdOrNickname);
+        ResultDTO<User> resultDTO1 = userService.loginByNickname(sIdOrNickname, user.getPwd());
+        ResultDTO<User> resultDTO2 = userService.loginById(iIdOrNickname, user.getPwd());
         ResultDTO<User> resultDTO = new ResultDTO<>();
         if (resultDTO1.getCode() == 20) {
             resultDTO.setCode(201);
@@ -75,5 +81,14 @@ public class UserController {
         return resultDTO;
     }
 
+    // 检查昵称唯一性
+    // 要求一个 User 对象，通过 json 从前台传进
+    // http://127.0.0.1:8256/film_system/user/checkNickname/nickname=AAA
+    // 仅当返回值为 20 时，昵称可用
+    @RequestMapping("/checkNickname/nickname={nickname}")
+    @ResponseBody
+    public int checkNicknameAvailable(@PathVariable("nickname")String nickname) throws Exception {
+        return userService.checkNicknameAvailable(nickname);
+    }
 }
 

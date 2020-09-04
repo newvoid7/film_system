@@ -6,6 +6,21 @@
 
     <!-- int addUser(User user); -->
     <insert id="addUser" parameterType="User">
-        INSERT INTO user (id, nickname, pwd, birthday) VALUES (#{id}, #{nickname}, #{pwd}, #{birthday})
+        INSERT INTO user (nickname, pwd) VALUES ('${nickname}', '${pwd}')
     </insert>
+
+    <!-- int updateUser(User user); -->
+    <update id="updateUser" parameterType="User">
+        UPDATE user
+        SET birthday = '${birthday}',
+        avtar_url = '${avatar_url}',
+        gender = '${gender}',
+        intro = '${intro}'
+        WHERE id = {id}
+    </update>
+
+    <!-- User findUserByUser(User user) -->
+    <select id="findUserByUser" resultType="User" parameterType="User">
+        SELECT * FROM user WHERE id = #{id} OR nickname = #{nickname}
+    </select>
 </mapper>

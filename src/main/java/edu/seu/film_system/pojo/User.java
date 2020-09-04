@@ -6,19 +6,23 @@ import java.util.Date;
 import java.util.Objects;
 
 public class User {
-    private int id;
-    private String pwd;
-    private String nickname;
+    private int id;                         // Main Key, Auto Increase
+    private String pwd;                     // Not Null
+    private String nickname;                // Key, Not Null
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birthday;
     private String avatar_url;
+    private String gender;
+    private String intro;
 
-    public User(int id, String pwd, String nickname, Date birthday, String avatar_url) {
+    public User(int id, String pwd, String nickname, Date birthday, String avatar_url, String gender, String intro) {
         this.id = id;
         this.pwd = pwd;
         this.nickname = nickname;
         this.birthday = birthday;
         this.avatar_url = avatar_url;
+        this.gender = gender;
+        this.intro = intro;
     }
 
     public User() {
@@ -64,6 +68,22 @@ public class User {
         this.avatar_url = avatar_url;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getIntro() {
+        return intro;
+    }
+
+    public void setIntro(String intro) {
+        this.intro = intro;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -71,7 +91,9 @@ public class User {
                 ", pwd='" + pwd + '\'' +
                 ", nickname='" + nickname + '\'' +
                 ", birthday=" + birthday +
-                ", avatarUrl='" + avatar_url + '\'' +
+                ", avatar_url='" + avatar_url + '\'' +
+                ", gender='" + gender + '\'' +
+                ", intro='" + intro + '\'' +
                 '}';
     }
 
@@ -87,4 +109,9 @@ public class User {
     public int hashCode() {
         return Objects.hash(id);
     }
+
+    public void protectInfo() {
+        setPwd("Masked");
+    }
+
 }

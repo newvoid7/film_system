@@ -11,7 +11,9 @@ public interface UserService {
     ResultDTO<User> findUserByNickname(String nickname);
     ResultDTO<User> loginById(int userId, String pwd);
     ResultDTO<User> loginByNickname(String nickname, String pwd);
-    ResultDTO<User> findUserByUser(User user);
     ResultDTO<User> addUser(User user);
-    void newUser(User user);
+    ResultDTO<User> delUser(User user);
+    ResultDTO<User> updateUser(User user);
+    ResultDTO<User> findUserByUser(User user);
+    int checkNicknameAvailable(String nickname);
 }

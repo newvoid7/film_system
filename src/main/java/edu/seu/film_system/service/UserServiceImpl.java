@@ -16,46 +16,73 @@ public class UserServiceImpl implements UserService {
     @Resource
     UserMapper userMapper;
 
+    // 找出所有用户（仅测试）
     @Override
     public ResultDTO<User> findAllUser() {
         ResultDTO<User> resultDTO = new ResultDTO<>();
-        resultDTO.setData(userMapper.findAllUser());
-        resultDTO.setCode(20);
-        resultDTO.setMsg("success");
+        List<User> list = new ArrayList<>();
+        try {
+            list = userMapper.findAllUser();
+            for (int i = 0; i < list.size(); ++i) {            // 保护密码信息
+                list.get(i).protectInfo();
+            }
+            resultDTO.setCode(20);
+            resultDTO.setMsg("Find all user: Success");
+        } catch (Exception e) {
+            resultDTO.setCode(11);
+            resultDTO.setMsg("Find all user: Database");
+        }
+        resultDTO.setData(list);
         return resultDTO;
     }
 
+    // 通过 ID 查找用户（登录后），模糊查询
     @Override
     public ResultDTO<User> findUserById(int userId) {
         ResultDTO<User> resultDTO = new ResultDTO<>();
-        resultDTO.setData(userMapper.findUserById(userId));
-        resultDTO.setCode(20);
-        resultDTO.setMsg("success");
+        List<User> list = new ArrayList<>();
+        try {
+            list = userMapper.findUserById(userId);
+            for (int i = 0; i < list.size(); ++i) {            // 保护密码信息
+                list.get(i).protectInfo();
+            }
+            resultDTO.setCode(20);
+            resultDTO.setMsg("Find user by id: Success");
+        } catch (Exception e) {
+            resultDTO.setCode(11);
+            resultDTO.setMsg("Find user by id: Database");
+        }
+        resultDTO.setData(list);
         return resultDTO;
     }
 
+    // 通过昵称查找用户（登录后），模糊查询
     @Override
     public ResultDTO<User> findUserByNickname(String nickname) {
         ResultDTO<User> resultDTO = new ResultDTO<>();
         List<User> list = new ArrayList<>();
-        if (nickname.isEmpty()) {
+        if (nickname == null || nickname.isEmpty()) {       // 注意：当前台不区分用户名还是ID登录时，有可能为空
             resultDTO.setCode(31);
             resultDTO.setMsg("Search in nickname: nickname cannot be empty");
         } else {
             nickname = '%' + nickname +'%';
             try {
                 list = userMapper.findUserByNickname(nickname);
+                for (int i = 0; i < list.size(); ++i) {            // 保护密码信息
+                    list.get(i).protectInfo();
+                }
                 resultDTO.setCode(20);
-                resultDTO.setMsg("Search in nickname: Success");
+                resultDTO.setMsg("Search by nickname: Success");
             } catch (Exception e) {
                 resultDTO.setCode(11);
-                resultDTO.setMsg("Search in nickname: Database error");
+                resultDTO.setMsg("Search by nickname: Database error");
             }
         }
         resultDTO.setData(list);
         return resultDTO;
     }
 
+    // 通过 ID 登录，精确查询
     @Override
     public ResultDTO<User> loginById(int userId, String pwd) {
         ResultDTO<User> resultDTO = new ResultDTO<>();
@@ -69,24 +96,27 @@ public class UserServiceImpl implements UserService {
                 if (list.size() == 1) {
                     list = userMapper.loginById(userId, pwd);
                     if (list.size() == 1){
+                        list.get(0).protectInfo();
                         resultDTO.setCode(20);
                         resultDTO.setMsg("Login by ID: Success");
                     } else if (list.size() == 0) {
                         resultDTO.setCode(22);
                         resultDTO.setMsg("Login by ID: Password incorrect");
                     } else {
+                        list.clear();
                         resultDTO.setCode(12);
                         resultDTO.setMsg("Login by ID: Impossible");
                     }
-
                 } else if (list.size() == 0) {
                     resultDTO.setCode(21);
                     resultDTO.setMsg("Login by ID: ID not exist");
                 } else {
+                    list.clear();
                     resultDTO.setCode(12);
                     resultDTO.setMsg("Login by ID: Database has more than 1 ID");
                 }
             } catch (Exception e) {
+                list.clear();
                 resultDTO.setCode(11);
                 resultDTO.setMsg("Login by ID: Database error");
             }
@@ -95,11 +125,12 @@ public class UserServiceImpl implements UserService {
         return resultDTO;
     }
 
+    // 通过昵称登录，精确查询
     @Override
     public ResultDTO<User> loginByNickname(String nickname, String pwd) {
         ResultDTO<User> resultDTO = new ResultDTO<>();
         List<User> list = new ArrayList<>();
-        if (nickname.isEmpty()) {
+        if (nickname == null || nickname.isEmpty()) {
             resultDTO.setCode(31);
             resultDTO.setMsg("Login by nickname: nickname cannot be empty");
         } else {
@@ -108,12 +139,14 @@ public class UserServiceImpl implements UserService {
                 if (list.size() == 1) {
                     list = userMapper.loginByNickname(nickname, pwd);
                     if (list.size() == 1){
+                        list.get(0).protectInfo();
                         resultDTO.setCode(20);
                         resultDTO.setMsg("Login by nickname: Success");
                     } else if (list.size() == 0) {
                         resultDTO.setCode(22);
                         resultDTO.setMsg("Login by nickname: Password incorrect");
                     } else {
+                        list.clear();
                         resultDTO.setCode(12);
                         resultDTO.setMsg("Login by nickname: Impossible");
                     }
@@ -122,10 +155,12 @@ public class UserServiceImpl implements UserService {
                     resultDTO.setCode(21);
                     resultDTO.setMsg("Login by nickname: Nickname not exist");
                 } else {
+                    list.clear();
                     resultDTO.setCode(12);
                     resultDTO.setMsg("Login by nickname: Database has more than 1 nickname");
                 }
             } catch (Exception e) {
+                list.clear();
                 resultDTO.setCode(11);
                 resultDTO.setMsg("Login by nickname: Database error");
             }
@@ -134,33 +169,72 @@ public class UserServiceImpl implements UserService {
         return resultDTO;
     }
 
+    // 用户注册
+    // 使用了 xml 中定义的 mapper
     @Override
-    public void newUser(User user) {
-        userMapper.newUser(user.getNickname(), user.getBirthday(), user.getPwd());
+    public ResultDTO<User> addUser(User user) {
+        ResultDTO<User> resultDTO = new ResultDTO<>();
+        List<User> list = new ArrayList<>();
+        try {
+            int code = userMapper.addUser(user);
+            if (code > 0) {
+                list.add(userMapper.findUserByUser(user));  // 返回刚刚注册的用户对象
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Add user: Success");
+            } else {
+                resultDTO.setCode(12);
+                resultDTO.setMsg("Add user: Fail. Maybe nickname not unique");
+            }
+        } catch (Exception e) {
+            resultDTO.setCode(11);
+            resultDTO.setMsg("Add user: Database error");
+        }
+        resultDTO.setData(list);
+        return resultDTO;
     }
 
     @Override
+    public ResultDTO<User> delUser(User user) {
+        return null;
+    }
+
+    @Override
+    public ResultDTO<User> updateUser(User user) {
+        return null;
+    }
+
+    // 用户多条件查询
+    @Override
     public ResultDTO<User> findUserByUser(User user) {
         ResultDTO<User> resultDTO = new ResultDTO<>();
-        resultDTO.setData(userMapper.findUserByUser(user));
+        User resultUser = userMapper.findUserByUser(user);
+        List<User> list = new ArrayList<>();
+        list.add(resultUser);
+        resultDTO.setData(list);
         resultDTO.setCode(6);
         resultDTO.setMsg("多条件查询");
         return resultDTO;
     }
 
+    // 检查昵称唯一性
     @Override
-    public ResultDTO<User> addUser(User user) {
-        ResultDTO<User> resultDTO = new ResultDTO<>();
-        try {
-            int i = userMapper.addUser(user);
-            if (i > 0) {
-                resultDTO.setMsg("注册成功");
-            } else {
-                resultDTO.setMsg("注册失败：Mapper 返回非法值");
+    public int checkNicknameAvailable(String nickname) {
+        int code = 0;
+        if (nickname == null || nickname.isEmpty()) {
+            code = 11;                      // 输入参数有误
+        } else {
+            try {
+                List<User> list = new ArrayList<>();
+                list = userMapper.findUserByNickname(nickname);
+                if (list.isEmpty()) {
+                    code = 20;              // 查询昵称未注册
+                } else {
+                    code = 21;              // 查询昵称已注册
+                }
+            } catch (Exception e) {
+                code = 31;                  // 数据库错误
             }
-        } catch (Exception e) {
-            resultDTO.setMsg("注册失败：抛出异常");
         }
-        return resultDTO;
+        return code;
     }
 }
