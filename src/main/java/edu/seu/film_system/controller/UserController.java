@@ -67,6 +67,7 @@ public class UserController {
     @RequestMapping("/update")
     @ResponseBody
     public ResultDTO<User> update(@RequestBody User user) {
+        // System.out.println(user.toString());
         return userService.updateUser(user);
     }
 

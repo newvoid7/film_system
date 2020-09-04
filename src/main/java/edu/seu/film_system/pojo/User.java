@@ -1,8 +1,9 @@
 package edu.seu.film_system.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.Objects;
 
 public class User {
@@ -10,6 +11,7 @@ public class User {
     private String pwd;                     // Not Null
     private String nickname;                // Key, Not Null
     @DateTimeFormat(pattern = "yyyy-MM-dd")
+    // @JsonFormat(pattern = "yyyy-MM-dd")
     private Date birthday;
     private String avatar_url;
     private String gender;

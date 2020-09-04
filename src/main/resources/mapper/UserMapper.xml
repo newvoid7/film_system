@@ -13,10 +13,10 @@
     <update id="updateUser" parameterType="User">
         UPDATE user
         SET birthday = '${birthday}',
-        avtar_url = '${avatar_url}',
+        avatar_url = '${avatar_url}',
         gender = '${gender}',
         intro = '${intro}'
-        WHERE id = {id}
+        WHERE id = ${id}
     </update>
 
     <!-- User findUserByUser(User user) -->

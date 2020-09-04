@@ -2,7 +2,7 @@ package edu.seu.film_system.pojo;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Info {
     private int id;
