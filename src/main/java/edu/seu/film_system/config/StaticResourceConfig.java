@@ -18,5 +18,8 @@ public class StaticResourceConfig implements WebMvcConfigurer {
         registry.addResourceHandler("/resource/image/*").addResourceLocations("file:D:/film/image/");
         // http://127.0.0.1:8256/film_system/resource/video/v1.mp4
         registry.addResourceHandler("/resource/video/*").addResourceLocations("file:D:/film/video/");
+
+        // http://127.0.0.1:8256/film_system/resource/user/
+        registry.addResourceHandler("/resource/user/*").addResourceLocations("file:D:/film/user/");
     }
 }

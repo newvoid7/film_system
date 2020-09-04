@@ -5,10 +5,14 @@ import edu.seu.film_system.pojo.User;
 import edu.seu.film_system.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 @Controller
 @RequestMapping("user")
@@ -130,5 +134,34 @@ public class UserController {
 
     // 更新用户昵称
     // TODO 用 xml 中的函数？还是直接传入 json
+
+    // http://127.0.0.1:8256/film_system/user/uploadAvatar
+    // 返回头像的静态资源网址
+    @RequestMapping(value="/uploadAvatar")
+    @ResponseBody
+    public String uploadImg(@RequestParam("img") MultipartFile img) {
+        String contentType = img.getContentType();    // 获取文件的类型
+        // System.out.println("文件类型为：" + contentType);
+        String originalFilename = img.getOriginalFilename();     // 获取文件的原始名称
+        String pathname = "D:/film/user";
+        // 判断文件是否为空
+        if (!img.isEmpty()) {
+            File targetImg = new File(pathname);
+            // 判断文件夹是否存在
+            if (!targetImg.exists()) {
+                targetImg.mkdirs();    //级联创建文件夹
+            }
+            try {
+                // 开始保存图片
+                FileOutputStream outputStream = new FileOutputStream(pathname + '/' + originalFilename);
+                outputStream.write(img.getBytes());
+                outputStream.flush();
+                outputStream.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return "http://127.0.0.1:8256/film_system/resource/user/"+originalFilename;
+    }
 }
 
