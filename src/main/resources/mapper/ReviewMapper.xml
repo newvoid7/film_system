@@ -7,7 +7,7 @@
     <!-- int addReview(Review review) -->
     <insert id="addReview" parameterType="Review">
         INSERT INTO review (time, user_id, film_id, content)
-        VALUES (NOW(), ${user_id}, ${film_id}, ${content})
+        VALUES (NOW(), ${user_id}, ${film_id}, '${content}')
     </insert>
 
     <!-- Review findReviewByReview(Review review) -->
