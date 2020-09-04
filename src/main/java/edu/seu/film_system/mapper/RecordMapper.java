@@ -15,4 +15,9 @@ public interface RecordMapper {
     @Select("SELECT * FROM record WHERE film_id = ${filmId}")
     List<Record> findRecordByFilmId(int filmId);
 
+    // INSERT
+    int addRecord(Record record);
+
+    // UPDATE
+    int updateRecord(Record record);
 }

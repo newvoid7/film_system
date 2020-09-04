@@ -36,13 +36,13 @@ public class UserServiceImpl implements UserService {
         return resultDTO;
     }
 
-    // 通过 ID 查找用户（登录后），模糊查询
+    // 通过 ID 查找用户（登录后），精确查询
     @Override
-    public ResultDTO<User> findUserById(int userId) {
+    public ResultDTO<User> getUserById(int userId) {
         ResultDTO<User> resultDTO = new ResultDTO<>();
         List<User> list = new ArrayList<>();
         try {
-            list = userMapper.findUserById(userId);
+            list = userMapper.getUserById(userId);
             for (int i = 0; i < list.size(); ++i) {            // 保护密码信息
                 list.get(i).protectInfo();
             }
@@ -92,7 +92,7 @@ public class UserServiceImpl implements UserService {
             resultDTO.setMsg("Login by ID: ID cannot be 0");
         } else {
             try {
-                list = userMapper.findUserById(userId);
+                list = userMapper.getUserById(userId);
                 if (list.size() == 1) {
                     list = userMapper.loginById(userId, pwd);
                     if (list.size() == 1){

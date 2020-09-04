@@ -7,7 +7,7 @@ import java.util.Date;
 
 public interface UserService {
     ResultDTO<User> findAllUser();
-    ResultDTO<User> findUserById(int userId);
+    ResultDTO<User> getUserById(int userId);
     ResultDTO<User> findUserByNickname(String nickname);
     ResultDTO<User> loginById(int userId, String pwd);
     ResultDTO<User> loginByNickname(String nickname, String pwd);

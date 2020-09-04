@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.seu.film_system.mapper.RecordMapper">
+
+    <!-- int addRecord(Record record); -->
+    <insert id="addRecord" parameterType="Record">
+        INSERT INTO record (user_id, film_id, last_timestamp)
+        VALUES (${user_id}, ${film_id}, ${last_timestamp})
+    </insert>
+
+    <!-- int updateRecord(Record record); -->
+    <update id="updateRecord" parameterType="Record">
+        UPDATE record
+        SET last_timestamp = ${last_timestamp}
+        WHERE user_id = ${user_id}
+        AND film_id = ${film_id}
+    </update>
+
+</mapper>

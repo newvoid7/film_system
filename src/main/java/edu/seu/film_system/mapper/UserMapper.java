@@ -14,7 +14,7 @@ public interface UserMapper {
     List<User> findAllUser();
 
     @Select("SELECT * FROM user WHERE id = ${userId}")
-    List<User> findUserById(@Param("userId") int userId);
+    List<User> getUserById(@Param("userId") int userId);
 
     @Select("SELECT * FROM user WHERE nickname LIKE '${nickname}'")
     List<User> findUserByNickname(@Param("nickname") String nickname);

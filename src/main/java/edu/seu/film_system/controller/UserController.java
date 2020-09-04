@@ -30,12 +30,12 @@ public class UserController {
         return resultDTO;
     }
 
-    // 通过 ID 查找用户，模糊查询
-    // http://127.0.0.1:8256/film_system/user/find/id=1
-    @RequestMapping("/find/id={userId}")
+    // 通过 ID 查找用户，精确查询
+    // http://127.0.0.1:8256/film_system/user/id=1
+    @RequestMapping("/id={userId}")
     @ResponseBody
     public ResultDTO<User> findUserById(@PathVariable("userId")int userId) {
-        return userService.findUserById(userId);
+        return userService.getUserById(userId);
     }
 
     // 通过昵称查找用户，模糊查询
@@ -44,6 +44,14 @@ public class UserController {
     @ResponseBody
     public ResultDTO<User> findUserByNickname(@PathVariable("nickname")String nickname) {
         return userService.findUserByNickname(nickname);
+    }
+
+    // http://127.0.0.1:8256/film_system/user/findUserByUser
+    // 通过 ID 或者 nickname 查找用户（精确查询）
+    @RequestMapping("/findUserByUser")
+    @ResponseBody
+    public ResultDTO<User> findUserByUser(@RequestBody User user) {
+        return userService.findUserByUser(user);
     }
 
     // 新增用户

@@ -63,4 +63,49 @@ public class RecordServiceImpl implements RecordService{
         resultDTO.setData(list);
         return resultDTO;
     }
+
+    @Override
+    public ResultDTO<Record> addRecord(Record record) {
+        ResultDTO<Record> resultDTO = new ResultDTO<>();
+        List<Record> list = new ArrayList<>();
+        try {
+            int code = recordMapper.addRecord(record);
+            if (code > 0) {
+                list.add(record);
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Add record: Success");
+            } else {
+                resultDTO.setCode(12);
+                resultDTO.setMsg("Add record: Fail. SQL error");
+            }
+        } catch (Exception e) {
+            resultDTO.setCode(11);
+            resultDTO.setMsg("Add record: Database error");
+        }
+        resultDTO.setData(list);
+        return resultDTO;
+    }
+
+    @Override
+    public ResultDTO<Record> updateRecord(Record record) {
+        ResultDTO<Record> resultDTO = new ResultDTO<>();
+        List<Record> list = new ArrayList<>();
+        try {
+            int code = recordMapper.updateRecord(record);
+            if (code > 0) {
+                list.add(record);
+                resultDTO.setCode(20);
+                resultDTO.setMsg("Update record: Success");
+            } else {
+                resultDTO.setCode(12);
+                resultDTO.setMsg("Update record: Fail. SQL error");
+            }
+        } catch (Exception e) {
+            resultDTO.setCode(11);
+            resultDTO.setMsg("Update record: Database error");
+        }
+        resultDTO.setData(list);
+        return resultDTO;
+    }
+
 }
