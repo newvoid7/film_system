@@ -80,6 +80,16 @@ public class RecordServiceImpl implements RecordService{
     }
 
     @Override
+    public boolean findRecordByUserAndFilm(int userId, int filmId) {
+        List<Record> list = recordMapper.findRecordByUserAndFilm(userId,filmId);
+        if (list.isEmpty()) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    @Override
     public ResultDTO<Record> addRecord(Record record) {
         ResultDTO<Record> resultDTO = new ResultDTO<>();
         List<Record> list = new ArrayList<>();

@@ -146,13 +146,14 @@ public class UserController {
         // String contentType = img.getContentType();    // 获取文件的类型
         // System.out.println("文件类型为：" + contentType);
         // System.out.println(userId);
-        /*
+
         String originalFilename = img.getOriginalFilename();     // 获取文件的原始名称
+        /*
         String suffix = "";
         if (originalFilename.lastIndexOf(".") != -1) {
             suffix = originalFilename.substring(originalFilename.lastIndexOf("."));  // 文件后缀
         }*/
-        String pathname = "D:/film/user";
+        String pathname = "C:/film/user";
         // 判断文件是否为空
         if (!img.isEmpty()) {
             File targetImg = new File(pathname);
@@ -162,7 +163,7 @@ public class UserController {
             }
             try {
                 // 开始保存图片
-                FileOutputStream outputStream = new FileOutputStream(pathname + '/' + userId);
+                FileOutputStream outputStream = new FileOutputStream(pathname + '/' + originalFilename);
                 outputStream.write(img.getBytes());
                 outputStream.flush();
                 outputStream.close();
@@ -170,7 +171,7 @@ public class UserController {
                 e.printStackTrace();
             }
         }
-        return "http://127.0.0.1:8256/film_system/resource/user/" + userId;
+        return "http://127.0.0.1:8256/film_system/resource/user/" + originalFilename;
     }
 }
 

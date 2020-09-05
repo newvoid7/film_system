@@ -49,7 +49,11 @@ public class RecordController {
     @RequestMapping("/add")
     @ResponseBody
     public ResultDTO<Record> addRecord(@RequestBody Record record) {
-        return recordService.addRecord(record);
+        if (recordService.findRecordByUserAndFilm(record.getUser_id(), record.getFilm_id())) {
+            return recordService.updateRecord(record);
+        } else {
+            return recordService.addRecord(record);
+        }
     }
 
     // http://127.0.0.1:8256/film_system/record/update

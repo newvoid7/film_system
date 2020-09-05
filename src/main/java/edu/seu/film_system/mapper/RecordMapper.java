@@ -16,6 +16,9 @@ public interface RecordMapper {
     @Select("SELECT * FROM record WHERE film_id = ${filmId}")
     List<Record> findRecordByFilmId(@Param("filmId") int filmId);
 
+    @Select("SELECT * FROM record WHERE user_id = ${userId} AND film_id = ${filmId}")
+    List<Record> findRecordByUserAndFilm(@Param("userId")int userId, @Param("filmId") int filmId);
+
     // INSERT
     int addRecord(Record record);
 
