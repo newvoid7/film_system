@@ -1,8 +1,6 @@
 package edu.seu.film_system.controller;
 
-import edu.seu.film_system.pojo.ResultDTO;
-import edu.seu.film_system.pojo.Review;
-import edu.seu.film_system.pojo.User;
+import edu.seu.film_system.pojo.*;
 import edu.seu.film_system.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -72,6 +70,82 @@ public class AdvanceController {
         }
     }
 
+    // 内部类：为了同时访问观影记录和对应的电影数据
+    private class RecordAndFilm {
+        private Record record;
+        private Film film;
+
+        public RecordAndFilm() {
+        }
+
+        public RecordAndFilm(Record record, Film film) {
+            this.record = record;
+            this.film = film;
+        }
+
+        public Record getRecord() {
+            return record;
+        }
+
+        public void setRecord(Record record) {
+            this.record = record;
+        }
+
+        public Film getFilm() {
+            return film;
+        }
+
+        public void setFilm(Film film) {
+            this.film = film;
+        }
+
+        @Override
+        public String toString() {
+            return "RecordAndFilm{" +
+                    "record=" + record +
+                    ", film=" + film +
+                    '}';
+        }
+    }
+
+    // 内部类：为了同时访问观影记录和对应的电影数据
+    private class FavoriteAndFilm {
+        private Favorite favorite;
+        private Film film;
+
+        public FavoriteAndFilm() {
+        }
+
+        public FavoriteAndFilm(Favorite favorite, Film film) {
+            this.favorite = favorite;
+            this.film = film;
+        }
+
+        public Favorite getFavorite() {
+            return favorite;
+        }
+
+        public void setFavorite(Favorite favorite) {
+            this.favorite = favorite;
+        }
+
+        public Film getFilm() {
+            return film;
+        }
+
+        public void setFilm(Film film) {
+            this.film = film;
+        }
+
+        @Override
+        public String toString() {
+            return "FavoriteAndFilm{" +
+                    "favorite=" + favorite +
+                    ", film=" + film +
+                    '}';
+        }
+    }
+
     // 同时访问评论和对应的用户
     // http://127.0.0.1:8256/film_system/advance/findReviewByFilm/film=1
     @RequestMapping("/findReviewByFilm/film={filmId}")
@@ -95,5 +169,54 @@ public class AdvanceController {
         resultDTO.setCode(20);
         return resultDTO;
     }
+
+    // 同时访问观影记录和对应的电影
+    // http://127.0.0.1:8256/film_system/advance/findRecordByUser/user=1
+    @RequestMapping("/findRecordByUser/user={userId}")
+    @ResponseBody
+    public ResultDTO<RecordAndFilm> findRecordByUser(@PathVariable("userId") int userId) {
+        ResultDTO<RecordAndFilm> resultDTO = new ResultDTO<>();
+        List<RecordAndFilm> list = new ArrayList<>();
+        RecordAndFilm recordAndFilm = new RecordAndFilm();
+        Film film = new Film();
+        ResultDTO<Record> recordResultDTO = recordService.findRecordByUserId(userId);
+        List<Record> recordList = recordResultDTO.getData();
+        for (Record record: recordList) {
+            recordAndFilm = new RecordAndFilm();
+            recordAndFilm.setRecord(record);
+            film = filmService.getFilmById(record.getFilm_id()).getData().get(0);
+            recordAndFilm.setFilm(film);
+            list.add(recordAndFilm);
+        }
+        resultDTO.setData(list);
+        resultDTO.setMsg("OK");
+        resultDTO.setCode(20);
+        return resultDTO;
+    }
+
+    // 同时访问收藏和对应的电影
+    // http://127.0.0.1:8256/film_system/advance/findFavoriteByUser/user=1
+    @RequestMapping("/findFavoriteByUser/user={userId}")
+    @ResponseBody
+    public ResultDTO<FavoriteAndFilm> findFavoriteByUser(@PathVariable("userId") int userId) {
+        ResultDTO<FavoriteAndFilm> resultDTO = new ResultDTO<>();
+        List<FavoriteAndFilm> list = new ArrayList<>();
+        FavoriteAndFilm favoriteAndFilm = new FavoriteAndFilm();
+        Film film = new Film();
+        ResultDTO<Favorite> favoriteResultDTO = favoriteService.searchByUser(userId);
+        List<Favorite> favoriteList = favoriteResultDTO.getData();
+        for (Favorite favorite: favoriteList) {
+            favoriteAndFilm = new FavoriteAndFilm();
+            favoriteAndFilm.setFavorite(favorite);
+            film = filmService.getFilmById(favorite.getFilm_id()).getData().get(0);
+            favoriteAndFilm.setFilm(film);
+            list.add(favoriteAndFilm);
+        }
+        resultDTO.setData(list);
+        resultDTO.setMsg("OK");
+        resultDTO.setCode(20);
+        return resultDTO;
+    }
+
 
 }
