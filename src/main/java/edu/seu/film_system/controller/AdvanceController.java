@@ -108,7 +108,7 @@ public class AdvanceController {
         }
     }
 
-    // 内部类：为了同时访问观影记录和对应的电影数据
+    // 内部类：为了同时访问收藏和对应的电影数据
     private class FavoriteAndFilm {
         private Favorite favorite;
         private Film film;
@@ -165,8 +165,8 @@ public class AdvanceController {
             list.add(reviewAndUser);
         }
         resultDTO.setData(list);
-        resultDTO.setMsg("OK");
-        resultDTO.setCode(20);
+        resultDTO.setMsg("ADVANCE " + reviewResultDTO.getMsg());
+        resultDTO.setCode(reviewResultDTO.getCode());
         return resultDTO;
     }
 
@@ -189,8 +189,8 @@ public class AdvanceController {
             list.add(recordAndFilm);
         }
         resultDTO.setData(list);
-        resultDTO.setMsg("OK");
-        resultDTO.setCode(20);
+        resultDTO.setMsg("ADVANCE " + recordResultDTO.getMsg());
+        resultDTO.setCode(recordResultDTO.getCode());
         return resultDTO;
     }
 
@@ -213,8 +213,8 @@ public class AdvanceController {
             list.add(favoriteAndFilm);
         }
         resultDTO.setData(list);
-        resultDTO.setMsg("OK");
-        resultDTO.setCode(20);
+        resultDTO.setMsg("ADVANCE " + favoriteResultDTO.getMsg());
+        resultDTO.setCode(favoriteResultDTO.getCode());
         return resultDTO;
     }
 

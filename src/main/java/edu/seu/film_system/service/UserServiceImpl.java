@@ -66,7 +66,7 @@ public class UserServiceImpl implements UserService {
     public ResultDTO<User> findUserByNickname(String nickname) {
         ResultDTO<User> resultDTO = new ResultDTO<>();
         List<User> list = new ArrayList<>();
-        if (nickname == null || nickname.isEmpty()) {       // 注意：当前台不区分用户名还是ID登录时，有可能为空
+        if (nickname == null || nickname.isEmpty()) {       // 有可能为空
             resultDTO.setCode(31);
             resultDTO.setMsg("Search in nickname: nickname cannot be empty");
         } else {
