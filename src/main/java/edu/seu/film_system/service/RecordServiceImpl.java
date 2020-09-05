@@ -111,15 +111,13 @@ public class RecordServiceImpl implements RecordService{
                 list.add(record);
                 resultDTO.setCode(20);
                 resultDTO.setMsg("Update record: Success");
+                resultDTO.setData(list);
             } else {
-                resultDTO.setCode(12);
-                resultDTO.setMsg("Update record: Fail. SQL error");
+                resultDTO = addRecord(record);
             }
         } catch (Exception e) {
-            resultDTO.setCode(11);
-            resultDTO.setMsg("Update record: Database error");
+            resultDTO = addRecord(record);
         }
-        resultDTO.setData(list);
         return resultDTO;
     }
 
