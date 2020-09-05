@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 @Controller
 @RequestMapping("film")
 public class FilmController {
@@ -112,4 +116,32 @@ public class FilmController {
         return filmService.topFilm(topN);
     }
 
+    // http://localhost:8256/film_system/film/random5
+    // 随机选取 N 部电影
+    @RequestMapping("/random{randomN}")
+    @ResponseBody
+    public ResultDTO<Film> getRandomFilms(@PathVariable("randomN") int randomN) {
+        ResultDTO<Film> resultDTO = filmService.findAllFilm();
+        if (randomN > resultDTO.getData().size()) {
+            resultDTO.setCode(31);
+            resultDTO.setMsg("Find random films: Request number too big");
+        } else {
+            List<Film> list = resultDTO.getData();
+            List<Film> newList = new ArrayList<>();
+            List<Integer> indexList = new ArrayList<>();
+            Random random = new Random();
+            for (int i = 0; i < randomN; ++i) {
+                int randomIndex = random.nextInt(list.size());
+                while (indexList.contains(randomIndex)){       // 重随
+                    randomIndex = random.nextInt(list.size());
+                }
+                indexList.add(randomIndex);
+                newList.add(list.get(randomIndex));
+            }
+            resultDTO.setData(newList);
+            resultDTO.setCode(20);
+            resultDTO.setMsg("Find random films: Success");
+        }
+        return resultDTO;
+    }
 }
