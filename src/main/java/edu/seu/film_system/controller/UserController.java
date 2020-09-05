@@ -136,8 +136,8 @@ public class UserController {
     // TODO 用 xml 中的函数？还是直接传入 json
 
     // 上传头像，以用户 ID 命名，存在服务器端指定文件夹下
-    // 默认覆盖相同名称的文件（包括后缀）
-    // TODO 怎么样保持用户只有一个头像资源，即使后缀不同？
+    // 不包含后缀名，因此无法在浏览器中打开，但可以在前端显示
+    // 默认覆盖相同名称的文件
     // http://127.0.0.1:8256/film_system/user/uploadAvatar
     // 返回头像的静态资源网址
     @RequestMapping(value="/uploadAvatar")
@@ -146,11 +146,12 @@ public class UserController {
         // String contentType = img.getContentType();    // 获取文件的类型
         // System.out.println("文件类型为：" + contentType);
         // System.out.println(userId);
+        /*
         String originalFilename = img.getOriginalFilename();     // 获取文件的原始名称
         String suffix = "";
         if (originalFilename.lastIndexOf(".") != -1) {
             suffix = originalFilename.substring(originalFilename.lastIndexOf("."));  // 文件后缀
-        }
+        }*/
         String pathname = "D:/film/user";
         // 判断文件是否为空
         if (!img.isEmpty()) {
@@ -161,7 +162,7 @@ public class UserController {
             }
             try {
                 // 开始保存图片
-                FileOutputStream outputStream = new FileOutputStream(pathname + '/' + userId + suffix);
+                FileOutputStream outputStream = new FileOutputStream(pathname + '/' + userId);
                 outputStream.write(img.getBytes());
                 outputStream.flush();
                 outputStream.close();
@@ -169,7 +170,7 @@ public class UserController {
                 e.printStackTrace();
             }
         }
-        return "http://127.0.0.1:8256/film_system/resource/user/" + userId + suffix;
+        return "http://127.0.0.1:8256/film_system/resource/user/" + userId;
     }
 }
 
